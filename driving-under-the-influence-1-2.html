@@ -442,17 +442,20 @@
 
 
       function sendHeight() {
-        window.parent.postMessage(
-          {
-            type: "setHeight",
-            height: document.body.scrollHeight
-          },
-          "*"
-        );
-      }
+    const buffer = 100; // fazladan 100px boşluk
+    const height = document.body.scrollHeight + buffer;
 
-      window.addEventListener("load", sendHeight);
-      window.addEventListener("resize", sendHeight);
+    window.parent.postMessage(
+      {
+        type: "setHeight",
+        height: height
+      },
+      "*"
+    );
+  }
+
+  window.addEventListener("load", sendHeight);
+  window.addEventListener("resize", sendHeight);
 
      
 </script>
