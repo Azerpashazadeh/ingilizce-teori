@@ -468,42 +468,37 @@
 
 
      let lastHeight = 0;
+    let sendCount = 0;
 
-  function sendHeight() {
-    const buffer = 100;
-    const body = document.body;
-    const html = document.documentElement;
+    function sendHeight() {
+      const buffer = 100; // extra boşluk
+      const contentHeight = document.documentElement.scrollHeight + buffer;
 
-    const contentHeight = Math.max(
-      body.scrollHeight, body.offsetHeight,
-      html.clientHeight, html.scrollHeight, html.offsetHeight
-    );
-
-    const totalHeight = contentHeight + buffer;
-
-    // 🔒 Sonsuz döngüyü önle: aynı yükseklik tekrar gönderilmesin
-    if (Math.abs(totalHeight - lastHeight) > 5) {
-      window.parent.postMessage(
-        {
-          type: "setHeight",
-          height: totalHeight
-        },
-        "*"
-      );
-      lastHeight = totalHeight;
+      // Yalnızca anlamlı değişiklik varsa ve döngüye girilmemişse
+      if (Math.abs(contentHeight - lastHeight) > 5 && sendCount < 3) {
+        window.parent.postMessage(
+          {
+            type: "setHeight",
+            height: contentHeight
+          },
+          "*"
+        );
+        lastHeight = contentHeight;
+        sendCount++;
+      }
     }
-  }
 
-  window.addEventListener("load", sendHeight);
-  window.addEventListener("resize", sendHeight);
+    // Yüklemede ve boyut değişince tetikle
+    window.addEventListener("load", sendHeight);
+    window.addEventListener("resize", sendHeight);
 
-  // DOM değişirse yeniden dene ama döngüye girmesin
-  const observer = new MutationObserver(sendHeight);
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true,
-    characterData: true
-  });
+    // İçerik dinamikse yine de yeniden denesin ama sınırlı
+    const observer = new MutationObserver(sendHeight);
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
      
 </script>
 
