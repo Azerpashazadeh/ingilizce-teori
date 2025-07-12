@@ -465,6 +465,22 @@
   document.addEventListener("selectstart", function(event) {
       event.preventDefault();
   });
+
+
+      function sendHeight() {
+        window.parent.postMessage(
+          {
+            type: "setHeight",
+            height: document.body.scrollHeight
+          },
+          "*"
+        );
+      }
+
+      window.addEventListener("load", sendHeight);
+      window.addEventListener("resize", sendHeight);
+
+     
 </script>
 
   </body>
