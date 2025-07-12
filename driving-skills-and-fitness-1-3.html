@@ -317,12 +317,13 @@
   });
 
 
-      function sendHeight() {
-    const buffer = 100; // iframe'in altına fazladan 100px boşluk ekle
+      let lastHeight = 0;
+
+  function sendHeight() {
+    const buffer = 100;
     const body = document.body;
     const html = document.documentElement;
 
-    // En güvenli yükseklik: tüm içeriği ve tarayıcı farklarını kapsar
     const contentHeight = Math.max(
       body.scrollHeight, body.offsetHeight,
       html.clientHeight, html.scrollHeight, html.offsetHeight
@@ -330,20 +331,23 @@
 
     const totalHeight = contentHeight + buffer;
 
-    window.parent.postMessage(
-      {
-        type: "setHeight",
-        height: totalHeight
-      },
-      "*"
-    );
+    // 🔒 Sonsuz döngüyü önle: aynı yükseklik tekrar gönderilmesin
+    if (Math.abs(totalHeight - lastHeight) > 5) {
+      window.parent.postMessage(
+        {
+          type: "setHeight",
+          height: totalHeight
+        },
+        "*"
+      );
+      lastHeight = totalHeight;
+    }
   }
 
-  // Sayfa yüklenince ve yeniden boyutlanınca yüksekliği bildir
   window.addEventListener("load", sendHeight);
   window.addEventListener("resize", sendHeight);
 
-  // Her ihtimale karşı DOM değişirse yeniden yükseklik hesapla
+  // DOM değişirse yeniden dene ama döngüye girmesin
   const observer = new MutationObserver(sendHeight);
   observer.observe(document.body, {
     childList: true,
