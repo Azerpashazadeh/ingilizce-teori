@@ -318,21 +318,38 @@
 
 
       function sendHeight() {
-    const buffer = 100; // fazladan 100px boşluk
-    const height = document.body.scrollHeight + buffer;
+    const buffer = 100; // iframe'in altına fazladan 100px boşluk ekle
+    const body = document.body;
+    const html = document.documentElement;
+
+    // En güvenli yükseklik: tüm içeriği ve tarayıcı farklarını kapsar
+    const contentHeight = Math.max(
+      body.scrollHeight, body.offsetHeight,
+      html.clientHeight, html.scrollHeight, html.offsetHeight
+    );
+
+    const totalHeight = contentHeight + buffer;
 
     window.parent.postMessage(
       {
         type: "setHeight",
-        height: height
+        height: totalHeight
       },
       "*"
     );
   }
 
+  // Sayfa yüklenince ve yeniden boyutlanınca yüksekliği bildir
   window.addEventListener("load", sendHeight);
   window.addEventListener("resize", sendHeight);
 
+  // Her ihtimale karşı DOM değişirse yeniden yükseklik hesapla
+  const observer = new MutationObserver(sendHeight);
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+    characterData: true
+  });
      
 </script>
 
