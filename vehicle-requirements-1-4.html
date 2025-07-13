@@ -309,38 +309,52 @@
   });
 
 
-     let lastHeight = 0;
-    let sendCount = 0;
+    let lastHeight = 0;
 
-    function sendHeight() {
-      const buffer = 100; // extra boşluk
-      const contentHeight = document.documentElement.scrollHeight + buffer;
+  function sendHeight() {
+    const buffer = 100;
+    const html = document.documentElement;
+    const body = document.body;
 
-      // Yalnızca anlamlı değişiklik varsa ve döngüye girilmemişse
-      if (Math.abs(contentHeight - lastHeight) > 5 && sendCount < 3) {
-        window.parent.postMessage(
-          {
-            type: "setHeight",
-            height: contentHeight
-          },
-          "*"
-        );
-        lastHeight = contentHeight;
-        sendCount++;
-      }
+    const contentHeight = Math.max(
+      body.scrollHeight, body.offsetHeight,
+      html.clientHeight, html.scrollHeight, html.offsetHeight
+    );
+
+    const totalHeight = contentHeight + buffer;
+
+    // Sadece fark varsa gönder
+    if (Math.abs(totalHeight - lastHeight) > 5) {
+      window.parent.postMessage(
+        {
+          type: "setHeight",
+          height: totalHeight
+        },
+        "*"
+      );
+      lastHeight = totalHeight;
     }
+  }
 
-    // Yüklemede ve boyut değişince tetikle
-    window.addEventListener("load", sendHeight);
-    window.addEventListener("resize", sendHeight);
+  // Yüklemede ve boyutta tekrar kontrol
+  window.addEventListener("load", sendHeight);
+  window.addEventListener("resize", sendHeight);
 
-    // İçerik dinamikse yine de yeniden denesin ama sınırlı
-    const observer = new MutationObserver(sendHeight);
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-      characterData: true
-    });
+  // Görsel, font vb. yavaş yüklenen öğeler için yeniden dene
+  const observer = new MutationObserver(() => {
+    setTimeout(sendHeight, 100);
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+    characterData: true
+  });
+
+  // İlk denemeden sonra da tekrar tekrar gönder (fallback)
+  setTimeout(sendHeight, 500);
+  setTimeout(sendHeight, 1000);
+  setTimeout(sendHeight, 1500);
      
 </script>
 
