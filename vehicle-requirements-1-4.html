@@ -309,52 +309,21 @@
   });
 
 
-  // Tüm içerik yüklendiğinde çalışacak
-document.addEventListener('DOMContentLoaded', function() {
-  let lastReportedHeight = 0;
-  const debounceDelay = 100; // milisaniye
+   function sendHeight() {
+    const buffer = 100; // fazladan 100px boşluk
+    const height = document.body.scrollHeight + buffer;
 
-  // Yüksekliği hesapla ve parent'a bildir
-  function updateHeight() {
-    const currentHeight = Math.max(
-      document.body.scrollHeight,
-      document.documentElement.scrollHeight,
-      document.body.offsetHeight,
-      document.documentElement.offsetHeight
+    window.parent.postMessage(
+      {
+        type: "setHeight",
+        height: height
+      },
+      "*"
     );
-
-    // Yükseklik değiştiyse ve makul bir değerse (50px-10000px arası)
-    if (currentHeight !== lastReportedHeight && currentHeight > 50 && currentHeight < 10000) {
-      lastReportedHeight = currentHeight;
-      window.parent.postMessage({
-        type: 'html1-iframe-resize',
-        height: currentHeight,
-        url: window.location.href
-      }, '*');
-    }
   }
 
-  // İlk yüklenmede çağır
-  updateHeight();
-
-  // Dinamik değişiklikleri izle
-  const observer = new MutationObserver(function() {
-    clearTimeout(window.html1ResizeTimeout);
-    window.html1ResizeTimeout = setTimeout(updateHeight, debounceDelay);
-  });
-
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true,
-    attributes: true,
-    characterData: true
-  });
-
-  // Resimler ve iframeler yüklendiğinde kontrol et
-  document.querySelectorAll('img, iframe').forEach(element => {
-    element.addEventListener('load', updateHeight);
-  });
-});
+  window.addEventListener("load", sendHeight);
+  window.addEventListener("resize", sendHeight);
      
 </script>
 
