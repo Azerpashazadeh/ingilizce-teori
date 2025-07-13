@@ -455,28 +455,27 @@
     
     <a href="https://distantedutv.wixstudio.io/my-site-4/blank-1" class="custom-button" target="_blank">Back to overview</a>
     
-  <script type="text/javascript">
+ <script type="text/javascript">
   function resizeWixFrame() {
-    // Bəzən brauzer hündürlüyü tam hesablamadan mesaj göndərir.
-    // Bunun qarşısını almaq üçün kiçik bir fasilə veririk.
+    console.log("[iFrame] Hündürlüyü ölçmə funksiyası işə düşdü.");
+    
     setTimeout(() => {
-      // Məzmunun tam hündürlüyünü hesabla
-      // scrollHeight ən dəqiq nəticəni verir
       const currentHeight = document.body.scrollHeight;
+      console.log([iFrame] Məzmunun hündürlüyü hesablandı: ${currentHeight}px.);
       
-      // Wix-ə mesaj göndər. Bu mesajı Wix səhifəsi tutacaq.
+      console.log("[iFrame] Hündürlük məlumatı Wix-ə göndərilir...");
       window.parent.postMessage({
         type: 'resize-iframe',
         height: currentHeight
       }, "*");
-    }, 150); // 150 millisaniyə gözləmə
+      console.log("[iFrame] Mesaj göndərildi!");
+    }, 200);
   }
 
-  // Səhifə tam yüklənəndə funksiyanı işə sal
-  window.onload = resizeWixFrame;
-  
-  // Pəncərənin ölçüsü dəyişdikdə də hündürlüyü yenidən hesabla (mobil cihazlarda ekranı çevirəndə və s.)
-  window.onresize = resizeWixFrame;
+  window.onload = function() {
+    console.log("[iFrame] Səhifə tam yükləndi (window.onload).");
+    resizeWixFrame();
+  };
 </script>
 
   </body>
