@@ -12,31 +12,21 @@
       body {
         font-family: "Trirong", serif;
         line-height: 1.2;
+        margin: 0;
+        padding: 15px; /* Məzmunun kənarlara yapışmaması üçün */
       }
-
       h1,
       h2 {
         color: #a70000;
       }
-
       h3 {
         color: #000000;
       }
-
-      .important-words1 {
+      .important-words1, .important-words2 {
         background-color: #f9c3ae;
         padding: 15px;
         margin-bottom: 20px;
         position: relative;
-        /* Dikey hattı bu alan içinde istediğimiz yere yerleştirebilmek için gerekli */
-      }
-
-      .important-words2 {
-        background-color: #f9c3ae;
-        padding: 15px;
-        margin-bottom: 20px;
-        position: relative;
-        /* Dikey hattı bu alan içinde istediğimiz yere yerleştirebilmek için gerekli */
       }
       .vertical-line1 {
         width: 4px;
@@ -44,123 +34,86 @@
         background-color: rgb(201, 17, 17);
         position: absolute;
         top: 80px;
-        left: 15px; /* Dikey hattın, sol kenardan uzaklığını ayarlar */
+        left: 15px;
       }
-
       .vertical-line2 {
         width: 4px;
         height: 100%;
         background-color: rgb(201, 17, 17);
         position: absolute;
         top: 0px;
-        left: 0px; /* Dikey hattın, sol kenardan uzaklığını ayarlar */
+        left: 0px;
       }
-
-      .important-words1 h2 {
+      .important-words1 h2, .important-words2 h2 {
         color: #a70000;
       }
-      .important-words2 h2 {
-        color: #a70000;
-      }
-
       .important-words1 ul {
         list-style-type: none;
         padding-left: 0;
         margin-left: 20px;
-        /* Metni dikey hattan uzaklaştırmak için sol boşluk ekler */
       }
-
-      .important-words1 li {
-        margin-bottom: 1px; /* Elemanlar arasındaki mesafeyi ayarlar */
-        padding-left: 0px; /* Sol boşluk, text-indent için */
-        text-indent: 0px; /* İkinci satırların hizalanması için */
-        list-style-position: inside; /* Madde işaretinin içerde kalmasını sağlar */
+      .important-words1 li, .important-words2 li {
+        margin-bottom: 1px;
+        padding-left: 20px;
+        text-indent: -20px;
+        list-style-position: inside;
       }
-
-      .important-words2 li {
-        margin-bottom: 1px; /* Elemanlar arasındaki mesafeyi ayarlar */
-        padding-left: 20px; /* Sol boşluk, text-indent için */
-        text-indent: -20px; /* İkinci satırların hizalanması için */
-        list-style-position: inside; /* Madde işaretinin içerde kalmasını sağlar */
-      }
-
       .road-section {
         margin-top: 30px;
       }
-
-      .road-section img {
+      .road-section img, .custom-image, .custom-centered-image {
         width: 100%;
         height: auto;
       }
-
-      .custom-image {
-        width: 100%;
-        height: auto;
-        max-width: 1500px;
+      .custom-centered-image {
+        display: block;
+        margin: 20px auto;
       }
-
       .image-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 20px;
       }
-
       .image-container figure {
         max-width: 48%;
         margin: 0;
       }
-
       .image-container img {
         width: 100%;
         height: auto;
       }
-
       .image-container figcaption {
         font-size: 0.6em;
         color: #000000;
         text-align: center;
         margin-top: 5px;
       }
-
+      .custom-button {
+        display: inline-block;
+        width: 140px;
+        height: 39px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        line-height: 39px;
+        text-decoration: none;
+        border-radius: 9px;
+        transition: background-color 0.3s ease;
+        margin-top: 70px;
+      }
+      .custom-button:hover {
+        background-color: blue;
+      }
       @media (max-width: 550px) {
         .image-container figure {
           max-width: 100%;
         }
       }
-      /* Polis arabası resmini ortada tutmak ve genişligini metinlere uyumlu yapmak için */
-      .custom-centered-image {
-        display: block; /* Resmi block element olarak ayarlar */
-        margin: 20px auto; /* Ortalar ve üst-alt boşluk ekler */
-        width: 100%; /* Genişliği metinlerin genişliğine bağlı olarak ayarlar */
-        max-width: 100%; /* Tarayıcı boyutu değiştikçe genişliğin metin genişliği ile uyumlu olmasını sağlar */
-        height: auto; /* Yüksekliği otomatik olarak ayarlar */
-      }
-      
-     /* CSS dosyası (style.css) */
-.custom-button {
-    display: inline-block;
-    width: 140px;
-    height: 39px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    line-height: 39px; /* Düğme yüksekliğine göre yazıyı ortala */
-    text-decoration: none; /* Bağlantı alt çizgisini kaldır */
-    border-radius: 9px; /* Köşeleri yuvarlat */
-    transition: background-color 0.3s ease;
-    margin-top: 70px;   /* Üstteki nesne ile düğme arasına 20px boşluk koy */
-}
-
-.custom-button:hover {
-    background-color: blue;
-}
     </style>
   </head>
-
   <body>
     <h2>Code of Conduct</h2>
-
     <div class="important-words1">
       <div class="vertical-line1"></div>
       <h3>Important Dutch words</h3>
@@ -169,7 +122,6 @@
           <strong>APK</strong> <br />Same as the MOT, mandatory periodic general
           inspection of the vehicle.
         </li>
-
         <li>
           <strong>Brommobiel</strong> <br />
           Moped on three or four wheels with closed bodywork and a maximum
@@ -181,7 +133,6 @@
         </li>
       </ul>
     </div>
-
     <p>
       When you participate in traffic, you are required to adhere to certain
       rules of conduct. These general rules are designed to:
@@ -195,7 +146,6 @@
       <li>limit the negative impact of traffic on the environment;</li>
       <li>prevent crime.</li>
     </ul>
-
     <div class="important-words2">
       <div class="vertical-line2"></div>
       <h3>Roads</h3>
@@ -219,7 +169,6 @@
         People authorised to regulate traffic and request official documents.
         These are:
       </p>
-
       <li>Public prosecutors</li>
       <li>Police officers</li>
       <li>Military police</li>
@@ -240,7 +189,6 @@
       In addition, road users are also required to follow instructions given by
       crossing guards - who may only stop drivers.
     </p>
-
     <div class="image-container">
       <figure>
         <img
@@ -270,7 +218,6 @@
       possession at all times, and you may not refuse a request to show them.
       These documents include:
     </p>
-
     <ul>
       <li>Your driving licence.</li>
       <li>The vehicle’s registration certificate.</li>
@@ -283,7 +230,6 @@
         in a disabled parking space.
       </li>
     </ul>
-
     <p>
       An authorised person may also require you to comply with an alcohol or
       drug test. This means you have to comply with a breath test, eye
@@ -338,7 +284,6 @@
       within 12 hours from when the accident occurred. Unless the police
       arrested you as a suspect before then.
     </p>
-
     <div class="important-words2">
       <p>
         Leaving the scene of an accident while leaving an injured person without
@@ -354,7 +299,6 @@
       is caught doing this, both the driver and the vehicle owner are liable for
       any damages.
     </p>
-
     <div class="important-words2">
       <div class="vertical-line2"></div>
       <h3>Driving licence confiscation</h3>
@@ -375,7 +319,6 @@
         disqualified. If you commit another offence within a short time, these
         penalties may be doubled.
       </p>
-
       <h3>Driving licence invalidation</h3>
       <p>
         If you commit several offences, or if you are ineligible to drive for
@@ -388,7 +331,6 @@
         in other categories.
       </p>
     </div>
-
     <img
       src="https://static.wixstatic.com/media/4b688f_f8ec58ada61a4f80817ec8b888ad80d0~mv2.jpg"
       alt="Image 1"
@@ -408,7 +350,6 @@
       Based on your behaviour, confiscation of your driving licence, may happen
       if you:
     </p>
-
     <ul>
       <li>exceed the speed limit by 50 km/h or more;</li>
       <li>cause hinder or a dangerous situation.</li>
@@ -418,7 +359,6 @@
       Proficiency), who will then determine your eligibility to continue
       driving.
     </p>
-
     <div class="important-words2">
       <p>
         The abbreviation CBR stands for Centraal Bureau Rijvaardigheidsbewijzen,
@@ -431,7 +371,6 @@
         capabilities.
       </p>
     </div>
-
     <p>The CBR may be notified if you:</p>
     <ul>
       <li>
@@ -452,31 +391,51 @@
       offence. This is also the case if you operate a vehicle for which a
       licence is required and your licence has been declared invalid.
     </p>
-    
-    <a href="https://distantedutv.wixstudio.io/my-site-4/blank-1" class="custom-button" target="_blank">Back to overview</a>
-    
-<script type="text/javascript">
-  function resizeWixFrame() {
-    console.log("[iFrame] Hündürlüyü ölçmə funksiyası işə düşdü.");
-    
-    setTimeout(() => {
-      const currentHeight = document.body.scrollHeight;
-      console.log([iFrame] Məzmunun hündürlüyü hesablandı: ${currentHeight}px.);
-      
-      console.log("[iFrame] Hündürlük məlumatı Wix-ə göndərilir...");
-      window.parent.postMessage({
-        type: 'resize-iframe',
-        height: currentHeight
-      }, "*");
-      console.log("[iFrame] Mesaj göndərildi!");
-    }, 200);
-  }
+    <a
+      href="https://distantedutv.wixstudio.io/my-site-4/blank-1"
+      class="custom-button"
+      target="_blank"
+      >Back to overview</a
+    >
 
-  window.onload = function() {
-    console.log("[iFrame] Səhifə tam yükləndi (window.onload).");
-    resizeWixFrame();
-  };
-</script>
+    <script type="text/javascript">
+      function resizeWixFrame() {
+        // Bu funksiyanın hər dəfə işə düşdüyünü görmək üçün loq
+        console.log("[iFrame] Hündürlüyü ölçmə funksiyası işə düşdü.");
 
+        // Gecikmə ilə daha stabil işləyir, bütün şəkillərin yüklənməsini təmin edir
+        setTimeout(() => {
+          // Məzmunun tam hündürlüyünü hesabla
+          const currentHeight = document.body.scrollHeight;
+          
+          // Düzəldilmiş loq: Dırnaq işarələri və dəyişən üçün düzgün sintaksis istifadə olunur
+          console.log(`[iFrame] Məzmunun hündürlüyü hesablandı: ${currentHeight}px.`);
+          
+          try {
+            console.log("[iFrame] Hündürlük məlumatı Wix-ə göndərilir...");
+            // Hesablanmış hündürlüyü Wix səhifəsinə göndər
+            window.parent.postMessage({
+              type: 'resize-iframe',
+              height: currentHeight
+            }, "*");
+            console.log("[iFrame] ✅ Mesaj uğurla göndərildi!");
+          } catch (error) {
+            console.error("[iFrame] ❌ Mesaj göndərilərkən xəta baş verdi:", error);
+          }
+        }, 300); // Gecikməni bir az artırdıq ki, şəkillər tam yüklənsin
+      }
+
+      // Səhifə ilk dəfə tam yüklənəndə funksiyanı işə sal
+      window.onload = function() {
+        console.log("[iFrame] Səhifə tam yükləndi (window.onload).");
+        resizeWixFrame();
+      };
+
+      // Brauzer pəncərəsinin ölçüsü dəyişdikdə hündürlüyü yenidən hesabla
+      window.onresize = function() {
+        console.log("[iFrame] Pəncərə ölçüsü dəyişdi (onresize).");
+        resizeWixFrame();
+      };
+    </script>
   </body>
 </html>
