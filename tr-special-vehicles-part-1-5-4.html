@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Dikey Hat Örneği
-  </title>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&amp;display=swap" rel="stylesheet"/>
-  <style>
-   body {
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dikey Hat Örneği</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&display=swap" rel="stylesheet" />
+    <style>
+        body {
             font-family: "Trirong", serif;
             line-height: 1.2;
         }
-
-         html,
-      body {
-      overflow: hidden !important;
-      height: 100%;
-      margin: 0;
-      padding-left: 2px;
-      padding-right: 2px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
 
         h1,
         h2 {
@@ -49,13 +37,6 @@
         }
 
 
-        .important-words1 {
-            background-color: #B9E5FB;
-            padding: 15px;
-            margin-bottom: 20px;
-            position: relative;
-            /* Dikey hattı bu alan içinde istediğimiz yere yerleştirebilmek için gerekli */
-        }
 
         strong {
             font-weight: bold;
@@ -78,15 +59,7 @@
         }
 
 
-        .important-words6 {
-            background-color: #B9E5FB;
-            padding: 15px;
-            margin-bottom: 20px;
-            margin-top: 20px;
-            position: relative;
-
-        }
-
+       
         .container {
             display: flex;
             justify-content: space-between;
@@ -106,7 +79,7 @@
 
         p {
             max-width: 98%;
-            
+           
         }
 
         .image {
@@ -195,180 +168,9 @@
             font-weight: bold;
             /* Yazıyı kalın yapar */
         }
+    
 
 
-
-
-        .important-words3 {
-            background-color: #FFECC5;
-            padding-left: 0px;
-            padding-top: 0px;
-            margin-bottom: 20px;
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            /* Dikey hizalama */
-            justify-content: space-between;
-            /* Boşlukları kontrol eder */
-        }
-
-        .important-words4 {
-            background-color: #FFECC5;
-            padding-left: 0px;
-            padding-top: 0px;
-            margin-bottom: 20px;
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            /* Dikey hizalama */
-            justify-content: space-between;
-            /* Boşlukları kontrol eder */
-        }
-
-        .important-words4 img {
-            width: 90%;
-            height: auto;
-            margin-right: -202px;
-            margin-left: 10px;
-
-            /* Resim ile metin arasındaki boşluk */
-            flex-shrink: 0;
-            /* Resmin daralmasını önler */
-        }
-
-
-        .important-words3 img {
-            width: 100%;
-            height: auto;
-            margin-right: -192px;
-
-            /* Resim ile metin arasındaki boşluk */
-            flex-shrink: 0;
-            /* Resmin daralmasını önler */
-        }
-
-        .text-content {
-            flex: 1;
-            /* Metin kısmının esnek olmasını sağlar */
-        }
-
-        .image-content {
-            margin-left: 20px;
-            /* Metin ile resim arasında boşluk bırak */
-        }
-
-        .image-content img {
-            max-width: 150px;
-            /* Resmin boyutunu ayarla */
-            height: auto;
-            /* Oranlı olarak yüksekliği ayarla */
-        }
-
-
-        /* Küçük ekranlar için medya sorgusu */
-        @media screen and (max-width: 768px) {
-            .important-words3 img {
-                width: 100%;
-                /* Küçük ekranlarda resmin boyutunu biraz küçült */
-            }
-
-            .text-content {
-                min-width: 80px;
-                /* Küçük ekranlar için metnin daha küçük olmasına izin ver */
-            }
-        }
-
-
-
-
-
-
-
-        /* Masaüstü için 2 sütun düzeni */
-        .image-container8 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            /* İki sütun yapısı */
-            gap: 10px;
-        }
-
-        .image-block8 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .image-block8 img {
-            width: 100%;
-            max-width: 600px;
-            /* Resim genişliği sınırlanabilir */
-            height: auto;
-        }
-
-        .image-block8 figcaption {
-            margin-top: 10px;
-            text-align: center;
-            font-size: 0.6em;
-            /* Yazı boyutunu küçültmek için */
-        }
-
-        /* Açıklamalı resimler için yüksekliği ayarlama */
-        .image-block8:nth-child(6n) figcaption,
-        .image-block8:nth-child(8n) figcaption {
-            min-height: 20px;
-            /* Açıklamalar için minimum yükseklik */
-        }
-
-        /* Mobil görünüm için sıralama ayarı */
-        @media (max-width: 650px) {
-            .image-container8 {
-                grid-template-columns: 1fr;
-                /* Mobilde tek sütun */
-                grid-template-areas:
-                    "image1"
-                    "image5"
-                    "image2"
-                    "image6"
-                    "image3"
-                    "image7"
-                    "image4"
-                    "image8";
-                /* İstenilen sıralama */
-            }
-
-            /* Her resim bloğuna grid area tanımlaması */
-            .image-block8:nth-child(1) {
-                grid-area: image1;
-            }
-
-            .image-block8:nth-child(2) {
-                grid-area: image2;
-            }
-
-            .image-block8:nth-child(3) {
-                grid-area: image5;
-            }
-
-            .image-block8:nth-child(4) {
-                grid-area: image6;
-            }
-
-            .image-block8:nth-child(5) {
-                grid-area: image3;
-            }
-
-            .image-block8:nth-child(6) {
-                grid-area: image4;
-            }
-
-            .image-block8:nth-child(7) {
-                grid-area: image7;
-            }
-
-            .image-block8:nth-child(8) {
-                grid-area: image8;
-            }
-        }
 
         .vertical-line1 {
             width: 4px;
@@ -390,134 +192,13 @@
             /* Dikey hattın, sol kenardan uzaklığını ayarlar */
         }
 
-        .important-words1 h2 {
-            color: #a70000;
-        }
+       
 
         .important-words2 h2 {
             color: #a70000;
         }
 
-        .important-words1 ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin-left: 20px;
-            /* Metni dikey hattan uzaklaştırmak için sol boşluk ekler */
-        }
-
-        .important-words1 li {
-            margin-bottom: 1px;
-            /* Elemanlar arasındaki mesafeyi ayarlar */
-            padding-left: 0px;
-            /* Sol boşluk, text-indent için */
-            text-indent: 0px;
-            /* İkinci satırların hizalanması için */
-            list-style-position: inside;
-            /* Madde işaretinin içerde kalmasını sağlar */
-        }
-
-        .important-words2 li {
-            margin-bottom: 1px;
-            /* Elemanlar arasındaki mesafeyi ayarlar */
-            padding-left: px;
-            /* Sol boşluk, text-indent için */
-            text-indent: -20px;
-            /* İkinci satırların hizalanması için */
-            list-style-position: inside;
-            /* Madde işaretinin içerde kalmasını sağlar */
-        }
-
-
-
-        .road-section {
-            margin-top: 30px;
-        }
-
-        .road-section img {
-            width: 100%;
-            height: auto;
-        }
-
-        .custom-image {
-            width: 100%;
-            height: auto;
-            max-width: 1500px;
-        }
-
-        .image-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .image-container figure {
-            max-width: 48%;
-            margin: 0px;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: auto;
-            margin-top: 15px;
-
-        }
-
-        .image-container figcaption {
-            font-size: 0.6em;
-            color: #000000;
-            text-align: center;
-            margin-top: 5px;
-            margin-bottom: 15px;
-
-
-        }
-
-        .image-container1 {
-            display: flex;
-            justify-content: center;
-        }
-
-        .image-container1 img {
-            width: 100%;
-            height: auto;
-        }
-
-        .image-container1 figure {
-            width: 100%;
-            margin: 0;
-            text-align: center;
-        }
-
-        .image-container1 figcaption {
-            font-size: 0.6em;
-            color: #000000;
-            margin-top: 5px;
-            text-align: center;
-            /* Yazıyı sol tarafa hizalar */
-        }
-
-        .image-text-container {
-            display: flex;
-            /* Görüntü ve metni yan yana koymak için */
-            flex-direction: row;
-            align-items: flex-start;
-            gap: -30px;
-
-        }
-
-        .image-text-container img {
-            max-width: 100%;
-            /* Görselin maksimum genişliğini kapsayıcıya göre ayarla */
-            height: auto;
-            /* Görselin oranlarını koru */
-            width: 440px;
-            /* Görseli küçültmek için sabit bir genişlik */
-            margin-left: -40px;
-            /* Görsel ile sol kenar arasındaki boşluk */
-
-
-        }
+       
 
 
         .text-content {
@@ -527,92 +208,6 @@
 
 
         }
-
-
-
-
-        .dash-list {
-            list-style-type: none;
-            /* Varsayılan liste işaretçilerini kaldırır */
-            padding-left: 10px;
-            /* Sol iç boşluğu kaldırır */
-        }
-
-        .dash-list li {
-            position: relative;
-            /* Pozisyonlama için gerekli */
-            padding-left: 12px;
-            /* İşaretçi ile metin arasındaki boşluk */
-            margin-bottom: px;
-            /* Liste öğeleri arasında boşluk (isteğe bağlı) */
-        }
-
-        .dash-list li::before {
-            content: "- ";
-            /* Önce işaretçi olarak kullanmak istediğiniz karakter */
-            position: absolute;
-            /* Pozisyonu mutlak olarak ayarlamak */
-            left: 0;
-            /* Sol kenardan hizalama */
-            top: 0;
-            /* Üst kenardan hizalama */
-            color: black;
-            /* İşaretçi rengi (isteğe bağlı) */
-            font-size: 16px;
-            /* İşaretçi boyutu (isteğe bağlı) */
-        }
-
-        li strong {
-            display: block;
-            font-weight: bold;
-            margin-bottom: px;
-            /* Kalın yazı ile altındaki metin arasındaki mesafe */
-        }
-
-        li p {
-            margin: 0;
-            /* Altyazı metninin çevresindeki varsayılan boşluğu kaldır */
-            padding-left: 0px;
-            /* Altyazıyı biraz sağa kaydır */
-            font-size: 16px;
-            /* Altyazının boyutunu küçült */
-            color: #000000;
-            /* Altyazının rengini gri tonlarında yap */
-        }
-
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 16px;
-            text-align: left;
-        }
-
-        table thead th {
-            background-color: #E0EDCB;
-            color: #333;
-            padding: 12px;
-        }
-
-        table tbody td {
-            border: 1px solid #ddd;
-            padding: 12px;
-        }
-
-        table tbody tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        table tbody td.first-column {
-            background-color: #E0EDCB;
-            /* Sol sütun rengi */
-            font-weight: bold;
-            /* Yazıları kalın yapma */
-        }
-
-
-
 
         @media (max-width: 650px) {
             .image-container figure {
@@ -663,171 +258,142 @@
         .custom-button:hover {
             background-color: blue;
         }
-  </style>
- </head>
- <body>
-  <h1>
-   Special vehicles - part 1
-  </h1>
-  <p>
-   Some vehicles have more rights than other vehicles. These are, for example, emergency vehicles. In addition,
-        trams, military convoys and funeral processions of motor vehicles have special rights.
-   <br/>
-   There are also vehicles that do not immediately have extra rights, but which you have to take extra into
-        account, e.g. larger transports.
-  </p>
-  <div class="important-words2">
-   <div class="vertical-line2">
-   </div>
-   <h3>
-    Emergency vehicle
-   </h3>
-   <p>
-    Motor vehicle that carries optical signals (flashing light) and sound signals (sirens). These include blue
-            flashing lights and a two-tone horn. You should always give right of way to these vehicles.
-   </p>
-   <h3>
-    Ambulance
-   </h3>
-   <p>
-    Motor vehicle equipped and intended to be used for the transportation of sick or injured people to and from
-            the hospital.
-   </p>
-   <h3>
-    Emergency medical services
-   </h3>
-   <p>
-    Motor vehicle intended for the provision of emergency medical care. This does not have to be for the
-            transport of a patient, such as an ambulance. It could, for example, be a company car from a GP (general
-            practitioner). This is mainly intended to get the GP to the patient urgently.
-   </p>
-   <h3>
-    Animal ambulance
-   </h3>
-   <p>
-    Motor vehicle, equipped and intended to be used for the transport of sick or injured animals. These vehicles
-            are never emergency vehicles because they do not use blue flashing lights or sirens. However, they often
-            have extra yellow flashing lights to make them easier to see.
-   </p>
-  </div>
-  <h2>
-   Emergency vehicles
-  </h2>
-  <p>
-   Emergency vehicles are motor vehicles that have an urgent task to complete. They show that they are in a hurry
-        by means of blue optical signals (flashing lights) and sound signals in the form of a two-tone horn (siren).
-        Without these signals, or with only one of these signals, they are not emergency vehicles and they do not have
-        priority.
-  </p>
-  <div>
-   <div class="images-container5">
-    <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_64d09112636d4d8b95ccd70a473ecda3~mv2.jpg"/>
-     <figcaption>
-      Not only vehicles of these services can be emergency vehicles.
-     </figcaption>
-    </figure>
-    <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_c39bcb500ca448eea472878807b0e94a~mv2.jpg"/>
-     <figcaption>
-      Vehicles of other authorised services can also be emergency vehicles, as long as they use
-                    blue flashing lights and sirens.
-     </figcaption>
-    </figure>
-   </div>
-  </div>
-  <p>
-   Emergency vehicles include ambulances, police vehicles and fire engines. However, other services may also be
-        authorised to use these signals. In this case, they are also classed as emergency vehicles. This includes
-        vehicles of the Directorate-General for Public Works and Waterways (Rijkswaterstaat), or vehicles for blood or
-        organ transport.
-  </p>
-  <h2>
-   Give way to emergency vehicles
-  </h2>
-  <p>
-   All road users must give way to emergency vehicles. There are no exceptions to this rule. It is important to do
-        so safely, however. You may not cause a hinder or danger or violate traffic rules in the course of giving way to
-        an emergency vehicle. If an emergency vehicle is approaching, remain calm. Drivers of these vehicles make their
-        own way through traffic to the extent possible. The more predictably you act, the easier it is for them to do
-        this. Some tips:
-  </p>
-  <ul>
-   <li>
+    </style>
+</head>
+
+<body>
+    <h1>Özel Araçlar - Bölüm 1</h1>
     <p>
-     Only make room if this is safe. In the meantime, continue driving with the permitted speed.
+        Bazı araçlar diğer araçlardan daha fazla hakka sahiptir. Bunlar, örneğin, acil durum araçlarıdır. Ayrıca, tramvaylar,
+        askeri konvoylar ve motorlu araçlardan oluşan cenaze alayları da özel haklara sahiptir.<br>
+        Bunun dışında, ek haklara sahip olmasalar da dikkate almanız gereken araçlar vardır, örneğin büyük taşıma araçları.
     </p>
-   </li>
-   <li>
+    
+    <div class="important-words2">
+        <div class="vertical-line2"></div>
+        <h3>Acil Durum Aracı</h3>
+        <p>
+            Optik sinyaller (yanıp sönen ışıklar) ve ses sinyalleri (sireni) taşıyan motorlu araçlardır. Bunlara mavi yanıp
+            sönen ışıklar ve çift tonlu korna dahildir. Bu araçlara her zaman yol vermelisiniz.
+        </p>
+        <h3>Ambulans</h3>
+        <p>
+            Hasta veya yaralı kişilerin hastaneye taşınması için donatılmış ve bu amaçla kullanılan motorlu araç.
+        </p>
+        <h3>Acil Tıbbi Hizmetler</h3>
+        <p>
+            Acil tıbbi bakım sağlamak için kullanılan motorlu araç. Bu, bir hastanın taşınması için gerekli olmayabilir, örneğin bir aile hekiminin (GP) şirket aracı gibi. Bu araçlar, esas olarak doktoru hastaya hızla ulaştırmak için kullanılır.
+        </p>
+        <h3>Hayvan Ambulansı</h3>
+        <p>
+            Hasta veya yaralı hayvanları taşımak için donatılmış ve bu amaçla kullanılan motorlu araç. Bu araçlar hiçbir zaman acil durum aracı değildir, çünkü mavi yanıp sönen ışıklar veya sirenler kullanmazlar. Ancak, genellikle fark edilmelerini kolaylaştırmak için ekstra sarı yanıp sönen ışıklara sahiptirler.
+        </p>
+    </div>
+    
+    <h2>Acil Durum Araçları</h2>
     <p>
-     If a lane is free, leave it free for the emergency vehicle. Stay off the hard shoulder in case of
-                traffic jams!
+        Acil durum araçları, acil bir görevi tamamlaması gereken motorlu araçlardır. Acele ettiklerini mavi optik sinyaller
+        (yanıp sönen ışıklar) ve çift tonlu korna (siren) şeklindeki ses sinyalleriyle gösterirler. Bu sinyaller olmadan
+        veya yalnızca bir sinyal ile, acil durum aracı olarak sınıflandırılmazlar ve öncelikleri olmaz.
     </p>
-   </li>
-   <li>
+    <div>
+        <div class="images-container5">
+            <figure>
+                <img src="https://static.wixstatic.com/media/4b688f_64d09112636d4d8b95ccd70a473ecda3~mv2.jpg"
+                    alt="Acil durum aracı örneği">
+                <figcaption>Acil durum araçları yalnızca bu hizmetlerin araçlarıyla sınırlı değildir.</figcaption>
+            </figure>
+            <figure>
+                <img src="https://static.wixstatic.com/media/4b688f_c39bcb500ca448eea472878807b0e94a~mv2.jpg"
+                    alt="Acil durum aracı örneği">
+                <figcaption>Diğer yetkili hizmetlerin araçları da mavi yanıp sönen ışıklar ve sirenler kullandığı sürece
+                    acil durum aracı olarak sınıflandırılabilir.</figcaption>
+            </figure>
+        </div>
+    </div>
+    
     <p>
-     When on a roundabout, or approaching one with an emergency vehicle behind you, continue to drive on the
-                roundabout until the emergency vehicle has left the roundabout.
+        Acil durum araçları arasında ambulanslar, polis araçları ve itfaiye araçları bulunur. Ancak, diğer hizmetler de bu
+        sinyalleri kullanma yetkisine sahip olabilir. Bu durumda, onlar da acil durum aracı olarak sınıflandırılır. Buna,
+        Kamu İşleri ve Su Yolları Genel Müdürlüğü (Rijkswaterstaat) veya kan ve organ taşımacılığı için kullanılan araçlar
+        da dahildir.
     </p>
-   </li>
-   <li>
+    
+
+
+    <h2>Acil Durum Araçlarına Yol Verme</h2>
     <p>
-     If you are in front of a red traffic light, only make room if the emergency vehicle cannot pass it. Also
-                make room only if this is safe. Do not just drive through a red traffic light onto the intersection. In
-                that case, waiting is safer.
+        Tüm yol kullanıcıları acil durum araçlarına yol vermelidir. Bu kurala hiçbir istisna yoktur. Ancak bunu güvenli bir
+        şekilde yapmak önemlidir. Acil durum aracına yol vermek için trafik kurallarını ihlal etmemeli veya tehlike yaratmamalısınız.
+        Bir acil durum aracı yaklaşıyorsa sakin olun. Bu araçların sürücüleri, trafik içinde kendilerine yol açmak için
+        gerekli manevraları yapar. Ne kadar öngörülebilir hareket ederseniz, bunu yapmaları o kadar kolay olur. İşte bazı
+        ipuçları:
     </p>
-   </li>
-   <li>
+    <ul>
+        <li>
+            <p>Yalnızca güvenliyse yol açın. Bu sırada izin verilen hızla sürmeye devam edin.</p>
+        </li>
+        <li>
+            <p>Eğer bir şerit boşsa, bu şeridi acil durum aracı için boş bırakın. Trafik sıkışıklığında emniyet şeridinden uzak durun!</p>
+        </li>
+        <li>
+            <p>
+                Döner kavşaktaysanız veya bir acil durum aracı arkanızda bir döner kavşağa yaklaşıyorsa, acil durum aracı
+                döner kavşaktan çıkana kadar kavşakta sürmeye devam edin.
+            </p>
+        </li>
+        <li>
+            <p>
+                Kırmızı ışıkta duruyorsanız, yalnızca acil durum aracı geçemeyecek durumdaysa yol açın. Ayrıca, yalnızca bu
+                güvenliyse hareket edin. Kırmızı ışığı geçerek kavşağa girmeyin. Bu durumda beklemek daha güvenlidir.
+            </p>
+        </li>
+        <li>
+            <p>
+                Bir acil durum aracı sizi geçmek istiyorsa, şeritte kalın ve mümkün olduğunca sağa yanaşın. Asla yüksek
+                hızla yol kenarına veya kaldırıma girmeyin.
+            </p>
+        </li>
+        <li>
+            <p>Her zaman başka acil durum araçlarının olup olmadığından emin olun.</p>
+        </li>
+    </ul>
+    <div>
+        <div class="images-container5">
+            <figure>
+                <img src="https://static.wixstatic.com/media/4b688f_3f5cd8eee5d0470b87ca1e8566d0ed33~mv2.jpg"
+                    alt="Döner kavşakta acil durum aracı">
+                <figcaption>Bu durumda, polis aracı döner kavşaktan çıkana kadar fazladan bir tur atın.</figcaption>
+            </figure>
+            <figure>
+                <img src="https://static.wixstatic.com/media/4b688f_4b38fd0a0f154b8c9519453969b8bf7a~mv2.jpg"
+                    alt="Düz geçit ve itfaiye aracı">
+                <figcaption>Kırmızı ışık yanarken itfaiye aracına yol vermek için düz geçide girmeyin.</figcaption>
+            </figure>
+        </div>
+    </div>
     <p>
-     If an emergency vehicle wants to pass you, stay on the lane and keep to the right as much as possible.
-                Never enter the verge or the pavement at high speed.
+        Bir acil durum aracını göremez veya geç fark ederseniz, doğru tepki veremezsiniz. Tüm aynaları düzenli olarak kontrol
+        ettiğinizden emin olun. Çoğu zaman bir acil durum aracını duymadan önce görebilirsiniz. Ayrıca, trafik ışığında
+        beklerken her zaman yeterli takip mesafesi bırakın. Böylece bir acil durum aracı geçmek isterse hareket etmek için
+        yeriniz olur.
     </p>
-   </li>
-   <li>
+    
+    <h2>Acil Durum Araçları ve Trafik Kuralları</h2>
     <p>
-     Always make sure that there are not more emergency vehicles.
+        Acil durum araçları, geçerli bir sebep olduğunda bazı trafik kurallarını görmezden gelebilir. Örneğin, kırmızı ışıkta
+        geçmelerine ve normalden daha hızlı sürmelerine izin verilir.
     </p>
-   </li>
-  </ul>
-  <div>
-   <div class="images-container5">
-    <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_3f5cd8eee5d0470b87ca1e8566d0ed33~mv2.jpg"/>
-     <figcaption>
-      In this situation, just drive an extra lap until the police car is off the roundabout.
-     </figcaption>
-    </figure>
-    <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_4b38fd0a0f154b8c9519453969b8bf7a~mv2.jpg"/>
-     <figcaption>
-      Never drive onto the level crossing when the red lights are on to let the fire engine pass.
-     </figcaption>
-    </figure>
-   </div>
-  </div>
-  <p>
-   If you do not see an emergency vehicle or see it too late, you cannot respond properly. Make sure you check all
-        mirrors regularly. It is not uncommon to see a emergency vehicle before you can hear it. In addition, always
-        maintain sufficient following distance, even when waiting for a traffic light. Then you still have room to make
-        room if an emergency vehicle wants to pass.
-  </p>
-  <h2>
-   Emergency vehicles and traffic rules
-  </h2>
-  <p>
-   Emergency vehicles may ignore some traffic rules if they have a good reason to do so. For example, they are
-        allowed to drive through a red light and drive faster than usual.
-  </p>
-  <p>
-   Police vehicles are allowed to do this even if they do not carry optical and sound signals and therefore are not
-        emergency vehicles at that time. They are not allowed to do this just like that, but only for good reason.
-  </p>
-  <a class="custom-button" href="https://www.examtheorie.nl/tr-test-and-theory-menu" target="_blank">
-   Back to
-    overview
-  </a>
-  <script>
-   window.addEventListener("scroll", () => {
+    <p>
+        Polis araçları, optik ve ses sinyalleri taşımadıklarında ve bu nedenle acil durum aracı olarak sınıflandırılmadıklarında
+        bile bu kuralları görmezden gelebilir. Ancak, bunu yalnızca geçerli bir sebep olduğunda yapabilirler.
+    </p>
+    
+    <a href="https://distantedutv.wixstudio.io/my-site-4/tr/blank-1" class="custom-button" target="_blank">Geri Dön</a>
+
+ <script>
+
+    window.addEventListener("scroll", () => {
       window.scrollTo(0, 0);
     });
 
@@ -866,6 +432,9 @@
     window.onresize = () => {
       sendHeight();
     };
+
   </script>
- </body>
+
+</body>
+
 </html>
