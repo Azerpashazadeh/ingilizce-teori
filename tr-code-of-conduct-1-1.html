@@ -453,49 +453,74 @@
 
      <a href="https://www.examtheorie.nl/tr-test-and-theory-menu" class="custom-button" target="_blank">Geri Dön</a>
 
-     <script>
+    <script>
+  // — İSTENMEZSE KALDIRIN —
+  // Scroll kilidi jank yaratabilir, en azından guard ekleyin
+  let lockingScroll = false;
+  window.addEventListener("scroll", () => {
+    if (lockingScroll) return;
+    lockingScroll = true;
+    window.scrollTo(0, 0);
+    // bir frame sonra kilidi bırak
+    requestAnimationFrame(() => (lockingScroll = false));
+  });
 
-    window.addEventListener("scroll", () => {
-      window.scrollTo(0, 0);
-    });
+  // Sağ tık / seçim engeli (gecikmeye neden olmaz)
+  document.addEventListener("contextmenu", e => e.preventDefault());
+  document.addEventListener("selectstart", e => e.preventDefault());
 
+  const SELECTOR = ".custom-button";
 
-    // Sağ tıklamayı engelle
-    document.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-    });
+  function postHeight(target) {
+    const rect = target.getBoundingClientRect();
+    window.parent.postMessage({ type: "contentHeight", height: rect.bottom }, "*");
+  }
 
-    // Metin seçmeyi engelle
-    document.addEventListener("selectstart", function (event) {
-      event.preventDefault();
-    });
-
-    function sendHeight() {
-      const target = document.querySelector(".custom-button");
-      if (!target) return;
-
-      const height = target.getBoundingClientRect().bottom;
-
-      // Post message ile dış sayfaya gönder
-      window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
-
-
+  function tryInit() {
+    const target = document.querySelector(SELECTOR);
+    if (!target) {
+      // Eleman yoksa bir sonraki frame’de tekrar dene
+      requestAnimationFrame(tryInit);
+      return;
     }
 
-    window.onload = () => {
-      sendHeight();
-      setTimeout(sendHeight, 300);
-      setTimeout(sendHeight, 1000);
-      setTimeout(sendHeight, 3000);
-    };
+    // 1) DOM hazır olur olmaz gönder (onload beklemeden)
+    postHeight(target);
 
+    // 2) Boyut değişirse tekrar gönder (daha deterministik)
+    const ro = new ResizeObserver(() => postHeight(target));
+    ro.observe(target);
 
-    // Tarayıcı yeniden boyutlandığında da yükseklik gönder
-    window.onresize = () => {
-      sendHeight();
-    };
+    // 3) Fontlar hazır olduğunda tekrar gönder (layout otursun)
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => postHeight(target)).catch(() => {});
+    }
 
-  </script>
+    // 4) Emniyet için birkaç geç gönderim (ağır içerik varsa)
+    setTimeout(() => postHeight(target), 300);
+    setTimeout(() => postHeight(target), 1000);
+    setTimeout(() => postHeight(target), 3000);
+  }
+
+  // DOMContentLoaded ile daha erken başla
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", tryInit);
+  } else {
+    tryInit();
+  }
+
+  // Yine de onload’ı yedek olarak bırakabilirsiniz
+  window.addEventListener("load", () => {
+    const target = document.querySelector(SELECTOR);
+    if (target) postHeight(target);
+  });
+
+  // Pencere boyutlanınca gönder (tamamlayıcı)
+  window.addEventListener("resize", () => {
+    const target = document.querySelector(SELECTOR);
+    if (target) postHeight(target);
+  });
+</script>
 
 
   </body>
