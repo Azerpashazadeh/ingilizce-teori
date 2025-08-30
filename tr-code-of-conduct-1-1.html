@@ -453,43 +453,48 @@
 
      <a href="https://www.examtheorie.nl/tr-test-and-theory-menu" class="custom-button" target="_blank">Geri Dön</a>
 
-    <script>
+   <script>
+  // (isteğe bağlı) kaydırmayı kilitleme – gerekliyse korumalı
+  let lockingScroll = false;
+  window.addEventListener("scroll", () => {
+    if (lockingScroll) return;
+    lockingScroll = true;
+    window.scrollTo(0, 0);
+    requestAnimationFrame(() => (lockingScroll = false));
+  });
 
-    window.addEventListener("scroll", () => {
-      window.scrollTo(0, 0);
-    });
+  document.addEventListener("contextmenu", e => e.preventDefault());
+  document.addEventListener("selectstart", e => e.preventDefault());
 
+  const SELECTOR = ".custom-button";
 
-    // Sağ tıklamayı engelle
-    document.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-    });
-
-    // Metin seçmeyi engelle
-    document.addEventListener("selectstart", function (event) {
-      event.preventDefault();
-    });
-
-    function sendHeight() {
-    const t = document.querySelector(".custom-button");
+  function sendHeight() {
+    const t = document.querySelector(SELECTOR);
     if (!t) return;
     const h = t.getBoundingClientRect().bottom;
-    window.parent.postMessage({ type:'contentHeight', height: h }, '*');
+    window.parent.postMessage({ type: "contentHeight", height: h }, "*");
   }
 
-  // Daha erken:
-  document.addEventListener('DOMContentLoaded', () => {
+  function init() {
+    const t = document.querySelector(SELECTOR);
+    if (!t) { requestAnimationFrame(init); return; }
     sendHeight();
+    if (window.ResizeObserver) new ResizeObserver(sendHeight).observe(t);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(sendHeight).catch(()=>{});
     setTimeout(sendHeight, 300);
     setTimeout(sendHeight, 1000);
     setTimeout(sendHeight, 3000);
-  });
+  }
 
-  // Yedek olarak yine bırakılabilir:
-  window.addEventListener('load', sendHeight);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 
-  // Boyut değişimlerinde tekrar gönder:
-  window.addEventListener('resize', sendHeight);
+  window.addEventListener("load", sendHeight);
+  window.addEventListener("resize", sendHeight);
+</script>
 
   </script>
 
