@@ -124,7 +124,7 @@
     </style>
   </head>
   <body>
-    <h2>Code of Conduct</h2>
+    <h2>Code of Conducttt</h2>
     <div class="important-words1">
       <div class="vertical-line1"></div>
       <h3>Important Dutch words</h3>
@@ -423,29 +423,25 @@
     });
 
     function sendHeight() {
-      const target = document.querySelector(".custom-button");
-      if (!target) return;
+    const t = document.querySelector(".custom-button");
+    if (!t) return;
+    const h = t.getBoundingClientRect().bottom;
+    window.parent.postMessage({ type:'contentHeight', height: h }, '*');
+  }
 
-      const height = target.getBoundingClientRect().bottom;
+  // Daha erken:
+  document.addEventListener('DOMContentLoaded', () => {
+    sendHeight();
+    setTimeout(sendHeight, 300);
+    setTimeout(sendHeight, 1000);
+    setTimeout(sendHeight, 3000);
+  });
 
-      // Post message ile dış sayfaya gönder
-      window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+  // Yedek olarak yine bırakılabilir:
+  window.addEventListener('load', sendHeight);
 
-
-    }
-
-    window.onload = () => {
-      sendHeight();
-      setTimeout(sendHeight, 300);
-      setTimeout(sendHeight, 1000);
-      setTimeout(sendHeight, 3000);
-    };
-
-
-    // Tarayıcı yeniden boyutlandığında da yükseklik gönder
-    window.onresize = () => {
-      sendHeight();
-    };
+  // Boyut değişimlerinde tekrar gönder:
+  window.addEventListener('resize', sendHeight);
 
   </script>
 
