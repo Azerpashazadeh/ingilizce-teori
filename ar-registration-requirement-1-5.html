@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Dikey Hat Örneği
-  </title>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&amp;display=swap" rel="stylesheet"/>
-  <style>
-   body {
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Dikey Hat Örneği
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&amp;display=swap" rel="stylesheet" />
+    <style>
+html, body {
+  overflow: hidden !important;
+  height: 100%;
+  margin: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+        body {
             font-family: "Trirong", serif;
             line-height: 1.2;
         }
-        html,
-     body {
-      overflow: hidden !important;
-      height: 100%;
-      margin: 0;
-      padding-left: 2px;
-      padding-right: 2px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+
+         
 
         h1,
         h2 {
@@ -63,12 +66,15 @@
         }
 
         .vertical-line2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            /* sağa sabitle */
+            left: auto;
+            /* (isteğe bağlı) soldan ayır */
             width: 4px;
             height: 100%;
             background-color: rgb(201, 17, 17);
-            position: absolute;
-            top: 0px;
-            left: 0px;
         }
 
         .important-words1 h2,
@@ -151,11 +157,25 @@
             object-fit: cover;
         }
 
-        .image-text-container .text {
-            flex: 1;
-            max-width: 48%;
-            text-align: left;
+        .image-text-container {
+            display: flex;
+            justify-content: flex-start;
+            /* Resim ve metin yan yana */
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 30px;
         }
+
+        .text {
+            direction: rtl;
+            /* Arapça için sağdan sola */
+            text-align: right;
+            /* Metin sağa hizalansın */
+            flex: 1;
+            /* Genişliği kaplasın */
+        }
+
+
 
         /* Resim alanı */
         .container .images {
@@ -170,14 +190,19 @@
             max-width: 500px;
         }
 
-        /* Metin konteyneri */
         .text-container {
-            flex: 1;
-            padding-left: 30px;
-            max-width: 50%;
-            text-align: left;
-            box-sizing: border-box;
-            align-self: flex-start;
+            direction: rtl;
+            /* yazı yönü sağdan sola */
+            text-align: right;
+            /* sağa hizala */
+        }
+
+        .text-container ul {
+            list-style-position: inside;
+            /* noktayı metne yakın yapar */
+            padding-right: 0;
+            /* sağ boşluğu sıfırla */
+            margin-right: 0;
         }
 
         .image-container {
@@ -281,420 +306,424 @@
         }
 
         /* Mevcut stilin sonu */
-  </style>
- </head>
- <body>
-  <h2>
-   Registration requirement
-  </h2>
-  <div class="important-words2">
-   <div class="vertical-line2">
-   </div>
-   <h3>
-    Vehicle registration
-   </h3>
-   <p>
-    Registering a vehicle in the national vehicle register with the name of the owner or holder.
-   </p>
-   <h3>
-    First admission
-   </h3>
-   <p>
-    The date on which a vehicle was first allowed on public roads. This may have occurred abroad if the vehicle
-            was imported at a later date.
-   </p>
-   <h3>
-    Maximum authorised mass
-   </h3>
-   <p>
-    The maximum permitted weight of a vehicle, including load.
-   </p>
-  </div>
-  <p>
-   Most motor carriages are subject to a registration requirement. This means that as soon as a vehicle is
-        registered, a registration number will be issued for the vehicle. The corresponding registration certificate
-        will be issued to the owner of the vehicle, who is then responsible for that certificate.
-  </p>
-  <p>
-   The vehicle that is being driven must always comply with the relevant information recorded in the national
-        vehicle register. In addition, the vehicle must be equipped with original and clearly visible number plates.
-        Depending on the vehicle, there may be one or two number plates.
-  </p>
-  <img alt="Image 1" class="custom-centered-image" src="https://static.wixstatic.com/media/4b688f_1deea4fefc6b4632a9e894999cc58740~mv2.jpg"/>
-  <p>
-   Number plates must not be covered or treated in any other way that reduces their legibility. The driver and the
-        owner are responsible for all above matters.
-  </p>
-  <h2>
-   Registration certificate
-  </h2>
-  <p>
-   Once a vehicle has been registered, the owner will be issued a registration certificate. This registration
-        certificate consists of a registration card, a registration certificate part ll, and proof of ownership.
-  </p>
-  <div class="container">
-   <div class="images">
-    <img alt="Image 1" src="https://static.wixstatic.com/media/4b688f_fa3dcd0d21f74548bb96dfc2ead1ee77~mv2.jpg"/>
-    <img alt="Image 2" src="https://static.wixstatic.com/media/4b688f_cfe75b6a7f4d460e8390b04f2e6537f1~mv2.jpg"/>
-   </div>
-   <div class="text-container">
+    </style>
+</head>
+
+<body>
+    <h2>
+        متطلب التسجيل
+    </h2>
+    <div class="important-words2">
+        <div class="vertical-line2">
+        </div>
+        <h3>
+            تسجيل المركبة
+        </h3>
+        <p>
+            قيدُ المركبة في السجلّ الوطني للمركبات باسم المالك أو الحائز.
+        </p>
+        <h3>
+            أول سماح بالسير
+        </h3>
+        <p>
+            التاريخ الذي سُمِح فيه للمركبة لأول مرة بالسير على الطرق العامة. وقد يكون ذلك قد حدث في الخارج إذا كانت
+            المركبة مُستوردة لاحقًا.
+        </p>
+        <h3>
+            الكتلة القصوى المصرّح بها
+        </h3>
+        <p>
+            الحدّ الأقصى المسموح به لوزن المركبة، بما في ذلك الحمولة.
+        </p>
+    </div>
     <p>
-     The registration card contains details regarding the owner or holder:
+        تخضع معظم المركبات الآلية لمتطلب التسجيل. وهذا يعني أنه بمجرد تسجيل مركبةٍ ما، يُصدَر لها رقم تسجيل. ويُسلّم
+        المالكُ شهادةَ التسجيل المقابلة، ويكون مسؤولًا عنها.
+    </p>
+    <p>
+        يجب أن تتوافق المركبة الجاري قيادتها دائمًا مع المعلومات ذات الصلة المُسجّلة في السجلّ الوطني للمركبات. بالإضافة
+        إلى ذلك، يجب أن تكون المركبة مزوّدة بلوحات تسجيل أصلية واضحة القراءة. وبحسب نوع المركبة قد تكون هناك لوحة واحدة
+        أو لوحتان.
+    </p>
+    <img alt="الصورة 1" class="custom-centered-image"
+        src="https://static.wixstatic.com/media/4b688f_1deea4fefc6b4632a9e894999cc58740~mv2.jpg" />
+    <p>
+        لا يجوز تغطية لوحات التسجيل أو التعامل معها بأي طريقة تُقلّل من قابليتها للقراءة. والسائق والمالك مسؤولان عن
+        جميع الأمور المذكورة أعلاه.
+    </p>
+    <h2>
+        شهادة التسجيل
+    </h2>
+    <p>
+        بعد تسجيل المركبة، يُسلَّم المالكُ شهادةَ تسجيل. وتتكوّن شهادة التسجيل من بطاقة تسجيل، وجزءٍ ثانٍ من شهادة
+        التسجيل، ودليلِ ملكية.
+    </p>
+    <div class="container">
+        <div class="images">
+            <img alt="الصورة 1"
+                src="https://static.wixstatic.com/media/4b688f_fa3dcd0d21f74548bb96dfc2ead1ee77~mv2.jpg" />
+            <img alt="الصورة 2"
+                src="https://static.wixstatic.com/media/4b688f_cfe75b6a7f4d460e8390b04f2e6537f1~mv2.jpg" />
+        </div>
+        <div class="text-container">
+            <p>
+                تحتوي بطاقة التسجيل على بيانات المالك أو الحائز:
+            </p>
+            <ul>
+                <li>
+                    اللقب والحروف الأولى من الاسم
+                </li>
+                <li>
+                    العنوان
+                </li>
+            </ul>
+            <p>
+                وكذلك معلومات المركبة:
+            </p>
+            <ul>
+                <li>
+                    رقم التسجيل
+                </li>
+                <li>
+                    «Meldcode» (آخر 4 أرقام من رقم تعريف المركبة VIN)
+                </li>
+                <li>
+                    تاريخ أول سماح بالسير
+                </li>
+                <li>
+                    تاريخ التسجيل في هولندا
+                </li>
+                <li>
+                    تاريخ الإسناد
+                </li>
+                <li>
+                    رقم تعريف المركبة (VIN)
+                </li>
+                <li>
+                    الشركة المصنِّعة وطراز المركبة
+                </li>
+                <li>
+                    لون المركبة
+                </li>
+                <li>
+                    الأوزان القصوى للمركبة
+                </li>
+                <li>
+                    الأوزان القصوى للمقطورة
+                </li>
+                <li>
+                    معلومات تقنية عن المحرّك
+                </li>
+                <li>
+                    الوزن بالحالة التشغيلية
+                </li>
+                <li>
+                    عدد المقاعد
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>
+        عمليًا، بصفتك المالك، تستلم فقط بطاقة التسجيل ورمزَ إثبات الملكية. وفي بعض الحالات لن تستلم رمز إثبات الملكية —
+        مثل سيارات التأجير (الليز). أمّا الجزء الثاني من شهادة التسجيل فتحتفظ به هيئة RDW ولا يُسلَّم للمالك إلا إذا
+        صدّر المركبة نهائيًا إلى الخارج.
+    </p>
+    <h2>
+        صلاحية شهادة التسجيل
+    </h2>
+    <p>
+        تبقى شهادة التسجيل عادةً صالحة حتى تتغيّر ملكية المركبة (غالبًا عند بيعها). ورغم أنّ عنوان المالك مُدوَّن على
+        البطاقة، فلا يلزم تغييره إذا انتقلتَ إلى عنوانٍ آخر. إذ تتلقى RDW عنوانك الجديد تلقائيًا من البلدية وتحدّث هذه
+        المعلومات في السجلّ الوطني للمركبات. ولا يضرّ إن كان عنوانٌ سابق مُدرجًا على بطاقة التسجيل.
+    </p>
+    <p>
+        قد تُبطَل شهادة التسجيل إذا لم تعد تستوفي متطلباتٍ معيّنة. فعلى سبيل المثال، يجب أن تبقى الشهادة قابلةً للقراءة
+        بوضوح دائمًا.
+    </p>
+    <div class="important-words2">
+        <div class="vertical-line2">
+        </div>
+        <h3>
+            شهادة براءة الذمة
+        </h3>
+        <p>
+            المستند الذي تستلمه عند بيع مركبتك وعند عدم قيدها باسمك في سجلّ تسجيل المركبات. وهو إثبات أنّك لم تعُد
+            مسؤولًا عن هذه المركبة، ولذلك يجب حفظُه بعناية.
+        </p>
+    </div>
+    <h2>
+        إبراز شهادة التسجيل
+    </h2>
+    <p>
+        بعد قيد سيارة ركّابٍ باسمك، تكون ملزَمًا بإبراز شهادة التسجيل المقابلة إذا أُوقِفت وطُلِب منك ذلك من شخصٍ
+        مُخوَّل. وقد يكون شرطيًا أو شرطةً عسكرية أو موظف ضرائب أو جمارك. ويُلزمك القانون بإبراز بطاقة التسجيل فقط (ورخصة
+        قيادتك إن طُلِبت).
+    </p>
+    <img alt="الصورة 1" class="custom-centered-image"
+        src="https://static.wixstatic.com/media/4b688f_ae2b444fe69e43b8b89cd4ede297b381~mv2.jpg">
+    <p>
+        إذا كنتَ متأخرًا في سداد الضرائب أو لديك عدد كبير من الغرامات غير المسدَّدة مثلًا، فقد تُحجَز مركبتك أثناء هذا
+        التوقيف.
+    </p>
+    <p>
+        ولن تتمكّن من تسجيل مركبةٍ أخرى باسمك ما دامت هناك ديون غير مدفوعة مُشارٌ إليها في السجلّ الوطني للمركبات.
+    </p>
+    <h2>
+        استثناءات من متطلب التسجيل
+    </h2>
+    <p>
+        ليست جميع المركبات الآلية مُلزَمة برقم تسجيل. والمركباتُ المُعفاة من هذا المتطلب هي:
     </p>
     <ul>
-     <li>
-      Surname and first initials
-     </li>
-     <li>
-      Address
-     </li>
+        <li>
+            <strong>
+                مركبات آلية ضيّقة محدودة السرعة
+            </strong>
+            <p>
+                مثل جزّازات العشب البلدية وآلات كنس الطرق (بعرض أقصاه 1.30 متر).
+            </p>
+        </li>
+        <li>
+            <strong>
+                مركبات ذوي الإعاقة
+            </strong>
+            <p>
+                يجب تزويد المركبات الآلية المخصّصة لذوي الإعاقة بلوحة أو ملصق تأمين.
+            </p>
+        </li>
+        <li>
+            <strong>
+                درّاجات نارية خفيفة خاصة
+            </strong>
+            <p>
+                تُحدَّد هذه الفئة بحسب نوع المركبة فيما إذا كانت تشمل درّاجاتٍ خاصة مثل Segways وحافلات BSO (Stints).
+                ويجب أيضًا تزويد هذه المركبات بلوحة أو ملصق تأمين.
+            </p>
+        </li>
+        <li>
+            <strong>
+                مقطورات بكتلةٍ قصوى مُصرّح بها تبلغ 750 كغ (أو أقل)
+            </strong>
+            <p>
+                لا تملك هذه المقطورات رقم تسجيل خاصًا بها، لكن يجب أن تحمل لوحةً بيضاء تحمل رقم تسجيل مركبة السحب نفسه.
+            </p>
+        </li>
     </ul>
+    <div class="image-container">
+        <figure>
+            <img alt="الصورة 1"
+                src="https://static.wixstatic.com/media/4b688f_e12cb28c5a0c444493a178ce7644fa88~mv2.jpg">
+            <figcaption>
+                <em>
+                    يُستخدم اختبار النَّفَس لتحديد تعاطي الكحول. ولا يجوز لك رفض هذا الاختبار.
+                </em>
+            </figcaption>
+            </img>
+        </figure>
+        <figure>
+            <img alt="الصورة 2"
+                src="https://static.wixstatic.com/media/4b688f_e511d54f7f5f4666a9e76ef9e51ae74a~mv2.jpg" />
+            <figcaption>
+                <em>
+                    يُستخدم اختبار اللعاب لتحديد تعاطي المخدّرات. ولا يجوز لك رفض هذا الاختبار أيضًا.
+                </em>
+            </figcaption>
+        </figure>
+    </div>
+    <h2>
+        خصائص لوحة التسجيل
+    </h2>
     <p>
-     And the vehicle information:
+        تمتلك كل سيارة ركّاب لوحةَ تسجيل فريدة تتكوّن من أحرفٍ وأرقام أو من حرفٍ واحدٍ وأرقام. وقد يتغيّر ترتيب هذه
+        الأحرف والأرقام إذا استُنفِدت جميع التركيبات الممكنة لترتيبٍ معيّن.
+    </p>
+    <p>
+        يجب أن تحمل كل لوحة تسجيل علامة اعتماد. ولا يجوز تشغيل المركبات إلا بلوحاتٍ معتمَدة. وإذا فُقِدت اللوحة أو
+        سُرِقت أو تضرّرت بشدة، فلا يجوز تشغيل المركبة حتى الحصول على لوحاتٍ جديدة. وتُزوّد لوحاتُ الاستبدال برمزٍ مكرّر،
+        وهو رقم إضافي فوق أول شرطةٍ على اللوحة، يوضّح عدد مرات طلب اللوحات من جديد.
+    </p>
+    <img alt="الصورة 1" class="custom-centered-image"
+        src="https://static.wixstatic.com/media/4b688f_acddcac686ab4f2bbe14199ca9d6707d~mv2.jpeg" />
+    <h2>
+        لوحات تسجيل مختلفة بحسب الفئة
+    </h2>
+    <div class="container1">
+        <div class="image-text-container">
+            <div class="image">
+                <img alt="Resim 1"
+                    src="https://static.wixstatic.com/media/4b688f_ea0617749d6c4683a9df5155ba475b33~mv2.jpg" />
+            </div>
+            <div class="text">
+                <strong>
+                    لوحة تسجيل مركبة آلية
+                </strong>
+                <p>
+                    تحمل هذه اللوحة جزءًا أزرق يضم شعار الاتحاد الأوروبي ورمز الدولة. وبحسب نوع المركبة تُصدَر لوحة
+                    واحدة أو لوحتان. وتتوفر هذه اللوحات بمقاسين.
+                </p>
+            </div>
+        </div>
+        <div class="image-text-container">
+            <div class="image">
+                <img alt="Resim 2"
+                    src="https://static.wixstatic.com/media/4b688f_dbb99844cee24ea992de244a0b22bcf4~mv2.jpg" />
+            </div>
+            <div class="text">
+                <strong>
+                    لوحة تسجيل مقطورة ثقيلة
+                </strong>
+                <p>
+                    تُخصَّص هذه اللوحة للمقطورات ذات الكتلة القصوى المصرّح بها التي تزيد على 750 كغ. وتُصدَر لوحة واحدة
+                    لكل مركبة.
+                </p>
+            </div>
+        </div>
+        <div class="image-text-container">
+            <div class="image">
+                <img alt="Resim 3"
+                    src="https://static.wixstatic.com/media/4b688f_61f47ae4a9cd4007859e961e903c28a5~mv2.jpg" />
+            </div>
+            <div class="text">
+                <strong>
+                    لوحة تسجيل لمقطورة خفيفة وحامل حمولة
+                </strong>
+                <p>
+                    تُخصَّص هذه اللوحة للمقطورات ذات الكتلة القصوى المصرّح بها حتى 750 كغ ولحاملات الحمولة على قضيب
+                    السحب، مثل حوامل الدراجات. وتحمل رقم التسجيل نفسه لمركبة السحب.
+                </p>
+            </div>
+        </div>
+        <div class="image-text-container">
+            <div class="image">
+                <img alt="Resim 4"
+                    src="https://static.wixstatic.com/media/4b688f_6295cea090714deb8dcfdaaf70b3bff9~mv2.jpg" />
+            </div>
+            <div class="text">
+                <strong>
+                    لوحة تسجيل وكالة سيارات
+                </strong>
+                <p>
+                    تستخدمها وكالات السيارات وتُثبَّت فوق لوحة التسجيل العادية أثناء تجارب القيادة.
+                </p>
+            </div>
+        </div>
+        <div class="image-text-container">
+            <div class="image">
+                <img alt="Resim 5"
+                    src="https://static.wixstatic.com/media/4b688f_a0cc66aae74f4ff3a043ea9992928c27~mv2.jpg" />
+            </div>
+            <div class="text">
+                <strong>
+                    لوحة تسجيل سيارة أجرة
+                </strong>
+                <p>
+                    تُستخدم هذه اللوحة لسيارات الأجرة.
+                </p>
+            </div>
+        </div>
+        <div class="image-text-container">
+            <div class="image">
+                <img alt="Resim 6"
+                    src="https://static.wixstatic.com/media/4b688f_d3b17a4f9c0842f886e5ac4549afcc72~mv2.jpg" />
+            </div>
+            <div class="text">
+                <strong>
+                    لوحة تسجيل درّاجة نارية خفيفة، بيديليك سريع، و«brommobiel»
+                </strong>
+                <p>
+                    بحسب نوع المركبة، تأتي هذه اللوحات بمقاسين: ضيّق أو عريض.
+                </p>
+            </div>
+        </div>
+        <div class="image-text-container">
+            <div class="image">
+                <img alt="Resim 7"
+                    src="https://static.wixstatic.com/media/4b688f_0c7ce78213b84c01979eed627dac8acb~mv2.jpg" />
+            </div>
+            <div class="text">
+                <strong>
+                    لوحة تسجيل «snorfiets»
+                </strong>
+                <p>
+                    بحسب نوع الـ «snorfiets»، تأتي هذه اللوحات بمقاسين: ضيّق أو عريض.
+                </p>
+            </div>
+        </div>
+    </div>
+    <h2>
+        حروفٌ بحسب الفئة
+    </h2>
+    <p>
+        لكل فئةٍ من المركبات (باستثناء سيارات الركاب) حرفٌ بادئ أو حرفان:
     </p>
     <ul>
-     <li>
-      Registration number
-     </li>
-     <li>
-      “Meldcode” (last 4 digits of VIN)
-     </li>
-     <li>
-      Date of first admission
-     </li>
-     <li>
-      Date of registration in the Netherlands
-     </li>
-     <li>
-      Date of ascription
-     </li>
-     <li>
-      Vehicle identification number (VIN)
-     </li>
-     <li>
-      Vehicle manufacturer and model
-     </li>
-     <li>
-      Vehicle colour
-     </li>
-     <li>
-      Vehicle maximum weights
-     </li>
-     <li>
-      Trailer maximum weights
-     </li>
-     <li>
-      Technical information engine
-     </li>
-     <li>
-      Weight in running order
-     </li>
-     <li>
-      Seats
-     </li>
+        <li>
+            الدراجات النارية الخفيفة و«snorfietsen» بحرف D أو F؛
+        </li>
+        <li>
+            المقطورات التي يزيد وزنها على 750 كغ بحرف W؛
+        </li>
+        <li>
+            أنصاف المقطورات بحرف O؛
+        </li>
+        <li>
+            المركبات التجارية الخفيفة (حتى 3500 كغ) بحرف V؛
+        </li>
+        <li>
+            المركبات التجارية الثقيلة (الشاحنات) بحرف B؛
+        </li>
+        <li>
+            الدراجات النارية بحرف M؛
+        </li>
+        <li>
+            حركة الحدود بالمجموعة GV؛
+        </li>
+        <li>
+            حركةٌ زراعية سريعة بحرف T (والمركبات المقطورة والمقطورات بحرف L).
+        </li>
     </ul>
-   </div>
-  </div>
-  <p>
-   In practice, as the owner, you receive only the registration card and the proof-of-ownership code. In some cases,
-        you will not receive the proof-of-ownership code - for example with lease cars. A registration certificate part
-        ll is maintained by the RDW and only issued to the owner if they export the vehicle abroad permanently.
-  </p>
-  <h2>
-   Registration certificate validity
-  </h2>
-  <p>
-   A registration certificate generally remains valid until the vehicle changes owner (usually when it is sold).
-        Even though the owner’s address is stated on the card, it does not have to be changed if you move. The RDW
-        automatically receives your new address from the municipality and updates this information in the national
-        vehicle register. It does not matter if a previous address is stated on a registration card.
-  </p>
-  <p>
-   A registration certificate may be invalidated if it no longer meets certain requirements. For example, the
-        certificate must always be clearly legible.
-  </p>
-  <div class="important-words2">
-   <div class="vertical-line2">
-   </div>
-   <h3>
-    Indemnity certificate
-   </h3>
-   <p>
-    The document you receive when you sell your vehicle and it is no longer registered in your name in the
-            vehicle registration register. This is proof that you are no longer responsible for this vehicle and it must
-            therefore be kept in good order.
-   </p>
-  </div>
-  <h2>
-   Registration certificate transfer
-  </h2>
-  <p>
-   Once a passenger car is registered in your name, you are required to show the corresponding registration
-        certificate if and when stopped and asked to do so by an authorised person. This may be a police officer,
-        military police, or a tax or customs officer. You are only required to show the registration card (and your
-        driving licence, if requested).
-  </p>
-  <img alt="Image 1" class="custom-centered-image" src="https://static.wixstatic.com/media/4b688f_ae2b444fe69e43b8b89cd4ede297b381~mv2.jpg">
-   <p>
-    If you are in arrears on your taxes or have too many outstanding fines, for example, your vehicle may be seized
-        during such a stop.
-   </p>
-   <p>
-    You will be unable to register another vehicle in your name while unpaid debts are flagged in the national
-        vehicle register.
-   </p>
-   <h2>
-    Exceptions to registration requirement
-   </h2>
-   <p>
-    Not all motor carriages are required to have a registration number. Vehicles exempt from this requirement are:
-   </p>
-   <ul>
-    <li>
-     <strong>
-      Narrow motor carriages with limited speed
-     </strong>
-     <p>
-      Such as municipal lawn mowers and road sweepers (maximum 1.30 metres wide).
-     </p>
-    </li>
-    <li>
-     <strong>
-      Disabled vehicles
-     </strong>
-     <p>
-      Motorised disabled vehicles must be equipped with an insurance plate or sticker.
-     </p>
-    </li>
-    <li>
-     <strong>
-      Special mopeds
-     </strong>
-     <p>
-      This group is tricky in that it is determined per vehicle type whether the group includes special mopeds,
-                such as Segways and BSO buses (Stints). These vehicles must also be equipped with an insurance plate or
-                sticker.
-     </p>
-    </li>
-    <li>
-     <strong>
-      Trailers with a maximum authorised mass of 750 kg (or less)
-     </strong>
-     <p>
-      These trailers do not have their own registration number, but must have a white number plate with the
-                same registration number as the towing vehicle.
-     </p>
-    </li>
-   </ul>
-   <div class="image-container">
-    <figure>
-     <img alt="Image 1" src="https://static.wixstatic.com/media/4b688f_e12cb28c5a0c444493a178ce7644fa88~mv2.jpg">
-      <figcaption>
-       <em>
-        A breath test is used to determine alcohol use. You may not refuse this test.
-       </em>
-      </figcaption>
-     </img>
-    </figure>
-    <figure>
-     <img alt="Image 2" src="https://static.wixstatic.com/media/4b688f_e511d54f7f5f4666a9e76ef9e51ae74a~mv2.jpg"/>
-     <figcaption>
-      <em>
-       A saliva test is used to determine drug use. You may not refuse this test either.
-      </em>
-     </figcaption>
-    </figure>
-   </div>
-   <h2>
-    Number plate features
-   </h2>
-   <p>
-    Each passenger car has a unique number plate consisting of letters and numbers or one letter and numbers. The
-        layout of these numbers and letters may change if all possible combinations have been used for one layout.
-   </p>
-   <p>
-    Every number plate must bear an approval mark. You may only operate vehicles with approved number plates. In the
-        event a number plate is lost, stolen, or severely damaged, you may not operate the vehicle until you obtain new
-        plates. Replacement number plates are provided with a duplicate code. This is an extra number above the first
-        dash on the number plate, which indicates how often the plates have been re-applied for.
-   </p>
-   <img alt="Image 1" class="custom-centered-image" src="https://static.wixstatic.com/media/4b688f_acddcac686ab4f2bbe14199ca9d6707d~mv2.jpeg"/>
-   <h2>
-    Different number plates per category
-   </h2>
-   <div class="container1">
-    <div class="image-text-container">
-     <div class="image">
-      <img alt="Resim 1" src="https://static.wixstatic.com/media/4b688f_ea0617749d6c4683a9df5155ba475b33~mv2.jpg"/>
-     </div>
-     <div class="text">
-      <strong>
-       Number plate motor vehicle
-      </strong>
-      <p>
-       This plate has a blue section featuring the EU logo and country code. Depending on the vehicle, one
-                    or two number plates are issued. These plates come in two sizes.
-      </p>
-     </div>
-    </div>
-    <div class="image-text-container">
-     <div class="image">
-      <img alt="Resim 2" src="https://static.wixstatic.com/media/4b688f_dbb99844cee24ea992de244a0b22bcf4~mv2.jpg"/>
-     </div>
-     <div class="text">
-      <strong>
-       Number plate heavy trailer
-      </strong>
-      <p>
-       This plate is for trailers with a maximum authorised mass above 750 kg. One plate is issued per
-                    vehicle.
-      </p>
-     </div>
-    </div>
-    <div class="image-text-container">
-     <div class="image">
-      <img alt="Resim 3" src="https://static.wixstatic.com/media/4b688f_61f47ae4a9cd4007859e961e903c28a5~mv2.jpg"/>
-     </div>
-     <div class="text">
-      <strong>
-       Number plate light trailer and load carrier
-      </strong>
-      <p>
-       This plate is for trailers with a maximum authorised mass of up to 750 kg and for load carriers on
-                    the tow bar, such as bicycle carriers. This has the same registration number as the towing vehicle.
-      </p>
-     </div>
-    </div>
-    <div class="image-text-container">
-     <div class="image">
-      <img alt="Resim 4" src="https://static.wixstatic.com/media/4b688f_6295cea090714deb8dcfdaaf70b3bff9~mv2.jpg"/>
-     </div>
-     <div class="text">
-      <strong>
-       Number plate car dealership
-      </strong>
-      <p>
-       This plate is used by car dealerships and is mounted over the normal number plate during test drives.
-      </p>
-     </div>
-    </div>
-    <div class="image-text-container">
-     <div class="image">
-      <img alt="Resim 5" src="https://static.wixstatic.com/media/4b688f_a0cc66aae74f4ff3a043ea9992928c27~mv2.jpg"/>
-     </div>
-     <div class="text">
-      <strong>
-       Number plate taxi
-      </strong>
-      <p>
-       This plate is used by taxis.
-      </p>
-     </div>
-    </div>
-    <div class="image-text-container">
-     <div class="image">
-      <img alt="Resim 6" src="https://static.wixstatic.com/media/4b688f_d3b17a4f9c0842f886e5ac4549afcc72~mv2.jpg"/>
-     </div>
-     <div class="text">
-      <strong>
-       Number plate moped, speed pedelec, and brommobiel
-      </strong>
-      <p>
-       Depending on the vehicle, these plates come in two sizes: narrow or wide.
-      </p>
-     </div>
-    </div>
-    <div class="image-text-container">
-     <div class="image">
-      <img alt="Resim 7" src="https://static.wixstatic.com/media/4b688f_0c7ce78213b84c01979eed627dac8acb~mv2.jpg"/>
-     </div>
-     <div class="text">
-      <strong>
-       Number plate snorfiets
-      </strong>
-      <p>
-       Depending on the type of snorfiets, these plates come in two sizes: narrow or wide.
-      </p>
-     </div>
-    </div>
-   </div>
-   <h2>
-    Letters per category
-   </h2>
-   <p>
-    Each vehicle category except passenger cars has one or two initial letters:
-   </p>
-   <ul>
-    <li>
-     mopeds and snorfietsen with a D or F;
-    </li>
-    <li>
-     trailers weighing more than 750 kg with a W;
-    </li>
-    <li>
-     semi-trailers with an O;
-    </li>
-    <li>
-     light commercial vehicles (up to 3500 kg) with a V;
-    </li>
-    <li>
-     heavy commercial vehicles (lorries) with a B;
-    </li>
-    <li>
-     motorcycles with an M;
-    </li>
-    <li>
-     border traffic with the combination GV;
-    </li>
-    <li>
-     fast agricultural traffic T (towed vehicles and trailers L).
-    </li>
-   </ul>
-   <a class="custom-button" href="https://www.examtheorie.nl/ar-test-and-theory-menu" target="_blank">
-    Back to
-    overview
-   </a>
-   <script>
-    window.addEventListener("scroll", () => {
-      window.scrollTo(0, 0);
-    });
+    <a class="custom-button" href="https://www.examtheorie.nl/ar-test-and-theory-menu" target="_blank">
+        العودة إلى النظرة العامة
+    </a>
+
+     
 
 
-    // Sağ tıklamayı engelle
-    document.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-    });
+<script>
+window.addEventListener("scroll", () => {
+  window.scrollTo(0, 0);
+});
 
-    // Metin seçmeyi engelle
-    document.addEventListener("selectstart", function (event) {
-      event.preventDefault();
-    });
+// Sag tiklamayi engelle
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
 
-    function sendHeight() {
-      const target = document.querySelector(".custom-button");
-      if (!target) return;
+// Metin se�meyi engelle
+document.addEventListener("selectstart", function (event) {
+  event.preventDefault();
+});
 
-      const height = target.getBoundingClientRect().bottom;
+function sendHeight() {
+  const target = document.querySelector(".custom-button");
+  if (!target) return;
+  const height = target.getBoundingClientRect().bottom;
+  // Post message ile dis sayfaya g�nder
+  window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+}
 
-      // Post message ile dış sayfaya gönder
-      window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+window.onload = () => {
+  sendHeight();
+  setTimeout(sendHeight, 300);
+  setTimeout(sendHeight, 1000);
+  setTimeout(sendHeight, 3000);
+};
 
+// Tarayici yeniden boyutlandiginda da y�kseklik g�nder
+window.onresize = () => {
+  sendHeight();
+};
+</script>
+</body>
 
-    }
-
-    window.onload = () => {
-      sendHeight();
-      setTimeout(sendHeight, 300);
-      setTimeout(sendHeight, 1000);
-      setTimeout(sendHeight, 3000);
-    };
-
-
-    // Tarayıcı yeniden boyutlandığında da yükseklik gönder
-    window.onresize = () => {
-      sendHeight();
-    };
-   </script>
-  </img>
- </body>
 </html>

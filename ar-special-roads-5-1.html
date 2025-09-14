@@ -1,55 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Dikey Hat Örneği
-  </title>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&amp;display=swap" rel="stylesheet"/>
-  <style>
-   body {
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Dikey Hat Örneği
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&amp;display=swap" rel="stylesheet" />
+    <style>
+html, body {
+  overflow: hidden !important;
+  height: 100%;
+  margin: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+        body {
             font-family: "Trirong", serif;
             line-height: 1.2;
         }
 
-         html,
-      body {
-      overflow: hidden !important;
-      height: 100%;
-      margin: 0;
-      padding-left: 2px;
-      padding-right: 2px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
 
 
-         /* Video için özel kapsayıcı */
-         .video-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%; /* Tam ekran genişliği */
-      padding: 10px; /* Kenar boşlukları */
-      box-sizing: border-box;
-      margin-top: 25px;
-    }
 
-    .video-container {
-      width: 100%; /* Video oynatıcının genişliği ekranın %98'ini kapsar */
-      max-width: 1400px; /* Büyük ekranlarda maksimum genişlik */
-      aspect-ratio: 16 / 9; /* En-boy oranını korur */
-      position: relative;
-    }
+        /* Video için özel kapsayıcı */
+        .video-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            /* Tam ekran genişliği */
+            padding: 10px;
+            /* Kenar boşlukları */
+            box-sizing: border-box;
+            margin-top: 25px;
+        }
 
-    video {
-      width: 100%; /* Video kapsayıcı genişliğini tamamen doldurur */
-      height: auto; /* Oranları korur */
-      border: 2px solid #ccc; /* Çerçeve */
-      border-radius: 10px; /* Köşeleri yuvarlama */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hafif gölge */
-    }
+        .video-container {
+            width: 100%;
+            /* Video oynatıcının genişliği ekranın %98'ini kapsar */
+            max-width: 1400px;
+            /* Büyük ekranlarda maksimum genişlik */
+            aspect-ratio: 16 / 9;
+            /* En-boy oranını korur */
+            position: relative;
+        }
+
+        video {
+            width: 100%;
+            /* Video kapsayıcı genişliğini tamamen doldurur */
+            height: auto;
+            /* Oranları korur */
+            border: 2px solid #ccc;
+            /* Çerçeve */
+            border-radius: 10px;
+            /* Köşeleri yuvarlama */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            /* Hafif gölge */
+        }
+
         h1,
         h2 {
             color: #0093C3;
@@ -132,7 +145,7 @@
 
         p {
             max-width: 98%;
-            
+
         }
 
         .image {
@@ -690,300 +703,316 @@
         .custom-button:hover {
             background-color: blue;
         }
-  </style>
- </head>
- <body>
-  <h1>
-   Special roads
-  </h1>
-  <p>
-   While driving on public roads you will come across different types of roads. Some are wider and others narrower.
-        In addition, you can and may drive much faster on one road than on the other. Adapted rules apply on a number of
-        roads.
-  </p>
-  <p>
-   The main special roads with adapted rules are:
-  </p>
-  <div>
-   <div class="images-container5">
-    <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_54a5e85f1c0a4817becdb81ead1b3675~mv2.png"/>
-     <figcaption>
-      Motorway
-     </figcaption>
-    </figure>
-    <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_2947e71262464a81bfe87d099a1c1c6c~mv2.png"/>
-     <figcaption>
-      Autoweg
-     </figcaption>
-    </figure>
-    <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_df47360c5f634c6d844205abde01ce2b~mv2.png"/>
-     <figcaption>
-      Erf
-     </figcaption>
-    </figure>
-   </div>
-  </div>
-  <h2>
-   Motorways and autowegen
-  </h2>
-  <p>
-   The maximum allowed speed on a motorway is 130 km/h. On an autoweg this is 100 km/h. These speeds are only valid
-   <strong>
-    if no other speed is specified.
-   </strong>
-   On these roads it is dangerous to drive much slower than other
-        traffic. Therefore, not all vehicles are allowed to drive on these roads:
-  </p>
-  <ul>
-   <li>
+    </style>
+</head>
+
+<body>
+    <h1>
+        الطرق الخاصة
+    </h1>
     <p>
-     Only motor vehicles that
-     <span class="inline">
-      can
-     </span>
-     and
-     <span class="inline">
-      may
-     </span>
-     drive at
-                least 50 km/h are allowed to use the autoweg.
+        أثناء القيادة على الطرق العامة ستصادف أنواعًا مختلفة من الطرق؛ بعضها أوسع وبعضها أضيق. فضلًا عن ذلك، قد تتمكّن
+        ويُسمح لك بالقيادة أسرع بكثير على طريق مقارنةً بآخر. وتُطبَّق قواعد مُعدَّلة على عدد من الطرق.
     </p>
-   </li>
-   <li>
-    Only motor vehicles that
-    <span class="inline">
-     can
-    </span>
-    and
-    <span class="inline">
-     may
-    </span>
-    drive at least
-            60 km/h are allowed to use the motorway.
-   </li>
-  </ul>
-  <p>
-   You may therefore not ride a moped on an autoweg or motorway, even if it has been upgraded and can therefore
-        reach 50 or 60 km/h, as mopeds have a speed limit of 45 km/h.
-  </p>
-  <p>
-   If a passenger car cannot exceed 40 km/h due to technical problems, it also may not enter an autoweg or
-        motorway, even if the vehicle is allowed to drive faster than 60 km/h.
-  </p>
-  <div>
-   <div class="images-container5">
-    <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_0fb942432f8c4a73a250e8ad9a706cf1~mv2.jpg"/>
-     <figcaption>
-      Many autowegen can be recognized by the green axis line, the line in the middle of the road.
-     </figcaption>
-    </figure>
-    <figure>
-     <img alt="Seat belt warning light" src="https://static.wixstatic.com/media/4b688f_5deeb026f14341a1b3e293d2c968b6ff~mv2.jpg"/>
-     <figcaption>
-      Motorways consist of several lanes and (almost) always have a hard shoulder.
-     </figcaption>
-    </figure>
-   </div>
-  </div>
-  <p>
-   There is
-   <strong>
-    no minimum required speed
-   </strong>
-   on an autoweg or motorway itself. The speed you should drive
-        on a motorway or autoweg mainly depends on the crowds and the speed of the rest of the traffic.
-  </p>
-  <p>
-   On a quiet motorway, most drivers maintain a speed of between 80 and 130 km/h. If you drive your passenger car
-        at a speed of 60 km/h, you are a danger on the road. This is not permitted by Article 5 of the Road Traffic Act.
-  </p>
-  <p>
-   A number of other rules have also been made to keep it safe on the motorway and autoweg. For example, you may
-        not:
-  </p>
-  <ul>
-   <li>
-    make a U-turn or reverse;
-   </li>
-   <li>
-    stop on the carriageway (involuntarily stopping due to traffic is allowed);
-   </li>
-   <li>
-    drive or wait on the hard shoulder, emergency refuge areas, or in the verge, except in emergencies.
-   </li>
-  </ul>
-  <div>
-   <div class="images-container5">
-    <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_2f9f97c6fb094733ac9b2b5aa3c389a1~mv2.jpg"/>
-     <figcaption>
-      Making a U-turn on an autoweg is prohibited and also very dangerous.
-     </figcaption>
-    </figure>
-    <figure>
-     <img alt="Seat belt warning light" src="https://static.wixstatic.com/media/4b688f_045135d7ce9342cd85f4c72252233e25~mv2.jpg"/>
-     <figcaption>
-      Reversing on an autoweg or motorway is not allowed. Not even if you do this on the hard
-                    shoulder. You are not allowed to drive here except in an emergency.
-     </figcaption>
-    </figure>
-   </div>
-  </div>
-  <p>
-   Another rule on the motorway is that you are not allowed to drive everywhere with a vehicle combination (for
-        example a passenger car with trailer) of more than seven meters in length. You may only drive on the two
-        rightmost lanes. Unless you have to use a different lane to be able to pre-sort. This rule also applies to
-        drivers of a lorry.
-  </p>
-  <h2>
-   Rush-hour lane
-  </h2>
-  <p>
-   On the motorway, you will regularly encounter rush-hour lanes. This can be an extra lane on the left side of the
-        carriageway, but it can also be that the hard shoulder is in use as an extra lane. Signs next to the road and
-        matrix signs above the lanes indicate whether or not this rush-hour lane is open. Do you see a red cross above a
-        lane? Then you are not allowed to drive on this lane. Also pay attention to the maximum speed limit. This can
-        change as soon as the rush-hour lane is open.
-  </p>
-  <div>
-   <div class="images-container5">
-    <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_10e6553716e94abc82cf2b54aeaf1939~mv2.png"/>
-     <figcaption>
-      Rush-hour lane open
-     </figcaption>
-    </figure>
-    <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_24d1cdb7bcbe48b59c15858768f54176~mv2.png"/>
-     <figcaption>
-      Clear rush-hour lane
-     </figcaption>
-    </figure>
-    <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_9c5207cc8f7445179a24289db1d863df~mv2.png"/>
-     <figcaption>
-      End of rush-hour lane
-     </figcaption>
-    </figure>
-   </div>
-  </div>
-  <div class="video-wrapper">
-   <div class="video-container">
-    <video controls="" poster="https://static.wixstatic.com/media/4b688f_f1845b6465c74a25a78890542aec01ff~mv2.png">
-     <!-- Video kaynakları -->
-     <source src="https://video.wixstatic.com/video/4b688f_f17f4e233378442c91af2921d22dd5aa/480p/mp4/file.mp4" type="video/mp4"/>
-     <source src="video_dosyaniz.webm" type="video/webm"/>
-     <!-- Altyazılar -->
-     <track kind="subtitles" label="Dutch" src="altyazi_tr.vtt" srclang="nl"/>
-     <track kind="subtitles" label="English" src="altyazi_en.vtt" srclang="en"/>
-     Tarayıcınız bu videoyu desteklemiyor. Lütfen farklı bir tarayıcı kullanın.
-    </video>
-   </div>
-  </div>
-  <p>
-   Note: The video is in Dutch, but you can turn on the English subtitles by clicking the CC button.
-  </p>
-  <h2>
-   Erf
-  </h2>
-  <p>
-   It is often thought that pedestrians have right of way on an erf. This is not the case. Within the erf, the same priority rules apply as on normal roads. The entrances and exits of an erf are usually designed as an entrance or exit construction. When entering a entrance construction and driving out of an exit construction, drivers must give way to all other traffic. This also includes pedestrians.
-  </p>
-  <div>
-   <div class="images-container5">
-    <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_df47360c5f634c6d844205abde01ce2b~mv2.png"/>
-     <figcaption>
-      G-5 Erf
-     </figcaption>
-    </figure>
-    <figure>
-     <img alt="Seat belt warning light" src="https://static.wixstatic.com/media/4b688f_d8fff2e7c6a7481090ceaf1df2933419~mv2.png"/>
-     <figcaption>
-      G-6
-                End of the erf
-     </figcaption>
-    </figure>
-   </div>
-  </div>
-  <p>
-   There are a few other rules within an erf:
-  </p>
-  <ul>
-   <li>
-    Pedestrians are allowed to use the road across the entire width. So they do not have to walk on the side of the road. This is because there are no pavements within an erf.
-   </li>
-   <li>
-    The speed limit for drivers is 15 km/h.
-   </li>
-   <li>
-    Drivers of a motor vehicle may only park in places that are designated as parking places. This is usually due to a sign with a P, or a P on the road surface. It is not allowed to park outside the parking places.
-   </li>
-  </ul>
-  <div>
-   <div class="images-container5">
-    <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_7c98acd2575c4ed1bf334da5134dedb4~mv2.jpg"/>
-     <figcaption>
-      In an erf, pedestrians are allowed to use the entire width of the road.
-     </figcaption>
-    </figure>
-    <figure>
-     <img alt="Seat belt warning light" src="https://static.wixstatic.com/media/4b688f_2f574663fb994ebe9cdb9813d941379e~mv2.jpg"/>
-     <figcaption>
-      In most cases you drive in and out of an erf via an entrance or exit construction.
-     </figcaption>
-    </figure>
-   </div>
-  </div>
-  <a class="custom-button" href="https://www.examtheorie.nl/ar-test-and-theory-menu" target="_blank">
-   Back to
-    overview
-  </a>
-  <script>
-   window.addEventListener("scroll", () => {
-      window.scrollTo(0, 0);
-    });
+    <p>
+        أهم الطرق الخاصة ذات القواعد المُعدَّلة هي:
+    </p>
+    <div>
+        <div class="images-container5">
+            <figure>
+                <img alt="تحذير: عطل الوسادة الهوائية الجانبية"
+                    src="https://static.wixstatic.com/media/4b688f_54a5e85f1c0a4817becdb81ead1b3675~mv2.png" />
+                <figcaption>
+                    الطريق السريع
+                </figcaption>
+            </figure>
+            <figure>
+                <img alt="تحذير: عطل الوسادة الهوائية الجانبية"
+                    src="https://static.wixstatic.com/media/4b688f_2947e71262464a81bfe87d099a1c1c6c~mv2.png" />
+                <figcaption>
+                    Autoweg
+                </figcaption>
+            </figure>
+            <figure>
+                <img alt="تحذير: عطل الوسادة الهوائية الجانبية"
+                    src="https://static.wixstatic.com/media/4b688f_df47360c5f634c6d844205abde01ce2b~mv2.png" />
+                <figcaption>
+                    Erf
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    <h2>
+        الطرق السريعة وطرق الـ Autoweg
+    </h2>
+    <p>
+        السرعة القصوى المسموح بها على الطريق السريع هي 130 كم/س. وعلى طريق الـ Autoweg تكون 100 كم/س. وهذه السرعات لا
+        تسري
+        <strong>
+            إلا إذا لم تُحدَّد سرعة أخرى.
+        </strong>
+        وعلى هذه الطرق يكون السير أبطأ بكثير من باقي الحركة خطرًا.
+        لذلك لا يُسمح لكل المركبات بالسير على هذه الطرق:
+    </p>
+    <ul>
+        <li>
+            <p>
+                يُسمح فقط للمركبات الآلية التي
+                <span class="inline">
+                    تستطيع
+                </span>
+                و
+                <span class="inline">
+                    يُسمح لها
+                </span>
+                أن تسير بسرعة لا تقل عن
+                50 كم/س باستخدام طريق الـ Autoweg.
+            </p>
+        </li>
+        <li>
+            يُسمح فقط للمركبات الآلية التي
+            <span class="inline">
+                تستطيع
+            </span>
+            و
+            <span class="inline">
+                يُسمح لها
+            </span>
+            أن تسير بسرعة لا تقل عن
+            60 كم/س باستخدام الطريق السريع.
+        </li>
+    </ul>
+    <p>
+        لذلك لا يجوز قيادة دراجة نارية خفيفة (moped) على طريق Autoweg أو على الطريق السريع، حتى وإن كانت مُعدَّلة
+        ويمكنها بلوغ 50 أو 60 كم/س، لأن الحد الأقصى القانوني لسرعتها هو 45 كم/س.
+    </p>
+    <p>
+        إذا تعذّر على سيارة ركوب تجاوز 40 كم/س بسبب مشكلات تقنية، فلا يجوز لها أيضًا دخول طريق Autoweg أو الطريق السريع،
+        حتى لو كانت السيارة مسموحًا لها أصلًا بالقيادة فوق 60 كم/س.
+    </p>
+    <div>
+        <div class="images-container5">
+            <figure>
+                <img alt="تحذير: عطل الوسادة الهوائية الجانبية"
+                    src="https://static.wixstatic.com/media/4b688f_0fb942432f8c4a73a250e8ad9a706cf1~mv2.jpg" />
+                <figcaption>
+                    يمكن التعرّف على كثير من طرق الـ Autoweg من خلال خط المحور الأخضر، أي الخط في منتصف الطريق.
+                </figcaption>
+            </figure>
+            <figure>
+                <img alt="تحذير ضوء حزام الأمان"
+                    src="https://static.wixstatic.com/media/4b688f_5deeb026f14341a1b3e293d2c968b6ff~mv2.jpg" />
+                <figcaption>
+                    تتكوّن الطرق السريعة من عدة مسارات و(تقريبًا) دائمًا ما يكون لها كتف للطوارئ.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    <p>
+        لا
+        <strong>
+            توجد سرعة دنيا مطلوبة
+        </strong>
+        على طريق Autoweg أو الطريق السريع نفسه. السرعة التي ينبغي عليك القيادة بها على الطريق السريع أو الـ Autoweg
+        تعتمد أساسًا على كثافة الحركة وسرعة بقية المرور.
+    </p>
+    <p>
+        على طريق سريع هادئ، يحافظ معظم السائقين على سرعات بين 80 و130 كم/س. إذا قدتَ سيارتك بسرعة 60 كم/س فأنت تمثل
+        خطرًا على الطريق. وهذا غير مسموح به بموجب المادة 5 من قانون السير على الطرق.
+    </p>
+    <p>
+        وُضعت أيضًا عدة قواعد أخرى للحفاظ على السلامة على الطريق السريع وطريق الـ Autoweg. على سبيل المثال، لا يجوز لك:
+    </p>
+    <ul>
+        <li>
+            القيام بالالتفاف (U-turn) أو الرجوع إلى الخلف؛
+        </li>
+        <li>
+            التوقف على سطح الطريق (يُسمح بالتوقف الاضطراري بسبب حركة المرور)؛
+        </li>
+        <li>
+            السير أو الانتظار على كتف الطريق، أو مناطق التوقّف الطارئة، أو على حافة الطريق، إلا في حالات الطوارئ.
+        </li>
+    </ul>
+    <div>
+        <div class="images-container5">
+            <figure>
+                <img alt="تحذير: عطل الوسادة الهوائية الجانبية"
+                    src="https://static.wixstatic.com/media/4b688f_2f9f97c6fb094733ac9b2b5aa3c389a1~mv2.jpg" />
+                <figcaption>
+                    الالتفاف على طريق Autoweg محظور وخطير جدًا أيضًا.
+                </figcaption>
+            </figure>
+            <figure>
+                <img alt="تحذير ضوء حزام الأمان"
+                    src="https://static.wixstatic.com/media/4b688f_045135d7ce9342cd85f4c72252233e25~mv2.jpg" />
+                <figcaption>
+                    الرجوع للخلف على طريق Autoweg أو الطريق السريع غير مسموح. حتى وإن تم ذلك على كتف الطريق. لا يُسمح لك
+                    بالسير هنا إلا في حالة طارئة.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    <p>
+        هناك قاعدة أخرى على الطريق السريع وهي أنه لا يُسمح لك بالقيادة في كل المسارات عند قيادة تشكيل مركبات (مثل سيارة
+        ركوب مع مقطورة) يزيد طوله على سبعة أمتار؛ إذ يجوز لك القيادة فقط على المسارين الأيمنين. ما لم تكن بحاجة لاستخدام
+        مسار مختلف للتموضع المسبق. وتسري هذه القاعدة أيضًا على سائقي الشاحنات.
+    </p>
+    <h2>
+        مسار ساعات الذروة
+    </h2>
+    <p>
+        على الطريق السريع ستصادف بانتظام مسارات لساعات الذروة. قد يكون هذا مسارًا إضافيًا في الجانب الأيسر من حرم
+        الطريق، وقد يكون كتف الطريق مستخدمًا كمسار إضافي. تُبيّن اللوحات بجانب الطريق والشاشات العلوية فوق المسارات ما
+        إذا كان مسار ساعات الذروة مفتوحًا أم لا. هل ترى علامة × حمراء فوق مسار؟ إذن لا يُسمح لك بالقيادة على هذا المسار.
+        انتبه أيضًا إلى حد السرعة الأقصى؛ فقد يتغيّر بمجرد فتح مسار ساعات الذروة.
+    </p>
+    <div>
+        <div class="images-container5">
+            <figure>
+                <img alt="تحذير: عطل الوسادة الهوائية الجانبية"
+                    src="https://static.wixstatic.com/media/4b688f_10e6553716e94abc82cf2b54aeaf1939~mv2.png" />
+                <figcaption>
+                    مسار ساعات الذروة مفتوح
+                </figcaption>
+            </figure>
+            <figure>
+                <img alt="تحذير: عطل الوسادة الهوائية الجانبية"
+                    src="https://static.wixstatic.com/media/4b688f_24d1cdb7bcbe48b59c15858768f54176~mv2.png" />
+                <figcaption>
+                    أخلِ مسار ساعات الذروة
+                </figcaption>
+            </figure>
+            <figure>
+                <img alt="تحذير: عطل الوسادة الهوائية الجانبية"
+                    src="https://static.wixstatic.com/media/4b688f_9c5207cc8f7445179a24289db1d863df~mv2.png" />
+                <figcaption>
+                    نهاية مسار ساعات الذروة
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    <div class="video-wrapper">
+        <div class="video-container">
+            <video controls=""
+                poster="https://static.wixstatic.com/media/4b688f_f1845b6465c74a25a78890542aec01ff~mv2.png">
+                <!-- Video kaynakları -->
+                <source
+                    src="https://video.wixstatic.com/video/4b688f_f17f4e233378442c91af2921d22dd5aa/480p/mp4/file.mp4"
+                    type="video/mp4" />
+                <source src="video_dosyaniz.webm" type="video/webm" />
+                <!-- Altyazılar -->
+                <track kind="subtitles" label="الهولندية" src="altyazi_tr.vtt" srclang="nl" />
+                <track kind="subtitles" label="الإنجليزية" src="altyazi_en.vtt" srclang="en" />
+                Tarayıcınız bu videoyu desteklemiyor. Lütfen farklı bir tarayıcı kullanın.
+            </video>
+        </div>
+    </div>
+    <p>
+        ملاحظة: الفيديو باللغة الهولندية، لكن يمكنك تشغيل الترجمات الإنجليزية بالنقر على زر CC.
+    </p>
+    <h2>
+        Erf
+    </h2>
+    <p>
+        يُظَنّ كثيرًا أن للمشاة أولوية المرور داخل الـ erf، وهذا غير صحيح. فداخل الـ erf تسري قواعد الأولوية نفسها كما
+        في الطرق العادية. وغالبًا ما تُصمَّم مداخل ومخارج الـ erf كمنشأة دخول أو خروج. وعند دخول منشأة الدخول أو الخروج
+        منها يتعيّن على السائقين منح الأولوية لكل حركة المرور الأخرى، ويشمل ذلك المشاة.
+    </p>
+    <div>
+        <div class="images-container5">
+            <figure>
+                <img alt="تحذير: عطل الوسادة الهوائية الجانبية"
+                    src="https://static.wixstatic.com/media/4b688f_df47360c5f634c6d844205abde01ce2b~mv2.png" />
+                <figcaption>
+                    G-5 Erf
+                </figcaption>
+            </figure>
+            <figure>
+                <img alt="تحذير ضوء حزام الأمان"
+                    src="https://static.wixstatic.com/media/4b688f_d8fff2e7c6a7481090ceaf1df2933419~mv2.png" />
+                <figcaption>
+                    G-6
+                    نهاية الـ erf
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    <p>
+        توجد بعض القواعد الأخرى داخل الـ erf:
+    </p>
+    <ul>
+        <li>
+            يُسمح للمشاة باستخدام كامل عرض الطريق؛ فلا يلزمهم السير على جانب الطريق. ويرجع ذلك إلى عدم وجود أرصفة داخل
+            الـ erf.
+        </li>
+        <li>
+            الحد الأقصى للسرعة للسائقين هو 15 كم/س.
+        </li>
+        <li>
+            يجوز لقائدي المركبات الآلية الوقوف فقط في الأماكن المخصّصة كمواقف. ويُبيَّن ذلك عادةً بعلامة تتضمن حرف P أو
+            بحرف P مرسوم على سطح الطريق. ولا يُسمح بالوقوف خارج أماكن الوقوف.
+        </li>
+    </ul>
+    <div>
+        <div class="images-container5">
+            <figure>
+                <img alt="تحذير: عطل الوسادة الهوائية الجانبية"
+                    src="https://static.wixstatic.com/media/4b688f_7c98acd2575c4ed1bf334da5134dedb4~mv2.jpg" />
+                <figcaption>
+                    في الـ erf يُسمح للمشاة باستخدام كامل عرض الطريق.
+                </figcaption>
+            </figure>
+            <figure>
+                <img alt="تحذير ضوء حزام الأمان"
+                    src="https://static.wixstatic.com/media/4b688f_2f574663fb994ebe9cdb9813d941379e~mv2.jpg" />
+                <figcaption>
+                    في معظم الحالات تدخل إلى الـ erf وتخرج منه عبر منشأة دخول أو خروج.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    <a class="custom-button" href="https://www.examtheorie.nl/ar-test-and-theory-menu" target="_blank">
+        العودة إلى النظرة العامة
+    </a>
 
 
-    // Sağ tıklamayı engelle
-    document.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-    });
 
-    // Metin seçmeyi engelle
-    document.addEventListener("selectstart", function (event) {
-      event.preventDefault();
-    });
+<script>
+window.addEventListener("scroll", () => {
+  window.scrollTo(0, 0);
+});
 
-    function sendHeight() {
-      const target = document.querySelector(".custom-button");
-      if (!target) return;
+// Sag tiklamayi engelle
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
 
-      const height = target.getBoundingClientRect().bottom;
+// Metin se�meyi engelle
+document.addEventListener("selectstart", function (event) {
+  event.preventDefault();
+});
 
-      // Post message ile dış sayfaya gönder
-      window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+function sendHeight() {
+  const target = document.querySelector(".custom-button");
+  if (!target) return;
+  const height = target.getBoundingClientRect().bottom;
+  // Post message ile dis sayfaya g�nder
+  window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+}
 
+window.onload = () => {
+  sendHeight();
+  setTimeout(sendHeight, 300);
+  setTimeout(sendHeight, 1000);
+  setTimeout(sendHeight, 3000);
+};
 
-    }
+// Tarayici yeniden boyutlandiginda da y�kseklik g�nder
+window.onresize = () => {
+  sendHeight();
+};
+</script>
+</body>
 
-    window.onload = () => {
-      sendHeight();
-      setTimeout(sendHeight, 300);
-      setTimeout(sendHeight, 1000);
-      setTimeout(sendHeight, 3000);
-    };
-
-
-    // Tarayıcı yeniden boyutlandığında da yükseklik gönder
-    window.onresize = () => {
-      sendHeight();
-    };
-  </script>
- </body>
 </html>

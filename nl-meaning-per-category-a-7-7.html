@@ -8,21 +8,22 @@
   </title>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&amp;display=swap" rel="stylesheet"/>
   <style>
+html, body {
+  overflow: hidden !important;
+  height: 100%;
+  margin: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
    body {
             font-family: "Trirong", serif;
             line-height: 1.2;
         }
 
-         html,
-      body {
-      overflow: hidden !important;
-      height: 100%;
-      margin: 0;
-      padding-left: 2px;
-      padding-right: 2px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+         
 
         h1,
         h2 {
@@ -580,10 +581,10 @@
  </head>
  <body>
   <h1>
-   Meaning per category - A
+   Betekenis per categorie - A
   </h1>
   <p>
-   These signs indicate speed limits.
+   Deze borden geven snelheidslimieten aan.
   </p>
   <div class="container3">
    <div class="item3">
@@ -593,7 +594,7 @@
       A-1
      </strong>
      <p>
-      Mandatory speed limit. These signs can indicate a variety of speed limits.
+      Verplichte snelheidslimiet (maximumsnelheid). Op deze borden kunnen verschillende snelheidslimieten staan.
      </p>
     </div>
    </div>
@@ -604,9 +605,7 @@
       A-2
      </strong>
      <p>
-      End of speed limit. These signs indicate the end of a speed limit, which means a previously indicated
-                    speed limit is no longer mandatory and the usual speed limit in the area - such as 80 km/h outside a
-                    built-up area - now applies.
+      Einde snelheidslimiet. Deze borden geven het einde van een snelheidslimiet aan; een eerder aangegeven maximumsnelheid vervalt en de gebruikelijke snelheidslimiet in het gebied – zoals 80 km/h buiten de bebouwde kom – geldt weer.
      </p>
     </div>
    </div>
@@ -617,8 +616,7 @@
       A-3
      </strong>
      <p>
-      Speed limits can also be indicated via electronic signage panels or matrix signs. These are not
-                    advisory speeds!
+      Snelheidslimieten kunnen ook met elektronische signaleringspanelen of matrixborden worden aangegeven. Dit zijn geen adviessnelheden!
      </p>
     </div>
    </div>
@@ -629,8 +627,7 @@
       A-4
      </strong>
      <p>
-      Recommended speed. This is not a mandatory speed limit. It is the recommended speed limit for the
-                    situation you are approaching. These signs can indicate a variety of recommended speeds.
+      Adviessnelheid. Dit is geen verplichte snelheid. Het is de aanbevolen snelheid voor de situatie die je nadert. Op deze borden kunnen verschillende adviessnelheden staan.
      </p>
     </div>
    </div>
@@ -641,15 +638,13 @@
       A-5
      </strong>
      <p>
-      End of recommended speed. These signs indicate the end of a recommended speed, which means a
-                    previously indicated recommended speed is no longer advised.
+      Einde adviessnelheid. Deze borden geven het einde van een adviessnelheid aan; een eerder aangegeven adviessnelheid wordt niet langer geadviseerd.
      </p>
     </div>
    </div>
    <div class="important-words1">
     <p>
-     Signs indicating a speed limit of 30 km/h or 60 km/h can also be used as zone signs. These signs remain
-                in force until the end zone sign.
+     Borden met een snelheidslimiet van 30 km/h of 60 km/h kunnen ook als zoneborden worden gebruikt. Deze borden blijven van kracht tot het einde-zonebord.
     </p>
     <div class="images-container5">
      <figure>
@@ -673,50 +668,48 @@
     </div>
    </div>
    <a class="custom-button" href="https://www.examtheorie.nl/nl-test-and-theory-menu" target="_blank">
-    Back to
-    overview
+    Terug naar
+    overzicht
    </a>
-   <script>
-    window.addEventListener("scroll", () => {
-      window.scrollTo(0, 0);
-    });
 
-
-    // Sağ tıklamayı engelle
-    document.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-    });
-
-    // Metin seçmeyi engelle
-    document.addEventListener("selectstart", function (event) {
-      event.preventDefault();
-    });
-
-    function sendHeight() {
-      const target = document.querySelector(".custom-button");
-      if (!target) return;
-
-      const height = target.getBoundingClientRect().bottom;
-
-      // Post message ile dış sayfaya gönder
-      window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
-
-
-    }
-
-    window.onload = () => {
-      sendHeight();
-      setTimeout(sendHeight, 300);
-      setTimeout(sendHeight, 1000);
-      setTimeout(sendHeight, 3000);
-    };
-
-
-    // Tarayıcı yeniden boyutlandığında da yükseklik gönder
-    window.onresize = () => {
-      sendHeight();
-    };
-   </script>
+   
   </div>
- </body>
+ 
+<script>
+window.addEventListener("scroll", () => {
+  window.scrollTo(0, 0);
+});
+
+// Sag tiklamayi engelle
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
+
+// Metin se�meyi engelle
+document.addEventListener("selectstart", function (event) {
+  event.preventDefault();
+});
+
+function sendHeight() {
+  const target = document.querySelector(".custom-button");
+  if (!target) return;
+  const height = target.getBoundingClientRect().bottom;
+  // Post message ile dis sayfaya g�nder
+  window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+}
+
+window.onload = () => {
+  sendHeight();
+  setTimeout(sendHeight, 300);
+  setTimeout(sendHeight, 1000);
+  setTimeout(sendHeight, 3000);
+};
+
+// Tarayici yeniden boyutlandiginda da y�kseklik g�nder
+window.onresize = () => {
+  sendHeight();
+};
+</script>
+</body>
 </html>
+

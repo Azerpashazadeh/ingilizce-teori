@@ -7,10 +7,22 @@
     <title>Dikey Hat Örneği</title>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&display=swap" rel="stylesheet" />
     <style>
+html, body {
+  overflow: hidden !important;
+  height: 100%;
+  margin: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
         body {
             font-family: "Trirong", serif;
             line-height: 1.2;
         }
+
+        
 
         h1,
         h2 {
@@ -200,46 +212,59 @@
             /* Yazıyı sol tarafa hizalar */
         }
 
-         table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    table-layout: auto; /* İçeriğe göre esnek tablo düzeni */
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            table-layout: auto;
+            /* İçeriğe göre esnek tablo düzeni */
+        }
 
-table, th, td {
-    border: 1px solid #adacac;
-}
+        table,
+        th,
+        td {
+            border: 1px solid #adacac;
+        }
 
-td, th {
-    padding: 8px;
-    text-align: left;
-    white-space: normal; /* Satır kaydırma sağlar */
-    word-wrap: break-word; /* Uzun kelimeleri böler */
-    overflow-wrap: break-word; /* Kelimelerin taşmasını engeller */
-}
+        td,
+        th {
+            padding: 8px;
+            text-align: left;
+            white-space: normal;
+            /* Satır kaydırma sağlar */
+            word-wrap: break-word;
+            /* Uzun kelimeleri böler */
+            overflow-wrap: break-word;
+            /* Kelimelerin taşmasını engeller */
+        }
 
-/* Yazı boyutunu küçültmek için medya sorgusu */
-@media (max-width: 600px) {
-    td, th {
-        font-size: 0.9em; /* Yazı boyutunu küçültür */
-    }
-}
+        /* Yazı boyutunu küçültmek için medya sorgusu */
+        @media (max-width: 600px) {
 
-@media (max-width: 400px) {
-    td, th {
-        font-size: 0.7em; /* Daha fazla küçültür */
-    }
-}
+            td,
+            th {
+                font-size: 0.9em;
+                /* Yazı boyutunu küçültür */
+            }
+        }
 
-thead th {
-    background-color: #f9c3ae;
-    color: rgb(0, 0, 0);
-}
+        @media (max-width: 400px) {
 
-.highlight {
-    background-color: #ffffff;
-}
+            td,
+            th {
+                font-size: 0.7em;
+                /* Daha fazla küçültür */
+            }
+        }
+
+        thead th {
+            background-color: #f9c3ae;
+            color: rgb(0, 0, 0);
+        }
+
+        .highlight {
+            background-color: #ffffff;
+        }
     </style>
 </head>
 
@@ -326,49 +351,43 @@ thead th {
     </div>
 
     <a href="https://www.examtheorie.nl/tr-test-and-theory-menu" class="custom-button" target="_blank">Geri Dön</a>
+    
+
 <script>
+window.addEventListener("scroll", () => {
+  window.scrollTo(0, 0);
+});
 
-    window.addEventListener("scroll", () => {
-      window.scrollTo(0, 0);
-    });
+// Sag tiklamayi engelle
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
 
+// Metin se�meyi engelle
+document.addEventListener("selectstart", function (event) {
+  event.preventDefault();
+});
 
-    // Sağ tıklamayı engelle
-    document.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-    });
+function sendHeight() {
+  const target = document.querySelector(".custom-button");
+  if (!target) return;
+  const height = target.getBoundingClientRect().bottom;
+  // Post message ile dis sayfaya g�nder
+  window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+}
 
-    // Metin seçmeyi engelle
-    document.addEventListener("selectstart", function (event) {
-      event.preventDefault();
-    });
+window.onload = () => {
+  sendHeight();
+  setTimeout(sendHeight, 300);
+  setTimeout(sendHeight, 1000);
+  setTimeout(sendHeight, 3000);
+};
 
-    function sendHeight() {
-      const target = document.querySelector(".custom-button");
-      if (!target) return;
-
-      const height = target.getBoundingClientRect().bottom;
-
-      // Post message ile dış sayfaya gönder
-      window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
-
-
-    }
-
-    window.onload = () => {
-      sendHeight();
-      setTimeout(sendHeight, 300);
-      setTimeout(sendHeight, 1000);
-      setTimeout(sendHeight, 3000);
-    };
-
-
-    // Tarayıcı yeniden boyutlandığında da yükseklik gönder
-    window.onresize = () => {
-      sendHeight();
-    };
-
-  </script>
+// Tarayici yeniden boyutlandiginda da y�kseklik g�nder
+window.onresize = () => {
+  sendHeight();
+};
+</script>
 </body>
 
 

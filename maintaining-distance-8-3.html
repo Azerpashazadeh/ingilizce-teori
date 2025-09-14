@@ -7,6 +7,16 @@
     <title>Dikey Hat Örneği</title>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&display=swap" rel="stylesheet" />
     <style>
+html, body {
+  overflow: hidden !important;
+  height: 100%;
+  margin: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
         body {
             font-family: "Trirong", serif;
             line-height: 1.2;
@@ -831,23 +841,7 @@
     </div>
 
 
-
-
-
-
-
-
-
-    BURADA CEDVEL OLMALIDI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
-
-
-
-
-
-
+    <!-- BURADA CEDVEL OLMALIDI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 
     <div>
@@ -912,16 +906,22 @@
         Poor conditions
     </h2>
     <p>
-        The following distance in line with the ‘two-second rule’ is a minimum following distance based on good road and weather conditions, an alert driver, and adequate road holding.
+        The following distance in line with the ‘two-second rule’ is a minimum following distance based on good road and
+        weather conditions, an alert driver, and adequate road holding.
     </p>
     <p>
-        The braking distance for a car in poor condition will be longer. The same applies in bad road or weather conditions, during which the road provides less grip. In these cases, drivers are advised to maintain an increased following distance.
+        The braking distance for a car in poor condition will be longer. The same applies in bad road or weather
+        conditions, during which the road provides less grip. In these cases, drivers are advised to maintain an
+        increased following distance.
     </p>
     <p>
-        Poor visibility due to rain, fog, or snow, or reduced alertness, can affect your perception and reaction, which increases the thinking distance. Also in these cases, drivers are advised to maintain an increased following distance.
+        Poor visibility due to rain, fog, or snow, or reduced alertness, can affect your perception and reaction, which
+        increases the thinking distance. Also in these cases, drivers are advised to maintain an increased following
+        distance.
     </p>
     <p>
-        Estimating the minimum following distance in these types of situations requires insight and experience. However, guidelines state that three or four seconds should suffice.
+        Estimating the minimum following distance in these types of situations requires insight and experience. However,
+        guidelines state that three or four seconds should suffice.
     </p>
     <p>
         To find out how to recognise poor road surfaces and subsequent reduced road holding, look at:
@@ -929,20 +929,24 @@
     <ul>
         <li>
             <p>
-<strong>
-    Type of road surface and its condition
-</strong>
-A wet road surface provides less grip, just like a road surface with holes or loose gravel or sand. In addition, for example, a paved road gives less grip than an asphalt road.
+                <strong>
+                    Type of road surface and its condition
+                </strong>
+                A wet road surface provides less grip, just like a road surface with holes or loose gravel or sand. In
+                addition, for example, a paved road gives less grip than an asphalt road.
             </p>
         </li>
         <li>
             <p>
-<strong>Road banking</strong>In bends, roads are usually sloped slightly, with the inner bend being slightly lower than the outer bend (positive road banking). This provides more grip when cornering. If the outer bend is lower than the inner bend due to circumstances (negative road banking), you will have less grip in the bends.
+                <strong>Road banking</strong>In bends, roads are usually sloped slightly, with the inner bend being
+                slightly lower than the outer bend (positive road banking). This provides more grip when cornering. If
+                the outer bend is lower than the inner bend due to circumstances (negative road banking), you will have
+                less grip in the bends.
             </p>
         </li>
     </ul>
-    
-    
+
+
     <div>
         <div class="images-container5">
             <figure>
@@ -972,7 +976,9 @@ A wet road surface provides less grip, just like a road surface with holes or lo
                 <ul>
                     <li>
                         <p>
-                            <strong>New road surface</strong>With a new road surface, you would expect that the grip is good right away. However, this is not the case. A road must first be “broken in” before it is rough enough. A new road surface is therefore slippier in the beginning.
+                            <strong>New road surface</strong>With a new road surface, you would expect that the grip is
+                            good right away. However, this is not the case. A road must first be “broken in” before it
+                            is rough enough. A new road surface is therefore slippier in the beginning.
                         </p>
                     </li>
                 </ul>
@@ -982,54 +988,48 @@ A wet road surface provides less grip, just like a road surface with holes or lo
         </div>
     </div>
 
-        <a href="https://www.examtheorie.nl/eng-test-and-theory-menu" class="custom-button" target="_blank">Back to
+    <a href="https://www.examtheorie.nl/eng-test-and-theory-menu" class="custom-button" target="_blank">Back to
         overview</a>
 
-      <script>
-
-    window.addEventListener("scroll", () => {
-      window.scrollTo(0, 0);
-    });
 
 
-    // Sağ tıklamayı engelle
-    document.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-    });
-
-    // Metin seçmeyi engelle
-    document.addEventListener("selectstart", function (event) {
-      event.preventDefault();
-    });
-
-    function sendHeight() {
-      const target = document.querySelector(".custom-button");
-      if (!target) return;
-
-      const height = target.getBoundingClientRect().bottom;
-
-      // Post message ile dış sayfaya gönder
-      window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
 
 
-    }
+<script>
+window.addEventListener("scroll", () => {
+  window.scrollTo(0, 0);
+});
 
-    window.onload = () => {
-      sendHeight();
-      setTimeout(sendHeight, 300);
-      setTimeout(sendHeight, 1000);
-      setTimeout(sendHeight, 3000);
-    };
+// Sag tiklamayi engelle
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
 
+// Metin se�meyi engelle
+document.addEventListener("selectstart", function (event) {
+  event.preventDefault();
+});
 
-    // Tarayıcı yeniden boyutlandığında da yükseklik gönder
-    window.onresize = () => {
-      sendHeight();
-    };
+function sendHeight() {
+  const target = document.querySelector(".custom-button");
+  if (!target) return;
+  const height = target.getBoundingClientRect().bottom;
+  // Post message ile dis sayfaya g�nder
+  window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+}
 
-  </script>
-  
+window.onload = () => {
+  sendHeight();
+  setTimeout(sendHeight, 300);
+  setTimeout(sendHeight, 1000);
+  setTimeout(sendHeight, 3000);
+};
 
+// Tarayici yeniden boyutlandiginda da y�kseklik g�nder
+window.onresize = () => {
+  sendHeight();
+};
+</script>
 </body>
 
 </html>

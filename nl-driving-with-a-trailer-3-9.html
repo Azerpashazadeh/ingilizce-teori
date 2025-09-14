@@ -8,21 +8,22 @@
   </title>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&amp;display=swap" rel="stylesheet"/>
   <style>
+html, body {
+  overflow: hidden !important;
+  height: 100%;
+  margin: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
    body {
             font-family: "Trirong", serif;
             line-height: 1.2;
         }
 
-         html,
-      body {
-      overflow: hidden !important;
-      height: 100%;
-      margin: 0;
-      padding-left: 2px;
-      padding-right: 2px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+         
 
         h1,
         h2 {
@@ -589,96 +590,84 @@
  </head>
  <body>
   <h1>
-   Driving with a trailer
+   Rijden met een aanhangwagen
   </h1>
   <p>
-   If you obtain the driving licence for the passenger car, you may also drive it with a (light) trailer. This
-        combination is sometimes subject to different rules.
+   Als je het rijbewijs voor de personenauto behaalt, mag je er ook mee rijden met een (lichte) aanhangwagen. Voor deze combinatie gelden soms afwijkende regels.
   </p>
   <h2>
-   Speed limit
+   Snelheidslimiet
   </h2>
   <p>
-   The speed limit with a trailer behind your passenger car is almost the same as with a passenger car, except on
-        autowegen and motorways. A passenger car with a trailer may never drive faster than 90 km/h on the autoweg or on
-        the motorway. If a lower speed is indicated on these roads, then of course this lower speed applies.
+   De snelheidslimiet met een aanhangwagen achter je personenauto is bijna hetzelfde als zonder aanhangwagen, behalve op autowegen en autosnelwegen. Een personenauto met aanhangwagen mag op de autoweg of op de autosnelweg nooit sneller rijden dan 90 km/h. Als op deze wegen een lagere snelheid is aangegeven, dan geldt uiteraard die lagere snelheid.
   </p>
   <h2>
-   Road section
+   Weggedeelte
   </h2>
   <p>
-   The appropriate road section for a passenger car with a trailer is the same as for those without trailers.
-        However, with a combination longer than seven metres on the motorway, you may not use a lane other than the two
-        lanes on the far right. Because a combination of a passenger car and trailer quickly exceeds seven metres, this
-        rule generally applies to all these combinations. This rule also applies to all lorries.
+   Het aangewezen weggedeelte voor een personenauto met aanhangwagen is hetzelfde als voor auto’s zonder aanhangwagen. Met een combinatie langer dan zeven meter mag je op de autosnelweg echter geen andere rijstrook gebruiken dan de twee meest rechter rijstroken. Omdat een combinatie van personenauto en aanhangwagen al snel langer is dan zeven meter, geldt deze regel in de praktijk voor (vrijwel) al deze combinaties. Deze regel geldt ook voor alle vrachtauto’s.
   </p>
   <p>
-   If you need to drive in a different lane than the two lanes to the right to pre-sort, it is allowed to do so.
-        Keep in mind that on a motorway with a trailer you are seen as slower traffic. Therefore, use the right lane as
-        much as possible for the direction you want to go.
+   Moet je voor het voorsorteren een andere rijstrook gebruiken dan de twee rechterrijstroken, dan is dat toegestaan. Houd er rekening mee dat je op de autosnelweg met een aanhangwagen als langzamer verkeer wordt gezien. Gebruik daarom zoveel mogelijk de rechterrijstrook in de richting waarin je wilt gaan.
   </p>
   <div>
    <div class="images-container5">
     <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_892b7c89d853450bb8418f1701e106e5~mv2.jpg"/>
+     <img alt="Waarschuwing storing zij-airbag" src="https://static.wixstatic.com/media/4b688f_892b7c89d853450bb8418f1701e106e5~mv2.jpg"/>
      <figcaption>
-      On the motorway, you are not allowed to use this lane with a combination that is longer than
-                    7 metres. The lesson car must travel at least one lane to the right.
+      Op de autosnelweg mag je met een combinatie die langer is dan 7 meter deze rijstrook niet gebruiken. De lesauto moet minimaal één rijstrook naar rechts rijden.
      </figcaption>
     </figure>
     <figure>
-     <img alt="Seat belt warning light" src="https://static.wixstatic.com/media/4b688f_183ad924e67148c182d60ef26de86967~mv2.jpg"/>
+     <img alt="Waarschuwingslampje gordel" src="https://static.wixstatic.com/media/4b688f_183ad924e67148c182d60ef26de86967~mv2.jpg"/>
      <figcaption>
-      In this case, the combination is allowed to drive in this lane if the driver wants to keep
-                    following the indicated direction.
+      In dit geval mag de combinatie op deze rijstrook rijden als de bestuurder de aangegeven richting wil blijven volgen.
      </figcaption>
     </figure>
    </div>
   </div>
   <a class="custom-button" href="https://www.examtheorie.nl/nl-test-and-theory-menu" target="_blank">
-   Back to
-    overview
+   Terug naar
+    overzicht
   </a>
-  <script>
-   window.addEventListener("scroll", () => {
-      window.scrollTo(0, 0);
-    });
 
+  
+ 
+<script>
+window.addEventListener("scroll", () => {
+  window.scrollTo(0, 0);
+});
 
-    // Sağ tıklamayı engelle
-    document.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-    });
+// Sag tiklamayi engelle
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
 
-    // Metin seçmeyi engelle
-    document.addEventListener("selectstart", function (event) {
-      event.preventDefault();
-    });
+// Metin se�meyi engelle
+document.addEventListener("selectstart", function (event) {
+  event.preventDefault();
+});
 
-    function sendHeight() {
-      const target = document.querySelector(".custom-button");
-      if (!target) return;
+function sendHeight() {
+  const target = document.querySelector(".custom-button");
+  if (!target) return;
+  const height = target.getBoundingClientRect().bottom;
+  // Post message ile dis sayfaya g�nder
+  window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+}
 
-      const height = target.getBoundingClientRect().bottom;
+window.onload = () => {
+  sendHeight();
+  setTimeout(sendHeight, 300);
+  setTimeout(sendHeight, 1000);
+  setTimeout(sendHeight, 3000);
+};
 
-      // Post message ile dış sayfaya gönder
-      window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
-
-
-    }
-
-    window.onload = () => {
-      sendHeight();
-      setTimeout(sendHeight, 300);
-      setTimeout(sendHeight, 1000);
-      setTimeout(sendHeight, 3000);
-    };
-
-
-    // Tarayıcı yeniden boyutlandığında da yükseklik gönder
-    window.onresize = () => {
-      sendHeight();
-    };
-  </script>
- </body>
+// Tarayici yeniden boyutlandiginda da y�kseklik g�nder
+window.onresize = () => {
+  sendHeight();
+};
+</script>
+</body>
 </html>
+

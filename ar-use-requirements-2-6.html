@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Dikey Hat Örneği
-  </title>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&amp;display=swap" rel="stylesheet"/>
-  <style>
-   body {
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Dikey Hat Örneği
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&amp;display=swap" rel="stylesheet" />
+    <style>
+html, body {
+  overflow: hidden !important;
+  height: 100%;
+  margin: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+        body {
             font-family: "Trirong", serif;
             line-height: 1.2;
         }
-        html,
-    body {
-      overflow: hidden !important;
-      height: 100%;
-      margin: 0;
-      padding-left: 2px;
-      padding-right: 2px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+
 
         h1,
         h2 {
@@ -215,10 +217,11 @@
             height: 100%;
             background-color: #E5AA1A;
             position: absolute;
-            top: 0px;
-            left: 0px;
-            /* Dikey hattın, sol kenardan uzaklığını ayarlar */
+            top: 0;
+            right: 0;
+            /* sağa hizalandı */
         }
+
 
         .important-words1 h2 {
             color: #a70000;
@@ -321,35 +324,32 @@
         }
 
         .dash-list {
-            list-style-type: none;
-            /* Varsayılan liste işaretçilerini kaldırır */
-            padding-left: 10px;
-            /* Sol iç boşluğu kaldırır */
+            list-style: none;
+            /* varsayılan noktaları kaldır */
+            direction: rtl;
+            /* yazım yönünü sağdan sola yap */
+            padding: 0;
+            margin: 0;
         }
 
         .dash-list li {
             position: relative;
-            /* Pozisyonlama için gerekli */
-            padding-left: 12px;
-            /* İşaretçi ile metin arasındaki boşluk */
-            margin-bottom: px;
-            /* Liste öğeleri arasında boşluk (isteğe bağlı) */
+            padding-right: 20px;
+            /* metin ile "-" işareti arasında boşluk */
+            text-align: right;
+            /* metin sağa hizalansın */
         }
 
-        .dash-list li::before {
-            content: "- ";
-            /* Önce işaretçi olarak kullanmak istediğiniz karakter */
+        .dash-list li::after {
+            content: "-";
             position: absolute;
-            /* Pozisyonu mutlak olarak ayarlamak */
-            left: 0;
-            /* Sol kenardan hizalama */
+            right: 0;
+            /* sağ kenara hizala */
             top: 0;
-            /* Üst kenardan hizalama */
             color: black;
-            /* İşaretçi rengi (isteğe bağlı) */
             font-size: 16px;
-            /* İşaretçi boyutu (isteğe bağlı) */
         }
+
 
         li strong {
             display: block;
@@ -417,393 +417,384 @@
         .custom-button:hover {
             background-color: blue;
         }
-  </style>
- </head>
- <body>
-  <h2>
-   Use requirements
-  </h2>
-  <p>
-   Use requirements govern the use of a car, such as how to transport passengers and load and how far load may
-        protrude.
-  </p>
-  <h2>
-   Towing
-  </h2>
-  <p>
-   If you have to tow a vehicle due to a breakdown, or if your vehicle has to be towed, you must comply with certain
-        rules:
-  </p>
-  <ul>
-   <li>
-    The distance between the two vehicles should not exceed 5 meters.
-   </li>
-   <li>
-    A motor vehicle may not tow more than one motor vehicle, nor may you tow an assembly of vehicles.
-   </li>
-   <li>
-    A combination of vehicles may not tow a motor vehicle.
-   </li>
-   <li>
-    You cannot tow a two-wheeled motorcycle or moped with a passenger car, nor can a passenger car be towed by a
-            two-wheeled motorcycle or moped.
-   </li>
-  </ul>
-  <div class="image-container">
-   <figure>
-    <img alt="Image 1" src="https://static.wixstatic.com/media/4b688f_d688daf8776f4080bec74d849bd26c0b~mv2.jpg"/>
-    <figcaption>
-     <em>
-      The distance between two vehicles, of which one is being towed, may not be more than five
-                    metres.
-     </em>
-    </figcaption>
-   </figure>
-   <figure>
-    <img alt="Image 2" src="https://static.wixstatic.com/media/4b688f_1d1279171b944d979bd57cfc41c5b990~mv2.jpg"/>
-    <figcaption>
-     <em>
-      When transporting a load it may not obstruct the driver’s manoeuvrability in any way. Transporting
-                    goods like in the picture above is therefore not permitted.
-     </em>
-    </figcaption>
-   </figure>
-  </div>
-  <h2>
-   Hinder caused by load or passengers
-  </h2>
-  <p>
-   The driver of a passenger car must not be hindered by passengers or load while operating the vehicle. Driving is
-        prohibited if load is blocking, for example, access to the gear stick or the view of the right wing mirror.
-  </p>
-  <h2>
-   Adequate view of surroundings
-  </h2>
-  <p>
-   The driver of a passenger car must have sufficient visibility of the vehicle’s immediate surroundings at all
-        times. This also applies when transporting a trailer behind the vehicle or load in or on the vehicle. Visibility
-        through the windscreen and front side windows should never be obstructed. The wing mirrors must also provide
-        sufficient visibility alongside and behind the car or trailer. If this is not the case, then trailer or caravan
-        mirrors or a camera monitor system must be used.
-  </p>
-  <p>
-   These rules do not apply to the rearview mirror.
-  </p>
-  <div class="image-container1">
-   <figure>
-    <img alt="Image 1" src="https://static.wixstatic.com/media/4b688f_b9caade9f98c45a5aedcedceff60b342~mv2.jpg"/>
-    <figcaption>
-     <em>
-      If you cannot look past the trailer or caravan with the normal mirrors, extra mirrors are
-                    required. The yellow lines indicate the width of the caravan. If this is wider than the width of the
-                    normal mirrors, then the normal mirrors are not sufficient.
-     </em>
-    </figcaption>
-   </figure>
-  </div>
-  <h2>
-   Securing load
-  </h2>
-  <p>
-   Load being transported in or on a passenger car or trailer must not be able to shift or fall off the vehicle. It
-        is therefore mandatory to properly secure all load before driving. This also applies to load inside the car,
-        which must not be able to hinder the driver.
-  </p>
-  <p>
-   Load must be secured in line with a number of requirements:
-  </p>
-  <ul>
-   <li>
-    The method of securing must be able to withstand sufficient forces, both in the direction of travel and to
-            the side, backwards and upwards, such as with speed bumps.
-   </li>
-   <li>
-    Loose cargo that cannot be secured (e.g. sand or leaves) must be covered with a net or tarp if it could fall
-            or blow off the vehicle.
-   </li>
-   <li>
-    The securing devices must be suitable for the purpose for which they are being used.
-   </li>
-  </ul>
-  <div class="image-container">
-   <figure>
-    <img alt="Image 1" src="https://static.wixstatic.com/media/4b688f_202ce935139347659caec13fdd5492c9~mv2.jpg">
-     <figcaption>
-      <em>
-       If you are transporting a large load in the trailer, you must secure it well with, for
-                    example, lashing straps or ropes.
-      </em>
-     </figcaption>
-    </img>
-   </figure>
-   <figure>
-    <img alt="Image 2" src="https://static.wixstatic.com/media/4b688f_96c96cfc36e04449886496d8617556b8~mv2.jpg"/>
-    <figcaption>
-     <em>
-      If you are transporting loose cargo in the trailer, it must be covered with a net or tarpaulin. No
-                    cargo should be able to blow off or fall off.
-     </em>
-    </figcaption>
-   </figure>
-  </div>
-  <h2>
-   Overhanging load
-  </h2>
-  <p>
-   Just like with vehicles, load may not contain any sharp objects that could cause injury in the event of a
-        collision. Protruding blunt objects must be covered if leaving them uncovered increases the risk of injury.
-  </p>
-  <h2>
-   Load carrier
-  </h2>
-  <p>
-   Transporting load on a load carrier is only permitted if the load carrier is intended to hold that load. A
-        bicycle carrier, for example, may only be used to transport bicycles - and only the intended number of bicycles
-        according to its design.
-  </p>
-  <div class="image-container">
-   <figure>
-    <img alt="Image 1" src="https://static.wixstatic.com/media/4b688f_85a65e8e2e634d3191d4fd44d3338a9e~mv2.jpg"/>
-    <figcaption>
-     <em>
-      You may only transport bicycles on a bicycle carrier. Transporting a suitcase is not
-                    permitted.
-     </em>
-    </figcaption>
-   </figure>
-   <figure>
-    <img alt="Image 2" src="https://static.wixstatic.com/media/4b688f_5b6bbf105a37447192750ca26fde3f30~mv2.jpg"/>
-    <figcaption>
-     <em>
-      When a load carrier obscures the number plate and rear lights of a passenger car, it must have
-                    integrated lighting and a white number plate.
-     </em>
-    </figcaption>
-   </figure>
-  </div>
-  <p>
-   The load and the load carrier must also meet the following requirements:
-  </p>
-  <ul>
-   <li>
-    The goods and the load carrier itself must be properly secured.
-   </li>
-   <li>
-    The load carrier, including the load, must not protrude more than 20 centimeters from the sides of the
-            vehicle.
-   </li>
-   <li>
-    If the lighting of the passenger car is obscured by the load carrier, the following lighting must be present
-            on the load carrier:
-   </li>
-   <ul class="dash-list">
-    <li>
-     two red rear lights;
-    </li>
-    <li>
-     two red brake lights;
-    </li>
-    <li>
-     two red retro-reflectors;
-    </li>
-    <li>
-     two amber indicators.
-    </li>
-   </ul>
-   <li>
-    If the number plate of the passenger car is obscured by the load carrier, a white number plate with the same
-            registration number as the passenger car must be affixed to the load carrier. This must have an approval
-            mark and number plate lighting must be present.
-   </li>
-  </ul>
-  <p>
-   If the load carrier is mounted on the tow bar or on the front of the trailer, it must meet the following
-        requirements:
-  </p>
-  <ul>
-   <li>
-    The weight on the tow bar (also referred to as the tow ball weight) must not exceed that specified for this
-            passenger car. If it has not been recorded, it must never exceed 75 kg.
-   </li>
-   <li>
-    The load carrier itself, or parts thereof, must not touch the road surface during normal use.
-   </li>
-   <li>
-    The load carrier or (remaining) parts thereof must not hinder a coupled trailer’s manoeuvrability.
-   </li>
-  </ul>
-  <p>
-   If goods are transported on the roof of a passenger car, this must be in accordance with the following
-        requirements:
-  </p>
-  <ul>
-   <li>
-    Transport must be by means of a load carrier that is intended for this.
-   </li>
-   <li>
-    The load carrier and goods must be properly secured.
-   </li>
-   <li>
-    The maximum authorised roof load (the weight on the roof) must not be exceeded.
-   </li>
-  </ul>
-  <p>
-   The maximum authorised roof load and tow ball weight can be found in the vehicle’s owner’s manual (or on the tow
-        bar).
-  </p>
-  <h2>
-   Overhanging load in passenger cars
-  </h2>
-  <p>
-   When loading load on or in a vehicle, we distinguish between divisible and indivisible loads.
-  </p>
-  <div class="important-words2">
-   <div class="vertical-line2">
-   </div>
-   <h3>
-    Divisible load
-   </h3>
-   <p>
-    Load that can be transported in several parts and can therefore often be loaded into or onto a vehicle in
-            several ways.
-   </p>
-   <h3>
-    Indivisible load
-   </h3>
-   <p>
-    Load that cannot be divided into smaller pieces during road transport without causing damage or unnecessary
-            costs. This can include ladders, glass plates, or long wooden planks.
-   </p>
-  </div>
-  <p>
-   Load must always be transported in the best possible way, so that it causes as little inconvenience as possible
-        to other traffic. The maximum overhang (how far something may protrude outside the vehicle) for different loads
-        are as follows:
-  </p>
-  <ul>
-   <li>
-    <strong>
-     Sides
-    </strong>
+    </style>
+</head>
+
+<body>
+    <h2>
+        متطلبات الاستعمال
+    </h2>
     <p>
-     If you transport a wide load on the roof of your passenger car, this load may protrude a maximum of 20
-                centimetres on each side. It makes no difference whether it is a divisible or an indivisible load.
+        تحكم متطلباتُ الاستعمال كيفيةَ استخدام السيارة، مثل كيفية نقل الركّاب والحمولة ومدى جواز بروز الحمولة.
     </p>
-   </li>
-   <div class="image-container1">
-    <figure>
-     <img alt="Image 1" src="https://static.wixstatic.com/media/4b688f_6b69afdbfdaa4d3988aedf6dd091b909~mv2.jpg"/>
-     <figcaption>
-      <em>
-      </em>
-     </figcaption>
-    </figure>
-   </div>
-   <li>
-    <strong>
-     Front
-    </strong>
+    <h2>
+        القطر
+    </h2>
     <p>
-     Load must not protrude from the front of a passenger car - unless the load is indivisible lengthwise, in
-                which case it may protrude by a maximum of one metre.
+        إذا اضطررتَ لقطر مركبة بسبب عطل، أو إذا كان لا بدّ من قطر مركبتك، فيجب الالتزامُ بقواعد معيّنة:
     </p>
-   </li>
-   <li>
-    <strong>
-     Rear
-    </strong>
+    <ul>
+        <li>
+            يجب ألّا تتجاوز المسافةُ بين المركبتين 5 أمتار.
+        </li>
+        <li>
+            لا يجوز للمركبة الآلية أن تَقطُر أكثرَ من مركبةٍ آلية واحدة، كما لا يجوز قطرُ تجميعةٍ من المركبات.
+        </li>
+        <li>
+            لا يجوز لمجموعةِ مركباتٍ أن تَقطُر مركبةً آلية.
+        </li>
+        <li>
+            لا يجوز لسيارة الركّاب قطرُ درّاجةٍ نارية ذات عجلتين أو درّاجةٍ نارية خفيفة (moped)، كما لا يجوز قطرُ سيارة
+            ركّاب بواسطة درّاجةٍ نارية ذات عجلتين أو درّاجةٍ نارية خفيفة.
+        </li>
+    </ul>
+    <div class="image-container">
+        <figure>
+            <img alt="الصورة 1"
+                src="https://static.wixstatic.com/media/4b688f_d688daf8776f4080bec74d849bd26c0b~mv2.jpg" />
+            <figcaption>
+                <em>
+                    لا يجوز أن تزيد المسافةُ بين مركبتين إحداهما مقطورةٌ على خمسة أمتار.
+                </em>
+            </figcaption>
+        </figure>
+        <figure>
+            <img alt="الصورة 2"
+                src="https://static.wixstatic.com/media/4b688f_1d1279171b944d979bd57cfc41c5b990~mv2.jpg" />
+            <figcaption>
+                <em>
+                    عند نقل حمولةٍ لا يجوز أن تُعيق بأيّ وجه قدرةَ السائق على المناورة؛ لذا فالنقلُ كما في الصورة أعلاه
+                    غيرُ مسموح.
+                </em>
+            </figcaption>
+        </figure>
+    </div>
+    <h2>
+        الإعاقة الناجمة عن الحمولة أو الركّاب
+    </h2>
     <p>
-     Load may protrude by a maximum of one metre from the rear of a passenger car. The distance between the
-                rear axle and the end of the load must never exceed five metres. This applies to both divisible and
-                indivisible load.
+        يجب ألّا يتعرّض سائقُ سيارة الركّاب لأيّ إعاقةٍ من الركّاب أو الحمولة أثناء القيادة. تُحظر القيادةُ إذا كانت
+        الحمولةُ تحجب — مثلًا — الوصولَ إلى ناقل الحركة أو الرؤيةَ عبر المرآة الجانبية اليمنى.
     </p>
-   </li>
-  </ul>
-  <div class="image-container1">
-   <figure>
-    <img alt="Image 1" src="https://static.wixstatic.com/media/4b688f_3bb5c9f660b64067beee327806f354a3~mv2.jpg"/>
-    <figcaption>
-     <em>
-     </em>
-    </figcaption>
-   </figure>
-  </div>
-  <div class="important-words2">
-   <p>
-    The main difference between
-    <strong>
-     divisible
-    </strong>
-    and
-    <strong>
-     indivisible
-    </strong>
-    load is that
-            indivisible load may protrude in front of a passenger car whereas divisible load may not.
-   </p>
-   <p>
-    Load may never protrude too much that it makes a passenger car longer, higher or wider than is permitted. So
-            load may not exceed:
-   </p>
-   <ul>
-    <li>
-     12 metres in length;
-    </li>
-    <li>
-     4 metres in height;
-    </li>
-    <li>
-     2.55 metres in width.
-    </li>
-   </ul>
-   <p>
-    Combinations (passenger car plus trailer) may not exceed 18 metres.
-   </p>
-  </div>
-  <a class="custom-button" href="https://www.examtheorie.nl/ar-test-and-theory-menu" target="_blank">
-   Back to
-    overview
-  </a>
-  <script>
-   window.addEventListener("scroll", () => {
-      window.scrollTo(0, 0);
-    });
+    <h2>
+        رؤيةٌ كافيةٌ للمحيط
+    </h2>
+    <p>
+        يجب أن تكون لدى سائق سيارة الركّاب رؤيةٌ كافيةٌ لمحيط المركبة المباشر في جميع الأوقات. وينطبق ذلك أيضًا عند نقل
+        مقطورةٍ خلف المركبة أو حمولةٍ داخل المركبة أو على سطحها. لا يجوز مطلقًا حجبُ الرؤية عبر الزجاج الأمامي والنوافذ
+        الجانبية الأمامية. كما يجب أن تؤمّن المرايا الجانبية رؤيةً كافيةً على جانبي السيارة وخلف السيارة أو المقطورة.
+        وإن لم تتحقق الرؤيةُ الكافية، فيجب استخدام مرايا للمقطورة/الكرفان أو نظام كاميرا مع شاشة.
+    </p>
+    <p>
+        لا تنطبق هذه القواعد على مرآة الرؤية الخلفية الداخلية.
+    </p>
+    <div class="image-container1">
+        <figure>
+            <img alt="الصورة 1"
+                src="https://static.wixstatic.com/media/4b688f_b9caade9f98c45a5aedcedceff60b342~mv2.jpg" />
+            <figcaption>
+                <em>
+                    إذا تعذّر النظرُ متجاوزًا المقطورة أو الكرفان بالمرايا العادية، فالمرايا الإضافية واجبة. تشير
+                    الخطوطُ الصفراء إلى عرض الكرفان؛ فإذا كان أعرضَ من عرض المرايا العادية فهذه المرايا غيرُ كافية.
+                </em>
+            </figcaption>
+        </figure>
+    </div>
+    <h2>
+        تثبيت الحمولة
+    </h2>
+    <p>
+        يجب ألّا تتمكّن الحمولةُ المنقولة في سيارة الركّاب أو على سطحها أو في المقطورة من الانزلاق أو السقوط من المركبة.
+        لذا يُلزَم تثبيتُ جميع الحمولة جيدًا قبل القيادة. وينطبق ذلك أيضًا على الحمولة داخل السيارة، إذ يجب ألّا تتمكّن
+        من إعاقة السائق.
+    </p>
+    <p>
+        ويجب تثبيتُ الحمولة بما يراعي عددًا من المتطلبات:
+    </p>
+    <ul>
+        <li>
+            يجب أن تتحمّل وسيلةُ التثبيت قوى كافيةً في اتجاه السير وإلى الجانبين وإلى الخلف وإلى الأعلى — كما عند
+            المطبات.
+        </li>
+        <li>
+            يجب تغطيةُ الحمولة السائبة التي يتعذّر تثبيتها (مثل الرمل أو الأوراق) بشَبَكٍ أو غطاءٍ مشمّع إذا كان من
+            الممكن أن تتطاير أو تسقط من المركبة.
+        </li>
+        <li>
+            يجب أن تكون أدواتُ التثبيت مناسبةً للغاية التي تُستخدَم من أجلها.
+        </li>
+    </ul>
+    <div class="image-container">
+        <figure>
+            <img alt="الصورة 1"
+                src="https://static.wixstatic.com/media/4b688f_202ce935139347659caec13fdd5492c9~mv2.jpg">
+            <figcaption>
+                <em>
+                    عند نقل حمولةٍ كبيرة في المقطورة يجب تثبيتُها جيدًا — مثلًا بواسطة أحزمة الربط أو الحبال.
+                </em>
+            </figcaption>
+            </img>
+        </figure>
+        <figure>
+            <img alt="الصورة 2"
+                src="https://static.wixstatic.com/media/4b688f_96c96cfc36e04449886496d8617556b8~mv2.jpg" />
+            <figcaption>
+                <em>
+                    عند نقل حمولةٍ سائبة في المقطورة يجب تغطيتُها بشَبَك أو بقماشٍ مشمّع. لا يجوز أن تتطاير أيُّ حمولةٍ
+                    أو تسقط.
+                </em>
+            </figcaption>
+        </figure>
+    </div>
+    <h2>
+        حمولةٌ بارزة
+    </h2>
+    <p>
+        كما في المركبات، لا يجوز أن تحتوي الحمولةُ على أجسامٍ حادّة قد تُسبّب إصابةً عند وقوع تصادم. ويجب تغطيةُ الأجزاء
+        البارزة غير الحادّة إذا كان تركُها مكشوفةً يزيد خطرَ الإصابة.
+    </p>
+    <h2>
+        حامل الحمولة
+    </h2>
+    <p>
+        لا يُسمَح بنقل الحمولة على حامل حمولةٍ إلا إذا كان الحاملُ مخصّصًا لتلك الحمولة. فحاملُ الدراجات — مثلًا — لا
+        يُستخدم إلا لنقل الدراجات، وبالعدد المسموح به بحسب تصميمه فقط.
+    </p>
+    <div class="image-container">
+        <figure>
+            <img alt="الصورة 1"
+                src="https://static.wixstatic.com/media/4b688f_85a65e8e2e634d3191d4fd44d3338a9e~mv2.jpg" />
+            <figcaption>
+                <em>
+                    لا يجوز نقلُ غير الدراجات على حامل الدراجات. نقلُ حقيبة سفر — مثلًا — غيرُ مسموح.
+                </em>
+            </figcaption>
+        </figure>
+        <figure>
+            <img alt="الصورة 2"
+                src="https://static.wixstatic.com/media/4b688f_5b6bbf105a37447192750ca26fde3f30~mv2.jpg" />
+            <figcaption>
+                <em>
+                    إذا كان حاملُ الحمولة يحجب لوحةَ التسجيل وأضواءَ المؤخرة في سيارة الركّاب، فيجب أن يكون مزوّدًا
+                    بإضاءةٍ مدمجة ولوحةٍ بيضاء.
+                </em>
+            </figcaption>
+        </figure>
+    </div>
+    <p>
+        ويجب أن يستوفي الحاملُ والحمولة المتطلبات الآتية أيضًا:
+    </p>
+    <ul>
+        <li>
+            يجب تثبيتُ البضائع وحاملِ الحمولة نفسِه تثبيتًا محكمًا.
+        </li>
+        <li>
+            لا يجوز أن يبرز حاملُ الحمولة — بما في ذلك الحمولة — أكثرَ من 20 سنتيمترًا عن جانبي المركبة.
+        </li>
+        <li>
+            إذا حجب حاملُ الحمولة إضاءةَ سيارة الركّاب، فيجب أن تتوافر الإضاءةُ الآتية على الحامل:
+        </li>
+        <ul class="dash-list">
+            <li>
+                مصباحان خلفيان أحمران؛
+            </li>
+            <li>
+                مصباحا فرامل أحمران؛
+            </li>
+            <li>
+                عاكسان رجوعيان أحمران؛
+            </li>
+            <li>
+                مؤشّران كهرمانيان.
+            </li>
+        </ul>
+        <li>
+            إذا حجَب حاملُ الحمولة لوحةَ تسجيل سيارة الركّاب، فيجب تثبيتُ لوحةٍ بيضاء على الحامل تحمل رقمَ التسجيل نفسه
+            لسيارة الركّاب، وأن تكون حاصلةً على علامة اعتماد، وأن تتوافرَ إضاءةُ لوحة الأرقام.
+        </li>
+    </ul>
+    <p>
+        إذا ثُبِّت حاملُ الحمولة على قضيب السحب أو على مقدّمة المقطورة، فيجب أن يستوفي المتطلبات الآتية:
+    </p>
+    <ul>
+        <li>
+            يجب ألّا يتجاوز الوزنُ على قضيب السحب (ويُسمّى أيضًا وزنَ كرة السحب) ما هو محدَّد لهذه السيارة. وإذا لم
+            يُذكَر، فلا يجوز أن يتجاوز 75 كغ مطلقًا.
+        </li>
+        <li>
+            يجب ألّا يلامس حاملُ الحمولة نفسُه — أو أي جزءٍ منه — سطحَ الطريق في الاستعمال العادي.
+        </li>
+        <li>
+            يجب ألّا يُعيق حاملُ الحمولة أو أجزاؤه (المتبقية) قدرةَ المناورة لمقطورةٍ موصولة.
+        </li>
+    </ul>
+    <p>
+        إذا نُقلت البضائعُ على سقف سيارة الركّاب، فيجب الالتزام بالآتي:
+    </p>
+    <ul>
+        <li>
+            يجب أن يكون النقلُ بواسطة حامل حمولةٍ مخصّص لهذا الغرض.
+        </li>
+        <li>
+            يجب تثبيتُ حامل الحمولة والبضائع تثبيتًا محكمًا.
+        </li>
+        <li>
+            يجب ألّا تتجاوز الحمولةُ المصرّح بها على السقف (الوزن على السقف) الحدَّ الأقصى.
+        </li>
+    </ul>
+    <p>
+        يمكن العثورُ على الحدّ الأقصى المصرّح به لحمولة السقف ووزن كرة السحب في دليل مالك المركبة (أو على قضيب السحب).
+    </p>
+    <h2>
+        حمولةٌ بارزة في سيارات الركّاب
+    </h2>
+    <p>
+        عند تحميل حمولةٍ على المركبة أو داخلها نُفرّق بين الحمولة القابلة للتجزئة والحمولة غير القابلة للتجزئة.
+    </p>
+    <div class="important-words2">
+        <div class="vertical-line2">
+        </div>
+        <h3>
+            حمولة قابلة للتجزئة
+        </h3>
+        <p>
+            حمولةٌ يمكن نقلُها على أجزاءٍ عدّة، وبالتالي يمكن غالبًا تحميلُها في المركبة أو عليها بطرقٍ مختلفة.
+        </p>
+        <h3>
+            حمولة غير قابلة للتجزئة
+        </h3>
+        <p>
+            حمولةٌ لا يمكن تقسيمُها إلى قطعٍ أصغر أثناء النقل الطرقي دون إحداث ضررٍ أو تكاليفَ غير لازمة. وقد تشمل
+            سلالمَ أو ألواحَ زجاجٍ أو عوارضَ خشبية طويلة.
+        </p>
+    </div>
+    <p>
+        يجب دائمًا نقلُ الحمولة بأفضل طريقةٍ ممكنة بحيث تُسبّب أقلَّ إزعاجٍ ممكنٍ لحركة المرور الأخرى. وحدودُ البروز
+        القصوى (مقدار المسموح ببروزه خارج المركبة) للأنواع المختلفة من الحمولات كما يأتي:
+    </p>
+    <ul>
+        <li>
+            <strong>
+                الجوانب
+            </strong>
+            <p>
+                إذا نقلتَ حمولةً عريضة على سقف سيارة الركّاب، فيجوز أن تبرز هذه الحمولةُ بحدٍّ أقصى 20 سنتيمترًا على كلّ
+                جانب، ولا فرق بين الحمولة القابلة للتجزئة وغير القابلة للتجزئة.
+            </p>
+        </li>
+        <div class="image-container1">
+            <figure>
+                <img alt="الصورة 1"
+                    src="https://static.wixstatic.com/media/4b688f_6b69afdbfdaa4d3988aedf6dd091b909~mv2.jpg" />
+                <figcaption>
+                    <em>
+                    </em>
+                </figcaption>
+            </figure>
+        </div>
+        <li>
+            <strong>
+                المقدّمة
+            </strong>
+            <p>
+                لا يجوز بروزُ الحمولة من مقدّمة سيارة الركّاب — إلا إذا كانت الحمولةُ غيرَ قابلةٍ للتجزئة طوليًا،
+                فعندئذٍ يجوز أن تبرز بمقدار مترٍ واحدٍ كحدٍّ أقصى.
+            </p>
+        </li>
+        <li>
+            <strong>
+                المؤخرة
+            </strong>
+            <p>
+                يجوز أن تبرز الحمولةُ مترًا واحدًا كحدٍّ أقصى من مؤخرة سيارة الركّاب. ويجب ألّا تتجاوز المسافةُ بين
+                المحور الخلفي ونهاية الحمولة خمسةَ أمتار مطلقًا. ويَنطبق ذلك على الحمولة القابلة للتجزئة وغير القابلة
+                للتجزئة معًا.
+            </p>
+        </li>
+    </ul>
+    <div class="image-container1">
+        <figure>
+            <img alt="الصورة 1"
+                src="https://static.wixstatic.com/media/4b688f_3bb5c9f660b64067beee327806f354a3~mv2.jpg" />
+            <figcaption>
+                <em>
+                </em>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="important-words2">
+        <p>
+            يكمنُ الفرقُ الرئيس بين
+            <strong>
+                الحمولة القابلة للتجزئة
+            </strong>
+            و
+            <strong>
+                الحمولة غير القابلة للتجزئة
+            </strong>
+            في أنّ
+            غيرَ القابلة للتجزئة قد تبرز من مقدّمة سيارة الركّاب بينما القابلةُ للتجزئة لا يجوز لها ذلك.
+        </p>
+        <p>
+            لا يجوز مطلقًا أن يبرزَ من الحمولة ما يجعل سيارةَ الركّاب أطول أو أعلى أو أعرض من الحدود المسموح بها. لذا لا
+            يجوز تجاوز:
+        </p>
+        <ul>
+            <li>
+                12 مترًا طولًا؛
+            </li>
+            <li>
+                4 أمتار ارتفاعًا؛
+            </li>
+            <li>
+                2.55 متر عرضًا.
+            </li>
+        </ul>
+        <p>
+            لا يجوز أن تتجاوز المجموعاتُ (سيارة ركّاب مع مقطورة) 18 مترًا.
+        </p>
+    </div>
+    <a class="custom-button" href="https://www.examtheorie.nl/ar-test-and-theory-menu" target="_blank">
+        العودة إلى النظرة العامة
+    </a>
 
 
-    // Sağ tıklamayı engelle
-    document.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-    });
 
-    // Metin seçmeyi engelle
-    document.addEventListener("selectstart", function (event) {
-      event.preventDefault();
-    });
+<script>
+window.addEventListener("scroll", () => {
+  window.scrollTo(0, 0);
+});
 
-    function sendHeight() {
-      const target = document.querySelector(".custom-button");
-      if (!target) return;
+// Sag tiklamayi engelle
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
 
-      const height = target.getBoundingClientRect().bottom;
+// Metin se�meyi engelle
+document.addEventListener("selectstart", function (event) {
+  event.preventDefault();
+});
 
-      // Post message ile dış sayfaya gönder
-      window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+function sendHeight() {
+  const target = document.querySelector(".custom-button");
+  if (!target) return;
+  const height = target.getBoundingClientRect().bottom;
+  // Post message ile dis sayfaya g�nder
+  window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+}
 
+window.onload = () => {
+  sendHeight();
+  setTimeout(sendHeight, 300);
+  setTimeout(sendHeight, 1000);
+  setTimeout(sendHeight, 3000);
+};
 
-    }
+// Tarayici yeniden boyutlandiginda da y�kseklik g�nder
+window.onresize = () => {
+  sendHeight();
+};
+</script>
+</body>
 
-    window.onload = () => {
-      sendHeight();
-      setTimeout(sendHeight, 300);
-      setTimeout(sendHeight, 1000);
-      setTimeout(sendHeight, 3000);
-    };
-
-
-    // Tarayıcı yeniden boyutlandığında da yükseklik gönder
-    window.onresize = () => {
-      sendHeight();
-    };
-  </script>
- </body>
 </html>

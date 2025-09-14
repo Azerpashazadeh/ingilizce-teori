@@ -8,21 +8,22 @@
   </title>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&amp;display=swap" rel="stylesheet"/>
   <style>
+html, body {
+  overflow: hidden !important;
+  height: 100%;
+  margin: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
    body {
             font-family: "Trirong", serif;
             line-height: 1.2;
         }
 
-         html,
-      body {
-      overflow: hidden !important;
-      height: 100%;
-      margin: 0;
-      padding-left: 2px;
-      padding-right: 2px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+         
 
         h1,
         h2 {
@@ -211,112 +212,104 @@
   </style>
  </head>
  <body>
-  <h1>
-   The use of mobile communication devices
+<h1>
+   Het gebruik van mobiele communicatiemiddelen
   </h1>
   <p>
-   Mobile telecommunications devices is a difficult word for mobile phones, for example. Holding these devices
-        while driving a motor vehicle, moped, snorfiets, bicycle, disabled vehicle, or tram is prohibited.
+   Mobiele telecommunicatieapparaten is een moeilijke term voor bijvoorbeeld mobiele telefoons. Het vasthouden van deze apparaten tijdens het besturen van een motorvoertuig, bromfiets, snorfiets, fiets, gehandicaptenvoertuig of tram is verboden.
   </p>
   <p>
-   Not only making a phonecall while holding the device is prohibited, it should not be held at all while driving.
-        Reading, texting, and changing music while driving is also prohibited.
+   Niet alleen bellen met het apparaat in de hand is verboden, je mag het tijdens het rijden helemaal niet vasthouden. Lezen, appen en muziek wisselen tijdens het rijden is eveneens verboden.
   </p>
   <div>
    <div class="images-container5">
     <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_a58763bff2b8498d866711f5b7216c79~mv2.jpg"/>
+     <img alt="Waarschuwing zij-airbag storing" src="https://static.wixstatic.com/media/4b688f_a58763bff2b8498d866711f5b7216c79~mv2.jpg"/>
      <figcaption>
-      Holding a mobile phone while driving is prohibited. Regardless of what you use it for.
+      Een mobiele telefoon vasthouden tijdens het rijden is verboden. Ongeacht waar je hem voor gebruikt.
      </figcaption>
     </figure>
     <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_3d3df6af3b7342a5823e0ae5d19235ca~mv2.jpg"/>
+     <img alt="Waarschuwing zij-airbag storing" src="https://static.wixstatic.com/media/4b688f_3d3df6af3b7342a5823e0ae5d19235ca~mv2.jpg"/>
      <figcaption>
-      Even holding a phone while riding a bicycle is prohibited.
+      Ook het vasthouden van een telefoon tijdens het fietsen is verboden.
      </figcaption>
     </figure>
    </div>
   </div>
   <h2>
-   Distraction
+   Afleiding
   </h2>
   <p>
-   Using mobile telephones while driving is estimated to claim several dozen victims per year as the result of
-        accidents, according to ‘Veilig Verkeer Nederland’. The risk of an accident is doubled when making a phone call
-        while driving, even if using hands-free equipment. Typing or reading messages increases the risk of an accident
-        by a factor of six. Using mobile phones when driving causes distraction and negatively impacts:
+   Het gebruik van mobiele telefoons tijdens het rijden eist naar schatting enkele tientallen slachtoffers per jaar, aldus ‘Veilig Verkeer Nederland’. Het ongevalsrisico verdubbelt bij telefoneren tijdens het rijden, ook met handsfree-apparatuur. Het typen of lezen van berichten verhoogt het risico met een factor zes. Het gebruik van mobiele telefoons tijdens het rijden leidt af en heeft een negatieve invloed op:
   </p>
   <ul>
    <li>
     <p>
-     your powers of perception;
+     je waarnemingsvermogen;
     </p>
    </li>
    <li>
     <p>
-     your responsiveness;
+     je reactievermogen;
     </p>
    </li>
    <li>
     <p>
-     control of the vehicle;
+     de beheersing van het voertuig;
     </p>
    </li>
    <li>
     <p>
-     your judgement;
+     je oordeelsvermogen;
     </p>
    </li>
   </ul>
   <p>
-   The above does not only apply to mobile phones. Setting up navigation systems and using music players such as
-        iPods is also forbidden while driving.
+   Het bovenstaande geldt niet alleen voor mobiele telefoons. Het instellen van navigatiesystemen en het bedienen van muziekspelers zoals iPods is tijdens het rijden ook verboden.
   </p>
   <a class="custom-button" href="https://www.examtheorie.nl/nl-test-and-theory-menu" target="_blank">
-   Back to
-    overview
+   Terug naar
+    overzicht
   </a>
-  <script>
-   window.addEventListener("scroll", () => {
-      window.scrollTo(0, 0);
-    });
 
+  
+ 
+<script>
+window.addEventListener("scroll", () => {
+  window.scrollTo(0, 0);
+});
 
-    // Sağ tıklamayı engelle
-    document.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-    });
+// Sag tiklamayi engelle
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
 
-    // Metin seçmeyi engelle
-    document.addEventListener("selectstart", function (event) {
-      event.preventDefault();
-    });
+// Metin se�meyi engelle
+document.addEventListener("selectstart", function (event) {
+  event.preventDefault();
+});
 
-    function sendHeight() {
-      const target = document.querySelector(".custom-button");
-      if (!target) return;
+function sendHeight() {
+  const target = document.querySelector(".custom-button");
+  if (!target) return;
+  const height = target.getBoundingClientRect().bottom;
+  // Post message ile dis sayfaya g�nder
+  window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+}
 
-      const height = target.getBoundingClientRect().bottom;
+window.onload = () => {
+  sendHeight();
+  setTimeout(sendHeight, 300);
+  setTimeout(sendHeight, 1000);
+  setTimeout(sendHeight, 3000);
+};
 
-      // Post message ile dış sayfaya gönder
-      window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
-
-
-    }
-
-    window.onload = () => {
-      sendHeight();
-      setTimeout(sendHeight, 300);
-      setTimeout(sendHeight, 1000);
-      setTimeout(sendHeight, 3000);
-    };
-
-
-    // Tarayıcı yeniden boyutlandığında da yükseklik gönder
-    window.onresize = () => {
-      sendHeight();
-    };
-  </script>
- </body>
+// Tarayici yeniden boyutlandiginda da y�kseklik g�nder
+window.onresize = () => {
+  sendHeight();
+};
+</script>
+</body>
 </html>
+

@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Dikey Hat Örneği
-  </title>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&amp;display=swap" rel="stylesheet"/>
-  <style>
-   body {
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Dikey Hat Örneği
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&amp;display=swap" rel="stylesheet" />
+    <style>
+html, body {
+  overflow: hidden !important;
+  height: 100%;
+  margin: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+        body {
             font-family: "Trirong", serif;
             line-height: 1.2;
         }
 
-        html,
-    body {
-      overflow: hidden !important;
-      height: 100%;
-      margin: 0;
-      padding-left: 2px;
-      padding-right: 2px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+
 
         h1,
         h2 {
@@ -61,14 +63,15 @@
         }
 
         .vertical-line2 {
-            width: 4px;
-            height: 100%;
-            background-color: rgb(201, 17, 17);
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            /* Dikey hattın, sol kenardan uzaklığını ayarlar */
-        }
+    width: 4px;
+    height: 100%;
+    background-color: rgb(201, 17, 17);
+    position: absolute;
+    top: 0;
+    right: 0;   /* sağa hizala */
+    left: auto; /* soldaki hizalamayı iptal et */
+}
+
 
         .important-words1 h2 {
             color: #a70000;
@@ -106,6 +109,19 @@
             list-style-position: inside;
             /* Madde işaretinin içerde kalmasını sağlar */
         }
+
+        table th,
+        table td {
+            direction: rtl;
+            /* Yazı yönü sağdan sola */
+            text-align: right;
+            /* Hücre içeriğini sağa hizala */
+            padding: 8px;
+            /* İsteğe bağlı: biraz boşluk */
+            vertical-align: top;
+            /* Uzun satırlar için üstten hizalama */
+        }
+
 
         .road-section {
             margin-top: 30px;
@@ -163,7 +179,7 @@
         .image-container img {
             width: 100%;
             height: auto;
-            
+
         }
 
         .image-container figcaption {
@@ -224,7 +240,7 @@
         .dash-list {
             list-style-type: none;
             /* Varsayılan liste işaretçilerini kaldırır */
-            padding-left: ;
+            padding-left: 0px;
             /* Sol iç boşluğu kaldırır */
         }
 
@@ -435,7 +451,7 @@
             /* Yazıları kalın yapma */
         }
 
-       
+
         /* Ekran genişliği 370px'in altına düştüğünde font size 15px olacak */
         @media (max-width: 370px) {
 
@@ -467,614 +483,617 @@
         .custom-button:hover {
             background-color: blue;
         }
-  </style>
- </head>
- <body>
-  <h2>
-   Driving licence requirement
-  </h2>
-  <div class="important-words2">
-   <div class="vertical-line2">
-   </div>
-   <h3>
-    Driving licence
-   </h3>
-   <p>
-    Licence to operate a particular category or particular categories of motor carriages. Current driving
-            licences are issued in the form of a credit card-sized plastic card.
-   </p>
-  </div>
-  <p>
-   You must have your original (not a copy), undamaged driving licence in your possession at all times when
-        operating a vehicle for which a driving licence is required. If you are stopped by an authorised person, such as
-        a police officer, you must show the officer your licence if asked. Driving licences state your social security
-        number (BSN), which means they can often serve as identification. If your driving licence is damaged in any way,
-        you may no longer drive the vehicle to which the licence applies.
-  </p>
-  <p>
-   Driving licences are only valid for the vehicle category or categories for which they are issued. Licences may
-        also include restrictions, such as mandatory use of an automatic clutch, or glasses or contact lenses. Some
-        driving licences are only valid if certain adjustments are made to a vehicle, such as extra pedals or mirrors.
-        These limits are indicated on the licence using fixed codes.
-  </p>
-  <div class="image-container">
-   <figure>
-    <img alt="Image 1" src="https://static.wixstatic.com/media/4b688f_7b420342baa1426fb623adccfd7ee030~mv2.jpg"/>
-    <figcaption>
-     <em>
-     </em>
-    </figcaption>
-   </figure>
-   <figure>
-    <img alt="Image 2" src="https://static.wixstatic.com/media/4b688f_afef01cba15d4f32b2af04e9ee6912f8~mv2.jpg"/>
-    <figcaption>
-     <em>
-     </em>
-    </figcaption>
-   </figure>
-  </div>
-  <h2>
-   Driving licence categories
-  </h2>
-  <p>
-   Driving licences can be issued for a variety of vehicle categories. These are:
-  </p>
-  <div class="image-text-container">
-   <figure>
-    <img alt="Sigorta Kartı" src="https://static.wixstatic.com/media/4b688f_6909d5a8c68844258a9765bb23679f09~mv2.png"/>
-    <figcaption>
-     <em>
-     </em>
-    </figcaption>
-   </figure>
-   <div class="text-content">
-    <h3>
-     AM driving licence
-    </h3>
+    </style>
+</head>
+
+<body>
+    <h2>
+        متطلب رخصة القيادة
+    </h2>
+    <div class="important-words2">
+        <div class="vertical-line2">
+        </div>
+        <h3>
+            رخصة القيادة
+        </h3>
+        <p>
+            ترخيصٌ لقيادة فئةٍ معيّنة أو فئاتٍ معيّنة من المركبات الآلية. تُصدَر رُخص القيادة الحالية على هيئة بطاقة
+            بلاستيكية بحجم بطاقة ائتمان.
+        </p>
+    </div>
     <p>
-     This is the driving licence required to drive mopeds, snorfietsen, speed pedelecs, and brommobielen. To
-                obtain this licence, you have to pass a theory test and a driving test.
+        يجب أن تكون بحوزتك دائمًا رخصةُ قيادتك الأصلية (وليس نسخة) وغيرُ تالفة عند تشغيل مركبةٍ تتطلّب رخصة قيادة. وإذا
+        أوقَفك شخصٌ مخوَّل — مثل شرطي — فعليك أن تبرز رخصتك عند الطلب. وتحتوي رخص القيادة رقمَ الخدمة للمواطنين (BSN)،
+        ولذا يمكن أن تُستَخدم كثيرًا كإثبات هوية. وإذا كانت رخصة قيادتك متضررةً بأيّ شكل، فلا يجوز لك قيادة المركبة التي
+        تنطبق عليها الرخصة.
     </p>
     <p>
-     During the driving test you can opt to use a two-wheeled moped. After obtaining the licence you are
-                qualified to ride all vehicles in this category.
+        تكون رخص القيادة صالحةً فقط للفئة أو الفئات التي صُدِرت لأجلها. وقد تتضمّن الرخص تقييداتٍ مثل إلزامية استخدام
+        قابضٍ آلي أو نظاراتٍ أو عدساتٍ لاصقة. وبعض رُخص القيادة لا تكون صالحةً إلا إذا أُجريت تعديلاتٌ معيّنة على
+        المركبة، مثل دواساتٍ إضافية أو مرايا. وتُبيَّن هذه القيود على الرخصة باستخدام رموزٍ ثابتة.
+    </p>
+    <div class="image-container">
+        <figure>
+            <img alt="الصورة 1"
+                src="https://static.wixstatic.com/media/4b688f_7b420342baa1426fb623adccfd7ee030~mv2.jpg" />
+            <figcaption>
+                <em>
+                </em>
+            </figcaption>
+        </figure>
+        <figure>
+            <img alt="الصورة 2"
+                src="https://static.wixstatic.com/media/4b688f_afef01cba15d4f32b2af04e9ee6912f8~mv2.jpg" />
+            <figcaption>
+                <em>
+                </em>
+            </figcaption>
+        </figure>
+    </div>
+    <h2>
+        فئات رخص القيادة
+    </h2>
+    <p>
+        يمكن إصدار رخص القيادة لعددٍ من فئات المركبات. وهي:
+    </p>
+    <div class="image-text-container">
+        <figure>
+            <img alt="Sigorta Kartı"
+                src="https://static.wixstatic.com/media/4b688f_6909d5a8c68844258a9765bb23679f09~mv2.png" />
+            <figcaption>
+                <em>
+                </em>
+            </figcaption>
+        </figure>
+        <div class="text-content">
+            <h3>
+                رخصة القيادة AM
+            </h3>
+            <p>
+                هذه هي الرخصة المطلوبة لقيادة الدراجات النارية الخفيفة (mopeds) و«snorfietsen» و«speed pedelecs»
+                و«brommobielen». وللحصول عليها يجب اجتياز اختبارٍ نظري واختبار قيادة.
+            </p>
+            <p>
+                أثناء اختبار القيادة يمكنك اختيار درّاجة نارية خفيفة ذات عجلتين. وبعد الحصول على الرخصة تكون مؤهّلًا
+                لقيادة جميع المركبات ضمن هذه الفئة.
+            </p>
+            <p>
+                إذا أردتَ قيادة «brommobiel» فقط، يمكنك اختيار اختبار قيادة خاص بـ «brommobielen». ومن سلبيات هذا الخيار
+                أنه بعد الحصول على الرخصة ستكون مؤهّلًا لقيادة «brommobiel» فقط، أي لا يمكنك قيادة «moped» أو
+                «snorfiets» أو «speed pedelec».
+            </p>
+            <p>
+                إذا لم تحصل قط على هذه الرخصة ولكنك تمتلك رخصة A أو B، فستُمنَح عندها رخصة AM. وهذا يعني أنك مؤهّل
+                لقيادة أيّ مركبة ضمن فئة AM.
+            </p>
+        </div>
+    </div>
+    <div class="image-text-container">
+        <figure>
+            <img alt="Sigorta Kartı"
+                src="https://static.wixstatic.com/media/4b688f_250da031dee04d3188ca636e17dca995~mv2.png" />
+            <figcaption>
+                <em>
+                </em>
+            </figcaption>
+        </figure>
+        <div class="text-content">
+            <h3>
+                رخصة القيادة A
+            </h3>
+            <p>
+                تُقسَّم رخصة قيادة الدرّاجات النارية إلى ثلاث فئاتٍ فرعية: A1 للأقل قدرة، وA2 للقدرة المتوسطة، وA للأعلى
+                قدرة.
+            </p>
+        </div>
+    </div>
+    <div class="important-words2">
+        <div class="vertical-line2">
+        </div>
+        <h3>
+            الرمز 80
+        </h3>
+        <p>
+            ابتداءً من سن 21 عامًا يمكنك أداء اختبارات القيادة للدراجات النارية الثقيلة (فئة A غير المحدودة). وإذا نجحتَ
+            في هذا الاختبار بين سن 21 و24 عامًا فستُثبَّت على رخصتك مُدّةً مؤقّتة وتقييدٌ (الرمز 80). ويعني هذا الرمز
+            أنك لا يجوز لك قيادة سوى دراجات A2 وثلاثية العجلات من فئة A.
+        </p>
+        <p>
+            يُزال هذا الرمز من رخصتك عندما تكون قد امتلكت رخصة A (أو رخصة A2 السابقة) لمدة سنتين، أو عندما تبلغ 24
+            عامًا.
+        </p>
+    </div>
+    <div class="image-text-container">
+        <figure>
+            <img alt="Sigorta Kartı"
+                src="https://static.wixstatic.com/media/4b688f_78e1d7420e91469ea2809b953c81f364~mv2.png" />
+            <figcaption>
+                <em>
+                </em>
+            </figcaption>
+        </figure>
+        <div class="text-content">
+            <h3>
+                رخصة القيادة B
+            </h3>
+            <p>
+                هذه هي الرخصة التي تدرس لها — رخصة سيارة الركّاب. تُؤهّلك لقيادة جميع سيارات الركّاب حتى كتلةٍ قصوى
+                مُصرّح بها 3500 كغ. ويُسمح بحدٍّ أقصى ثمانية ركّاب دون احتساب السائق. ويسمح بجرّ المقطورات الخفيفة.
+            </p>
+        </div>
+    </div>
+    <div class="image-text-container">
+        <figure>
+            <img alt="Sigorta Kartı"
+                src="https://static.wixstatic.com/media/4b688f_a9abc17c2c0f4c65927e539372865861~mv2.png" />
+            <figcaption>
+                <em>
+                </em>
+            </figcaption>
+        </figure>
+        <div class="text-content">
+            <h3>
+                رخصة E مع B
+            </h3>
+            <p>
+                إذا كانت لديك رخصة B وتريد القدرة على جرّ مقطوراتٍ وتراكيب أثقل مما تسمح به رخصة B، فيجب أن تحصل كذلك
+                على رخصة E.
+            </p>
+        </div>
+    </div>
+    <div class="image-text-container">
+        <figure>
+            <img alt="Sigorta Kartı"
+                src="https://static.wixstatic.com/media/4b688f_03f8b505c34040f9883f1a091cd54c59~mv2.png" />
+            <figcaption>
+                <em>
+                </em>
+            </figcaption>
+        </figure>
+        <div class="text-content">
+            <h3>
+                رخصتا القيادة C1 و C1E
+            </h3>
+            <p>
+                تُطلبان لتشغيل الشاحنات الخفيفة والمركبات التجارية ذات الكتلة القصوى المُصرّح بها بين 3500 كغ و7500 كغ.
+                يُسمح بحدٍّ أقصى ثمانية ركّاب. ولجرّ مقطوراتٍ بكتلةٍ قصوى فوق 750 كغ تُطلَب رخصة E بالإضافة إلى رخصة C1.
+            </p>
+        </div>
+    </div>
+    <div class="image-text-container">
+        <figure>
+            <img alt="Sigorta Kartı"
+                src="https://static.wixstatic.com/media/4b688f_f943ef1682504ac6b9b5f9e21a733e49~mv2.png" />
+            <figcaption>
+                <em>
+                </em>
+            </figcaption>
+        </figure>
+        <div class="text-content">
+            <h3>
+                رخصتا القيادة C و CE
+            </h3>
+            <p>
+                تُؤهّلانك لقيادة الشاحنات الأثقل. ولجرّ مقطوراتٍ بكتلةٍ قصوى مُصرّح بها تزيد على 750 كغ تُطلَب رخصة E
+                بالإضافة إلى رخصة C.
+            </p>
+        </div>
+    </div>
+    <div class="image-text-container">
+        <figure>
+            <img alt="Sigorta Kartı"
+                src="https://static.wixstatic.com/media/4b688f_4a32b3a46957431eae5fe3fb530e6796~mv2.png" />
+            <figcaption>
+                <em>
+                </em>
+            </figcaption>
+        </figure>
+        <div class="text-content">
+            <h3>
+                رخصتا القيادة D1 و D1E
+            </h3>
+            <p>
+                تُطلب رخصة D1 لقيادة الحافلات الأصغر بطولٍ يصل إلى ثمانية أمتار وبحدٍّ أقصى 16 راكبًا دون احتساب السائق.
+                ولجرّ مقطوراتٍ بكتلةٍ قصوى تزيد على 750 كغ تُطلَب رخصة E بالإضافة إلى D1.
+            </p>
+        </div>
+    </div>
+    <div class="image-text-container">
+        <figure>
+            <img alt="Sigorta Kartı"
+                src="https://static.wixstatic.com/media/4b688f_78b0dca8ca344049bd75769932f683fa~mv2.png" />
+            <figcaption>
+                <em>
+                </em>
+            </figcaption>
+        </figure>
+        <div class="text-content">
+            <h3>
+                رخصتا القيادة D و DE
+            </h3>
+            <p>
+                رخصة D صالحة للحافلات الأكبر مثل حافلات النقل العام وحافلات الرحلات. وقد يزيد طولها على ثمانية أمتار
+                وتحمل أكثر من 16 راكبًا. وللمقطورات ذات الكتلة القصوى المُصرّح بها الأكبر من 750 كغ تُطلَب كذلك E
+                بالإضافة إلى D.
+            </p>
+        </div>
+    </div>
+    <div class="image-text-container">
+        <figure>
+            <img alt="Sigorta Kartı"
+                src="https://static.wixstatic.com/media/4b688f_4619a55ccc7840f581dbcc08152abe65~mv2.png" />
+            <figcaption>
+                <em>
+                </em>
+            </figcaption>
+        </figure>
+        <div class="text-content">
+            <h3>
+                رخصة القيادة T
+            </h3>
+            <p>
+                تُطلب هذه الرخصة للقيادة على الطرق العامة بجرّارٍ زراعي أو حرجي، أو بمركبةٍ آلية محدودة السرعة.
+            </p>
+        </div>
+    </div>
+    <h2>
+        استثناءات من متطلب رخصة القيادة
+    </h2>
+    <p>
+        لا تُطلب رخصة القيادة لبعض المركبات الآلية. وأهمّها:
+    </p>
+    <ul>
+        <li>
+            <strong>
+                درّاجات نارية خفيفة خاصة
+            </strong>
+            <p>
+                هذه الدراجات — ومنها Segways — مُعَيَّنة بأنها غير خاضعة لمتطلب رخصة القيادة. ولا تتجاوز السرعة القصوى
+                لهذه المركبات 25 كم/س. وقد تكون هناك سنٌّ دنيا — فمثلًا يجب أن تكون بعمر 16 عامًا لقيادة Segway.
+            </p>
+        </li>
+        <li>
+            <strong>
+                جراراتٌ زراعية أو حرجية صغيرة (LBTs) ومركبات آلية محدودة السرعة (MMBSs)
+                (عرضٌ أقصاه 1.30 متر)
+            </strong>
+            <p>
+                الجرارات الزراعية والحرجية الأضيق (LBTs) والمركبات الآلية محدودة السرعة (MMBSs) المستخدمة للجزّ، ومكافحة
+                الأعشاب، والكنس، وإزالة الثلوج، ومكافحة الانزلاق، أو جمع فضلات الكلاب. وهي عادةً مركباتٌ بلدية.
+            </p>
+        </li>
+        <li>
+            <strong>
+                مركبات ذوي الإعاقة المُحرّكة
+            </strong>
+        </li>
+        <li>
+            <strong>
+                أثناء درس قيادة أو اختبار قيادة (CBR) أو امتحان قيادة (CBR)
+            </strong>
+            <p>
+                لا تحتاج إلى رخصة قيادة أثناء تلقي دروس القيادة أو اختبار قيادة (تجريبي).
+            </p>
+        </li>
+    </ul>
+    <div class="image-container">
+        <figure>
+            <img alt="Resim 1"
+                src="https://static.wixstatic.com/media/4b688f_99913feae25f4cebab58339a5d94477b~mv2.jpg" />
+            <figcaption>
+                <em>
+                    لمركبة MMBS ضيّقة مثل جزّازة العشب هذه، لا تُطلَب رخصة قيادة.
+                </em>
+            </figcaption>
+        </figure>
+        <figure>
+            <img alt="Resim 2"
+                src="https://static.wixstatic.com/media/4b688f_a88b807eab65412d9afde3ea5c604bbf~mv2.jpg" />
+            <figcaption>
+                <em>
+                    لا تحتاج إلى رخصة قيادة لقيادة Segway.
+                </em>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="important-words2">
+        <p>
+            تحذير! إذا كنتَ ممنوعًا من القيادة، فلا يجوز لك قيادة أيّ مركبةٍ آلية. وينطبق ذلك أيضًا على المركبات الآلية
+            التي لا تتطلّب رخصة قيادة.
+        </p>
+    </div>
+    <h2>
+        العمر
+    </h2>
+    <p>
+        تختلف الحدودُ الدنيا للعمر عند الحصول على رخصٍ لفئاتٍ معيّنة من المركبات الآلية. فمثلًا يمكنك الحصول على رخصةٍ
+        لدراجةٍ نارية خفيفة قبل رخصة سيارة الركّاب. ويجب أن تكون أكبر سنًا قليلًا لقيادة شاحنة أو حافلة، ما لم تخضع
+        لتدريبٍ خاص لهذه الفئة.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    الفئة
+                </th>
+                <th>
+                    الحد الأدنى للعمر للامتحانات العملية
+                </th>
+                <th>
+                    الاستثناءات
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="first-column">
+                    <strong>
+                        AM درّاجة نارية خفيفة
+                    </strong>
+                </td>
+                <td>
+                    16 سنة
+                </td>
+                <td>
+                    تُمنَح مع A و B
+                </td>
+            </tr>
+            <tr>
+                <td class="first-column">
+                    <strong>
+                        A1 دراجة نارية بقدرة قصوى 11 كيلوواط
+                    </strong>
+                </td>
+                <td>
+                    18 سنة
+                </td>
+                <td>
+                    الدروس مسموحة من سن 17
+                </td>
+            </tr>
+            <tr>
+                <td class="first-column">
+                    <strong>
+                        A2 دراجة نارية بقدرة قصوى 35 كيلوواط
+                    </strong>
+                </td>
+                <td>
+                    20 سنة
+                </td>
+                <td>
+                    إذا كنتَ تملك A1 فالدروس مسموحة من سن 19
+                </td>
+            </tr>
+            <tr>
+                <td class="first-column" rowspan="3">
+                    <strong>
+                        A جميع الدراجات النارية
+                    </strong>
+                </td>
+                <td>
+                    21 سنة
+                </td>
+                <td>
+                    الرمز 80 المقيّد
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    22 سنة
+                </td>
+                <td>
+                    حيازة A2 لمدة سنتين، بلا رمز 80
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    24 سنة
+                </td>
+                <td>
+                    لا تُشترط A2، بلا رمز 80
+                </td>
+            </tr>
+            <tr>
+            </tr>
+            <td class="first-column">
+                <strong>
+                    B سيارة ركّاب
+                </strong>
+            </td>
+            <td>
+                17 سنة
+            </td>
+            <td>
+                2toDrive، مع مُشرف، داخل NL فقط (ابتداءً من سن 18: ينتهي 2toDrive)
+            </td>
+            <tr>
+                <td class="first-column">
+                    <strong>
+                        BE مقطورة
+                    </strong>
+                </td>
+                <td>
+                    18 سنة
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td class="first-column">
+                    <strong>
+                        C1(E) شاحنة خفيفة
+                    </strong>
+                </td>
+                <td>
+                    18 سنة
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td class="first-column" rowspan="2">
+                    <strong>
+                        C(E) شاحنة ثقيلة
+                    </strong>
+                </td>
+                <td>
+                    18 سنة
+                </td>
+                <td>
+                    مع شهادة الكفاءة المهنية
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    21 سنة
+                </td>
+                <td>
+                    من دون شهادة
+                </td>
+            </tr>
+            <tr>
+                <td class="first-column" rowspan="2">
+                    <strong>
+                        D1(E) حافلة صغيرة
+                    </strong>
+                </td>
+                <td>
+                    18 سنة
+                </td>
+                <td>
+                    مع شهادة الكفاءة المهنية
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    21 سنة
+                </td>
+                <td>
+                    من دون شهادة
+                </td>
+            </tr>
+            <tr>
+                <td class="first-column" rowspan="2">
+                    <strong>
+                        D(E) حافلة كبيرة
+                    </strong>
+                </td>
+                <td>
+                    18 سنة
+                </td>
+                <td>
+                    مع شهادة الكفاءة المهنية
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    24 سنة
+                </td>
+                <td>
+                    من دون شهادة
+                </td>
+            </tr>
+            <td class="first-column">
+                <strong>
+                    T مركبة زراعية
+                </strong>
+            </td>
+            <td>
+                16 سنة
+            </td>
+            <td>
+                لا شهادة
+            </td>
+        </tbody>
+    </table>
+    <h2>
+        متطلبات المُدرّس
+    </h2>
+    <p>
+        يجب على مُدرّس القيادة الالتزام بقواعد معيّنة أيضًا، مثل حيازة بطاقة مُدرّس صالحة. ويحقّ لك طلبُ رؤية بطاقة
+        مُدرّسك في أيّ وقت.
     </p>
     <p>
-     If you want to drive a brommobiel only, you can opt to take a driving test just for brommobielen. A
-                disadvantage of this option is that, once you obtain the licence, you are only qualified to drive a
-                brommobiel. This means you cannot drive a moped, snorfiets or speed pedelec.
+        لا يجوز للمُدرّسين دمجُ دروس الدرّاجات النارية ودرّاجات «moped»، ولا دروس المركبات والسيّارات مع دروس الدرّاجات
+        النارية. بالإضافة إلى ذلك يجب أن يبقى المُدرّسون على تواصلٍ مع طلابهم. وبينما يكون هذا يسيرًا في السيارة، تحتاج
+        دروس الموبيد والدرّاجة النارية إلى جهاز اتصالٍ لاسلكي (ووكي توكي) وسماعةٍ يضعها الطالب للحفاظ على الاتصال.
     </p>
-    <p>
-     If you have never obtained this licence but you do possess an A or B licence, you will receive an AM
-                licence with that. This means you are qualified to drive any vehicle in the AM category.
-    </p>
-   </div>
-  </div>
-  <div class="image-text-container">
-   <figure>
-    <img alt="Sigorta Kartı" src="https://static.wixstatic.com/media/4b688f_250da031dee04d3188ca636e17dca995~mv2.png"/>
-    <figcaption>
-     <em>
-     </em>
-    </figcaption>
-   </figure>
-   <div class="text-content">
-    <h3>
-     A driving licence
-    </h3>
-    <p>
-     The motorcycle driving licence is divided into three subcategories.
-                A1 is the least powerful motorcycle, A2 medium power, and A the most powerful.
-    </p>
-   </div>
-  </div>
-  <div class="important-words2">
-   <div class="vertical-line2">
-   </div>
-   <h3>
-    Code 80
-   </h3>
-   <p>
-    From the age of 21, you may take driving tests for heavy motorcycles (category A unlimited). If you pass
-            this test between the ages of 21 and 24, you will receive a temporary, restrictive code (code 80) on your
-            driving licence. This code indicates that you may only operate category A2 motorcycles and category A
-            three-wheel motorcycles.
-   </p>
-   <p>
-    This code is removed from your licence when you have had an A driving licence (or the previously obtained A2
-            licence) for two years, or when you have reached the age of 24.
-   </p>
-  </div>
-  <div class="image-text-container">
-   <figure>
-    <img alt="Sigorta Kartı" src="https://static.wixstatic.com/media/4b688f_78e1d7420e91469ea2809b953c81f364~mv2.png"/>
-    <figcaption>
-     <em>
-     </em>
-    </figcaption>
-   </figure>
-   <div class="text-content">
-    <h3>
-     B driving licence
-    </h3>
-    <p>
-     This is the driving licence you are studying for, the passenger car licence. This licence qualifies you
-                to drive all passenger cars up to a maximum authorised mass of 3500 kg. No more than eight passengers,
-                not including the driver, are permitted. Pulling light trailers is permitted.
-    </p>
-   </div>
-  </div>
-  <div class="image-text-container">
-   <figure>
-    <img alt="Sigorta Kartı" src="https://static.wixstatic.com/media/4b688f_a9abc17c2c0f4c65927e539372865861~mv2.png"/>
-    <figcaption>
-     <em>
-     </em>
-    </figcaption>
-   </figure>
-   <div class="text-content">
-    <h3>
-     E with B driving licence
-    </h3>
-    <p>
-     If you have a B driving licence and want to be able to pull heavier trailers and combinations than the B
-                licence permits, you must also obtain an E driving licence.
-    </p>
-   </div>
-  </div>
-  <div class="image-text-container">
-   <figure>
-    <img alt="Sigorta Kartı" src="https://static.wixstatic.com/media/4b688f_03f8b505c34040f9883f1a091cd54c59~mv2.png"/>
-    <figcaption>
-     <em>
-     </em>
-    </figcaption>
-   </figure>
-   <div class="text-content">
-    <h3>
-     C1 and C1E driving licence
-    </h3>
-    <p>
-     These driving licences are required to operate light lorries and commercial vehicles with a maximum
-                authorised mass between 3500 kg and 7500 kg. A maximum of eight passengers are allowed. To pull trailers
-                with a maximum authorised mass above 750 kg, an E driving licence is required in addition to the C1
-                licence.
-    </p>
-   </div>
-  </div>
-  <div class="image-text-container">
-   <figure>
-    <img alt="Sigorta Kartı" src="https://static.wixstatic.com/media/4b688f_f943ef1682504ac6b9b5f9e21a733e49~mv2.png"/>
-    <figcaption>
-     <em>
-     </em>
-    </figcaption>
-   </figure>
-   <div class="text-content">
-    <h3>
-     C and CE driving licence
-    </h3>
-    <p>
-     These driving licences qualify you to drive heavier lorries. To pull trailers with a maximum authorised
-                mass above 750 kg, an E driving licence is required in addition to the C licence.
-    </p>
-   </div>
-  </div>
-  <div class="image-text-container">
-   <figure>
-    <img alt="Sigorta Kartı" src="https://static.wixstatic.com/media/4b688f_4a32b3a46957431eae5fe3fb530e6796~mv2.png"/>
-    <figcaption>
-     <em>
-     </em>
-    </figcaption>
-   </figure>
-   <div class="text-content">
-    <h3>
-     D1 and D1E driving licence
-    </h3>
-    <p>
-     The D1 driving licence is required to drive smaller buses of up to eight metres in length with a maximum
-                of 16 passengers, not including the driver. To pull trailers with a maximum authorised mass above 750
-                kg, an E driving licence is required in addition to the D1 licence.
-    </p>
-   </div>
-  </div>
-  <div class="image-text-container">
-   <figure>
-    <img alt="Sigorta Kartı" src="https://static.wixstatic.com/media/4b688f_78b0dca8ca344049bd75769932f683fa~mv2.png"/>
-    <figcaption>
-     <em>
-     </em>
-    </figcaption>
-   </figure>
-   <div class="text-content">
-    <h3>
-     D and DE driving licence
-    </h3>
-    <p>
-     Driving licence D is valid for larger buses such as coaches and public transport buses. These may be
-                longer than eight metres and carry more than 16 passengers. For trailers with a maximum autorised mass
-                greater than 750 kg, E is also required in addition to D.
-    </p>
-   </div>
-  </div>
-  <div class="image-text-container">
-   <figure>
-    <img alt="Sigorta Kartı" src="https://static.wixstatic.com/media/4b688f_4619a55ccc7840f581dbcc08152abe65~mv2.png"/>
-    <figcaption>
-     <em>
-     </em>
-    </figcaption>
-   </figure>
-   <div class="text-content">
-    <h3>
-     T driving licence
-    </h3>
-    <p>
-     This licence is required to drive on public roads in an agricultural or forestry tractor, or a motor
-                carriage with limited speed.
-    </p>
-   </div>
-  </div>
-  <h2>
-   Exceptions to driving licence requirement
-  </h2>
-  <p>
-   A driving licence is not required for some motor carriages. These are the most important:
-  </p>
-  <ul>
-   <li>
-    <strong>
-     Special mopeds
-    </strong>
-    <p>
-     These mopeds, which include Segways, have been designated as not subject to the driving licence
-                requirement. The maximum speed for these vehicles never exceeds 25 km/h. There may be a minimum age for
-                these mopeds - for Segways you must be 16 years of age;
-    </p>
-   </li>
-   <li>
-    <strong>
-     Small agricultural or forestry tractors (LBTs) and motor carriages with limited speed (MMBSs)
-                (maximum 1.30 metres wide)
-    </strong>
-    <p>
-     Narrower agricultural and forestry tractors (LBTs) and motor carriages with limited speed (MMBSs) used
-                for mowing, weed control, sweeping, snow removal, slip control, or dog feces collection. These are
-                generally municipal vehicles;
-    </p>
-   </li>
-   <li>
-    <strong>
-     Motorised disabled vehicles
-    </strong>
-   </li>
-   <li>
-    <strong>
-     During a driving lesson, a driving test (CBR) or a driving exam (CBR)
-    </strong>
-    <p>
-     You do not need a driving licence while taking driving lessons or a (mock) driving test.
-    </p>
-   </li>
-  </ul>
-  <div class="image-container">
-   <figure>
-    <img alt="Resim 1" src="https://static.wixstatic.com/media/4b688f_99913feae25f4cebab58339a5d94477b~mv2.jpg"/>
-    <figcaption>
-     <em>
-      For a narrow MMBS like this lawn mower, a driving licence is not required.
-     </em>
-    </figcaption>
-   </figure>
-   <figure>
-    <img alt="Resim 2" src="https://static.wixstatic.com/media/4b688f_a88b807eab65412d9afde3ea5c604bbf~mv2.jpg"/>
-    <figcaption>
-     <em>
-      You do not need a driving licence to operate a Segway.
-     </em>
-    </figcaption>
-   </figure>
-  </div>
-  <div class="important-words2">
-   <p>
-    Warning! If you are disqualified from driving, you may no longer drive any motor carriage. This also applies
-            to motor carriages for which you do not need a driving licence.
-   </p>
-  </div>
-  <h2>
-   Age
-  </h2>
-  <p>
-   Different minimum age limits apply when obtaining driving licences for specific motor carriages. For example, you
-        can obtain a driving licence for a moped earlier than a passenger car licence. You must be slightly older,
-        however, to operate a lorry or a bus, unless you undergo specific training for this type of vehicle.
-  </p>
-  <table>
-   <thead>
-    <tr>
-     <th>
-      Category
-     </th>
-     <th>
-      Minimum age practical exams
-     </th>
-     <th>
-      Exceptions
-     </th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-     <td class="first-column">
-      <strong>
-       AM Moped
-      </strong>
-     </td>
-     <td>
-      16 years
-     </td>
-     <td>
-      Received with A and B
-     </td>
-    </tr>
-    <tr>
-     <td class="first-column">
-      <strong>
-       A1 Motorcycle max 11 kW
-      </strong>
-     </td>
-     <td>
-      18 years
-     </td>
-     <td>
-      Lessons allowed from 17 years of age
-     </td>
-    </tr>
-    <tr>
-     <td class="first-column">
-      <strong>
-       A2 Motorcycle max 35 kW
-      </strong>
-     </td>
-     <td>
-      20 years
-     </td>
-     <td>
-      If in possession of A1, lessons allowed from 19 years of age
-     </td>
-    </tr>
-    <tr>
-     <td class="first-column" rowspan="3">
-      <strong>
-       A All motorcycles
-      </strong>
-     </td>
-     <td>
-      21 years
-     </td>
-     <td>
-      Restrictive code 80
-     </td>
-    </tr>
-    <tr>
-     <td>
-      22 years
-     </td>
-     <td>
-      In possession of A2 for 2 years, no code 80
-     </td>
-    </tr>
-    <tr>
-     <td>
-      24 years
-     </td>
-     <td>
-      None A2 required, no code 80
-     </td>
-    </tr>
-    <tr>
-    </tr>
-    <td class="first-column">
-     <strong>
-      B Passenger car
-     </strong>
-    </td>
-    <td>
-     17 years
-    </td>
-    <td>
-     2toDrive, with coach, only in NL (from 18 years of age: 2toDrive ends)
-    </td>
-    <tr>
-     <td class="first-column">
-      <strong>
-       BE Trailer
-      </strong>
-     </td>
-     <td>
-      18 years
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="first-column">
-      <strong>
-       C1(E) Light lorry
-      </strong>
-     </td>
-     <td>
-      18 years
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="first-column" rowspan="2">
-      <strong>
-       C(E) Heavy lorry
-      </strong>
-     </td>
-     <td>
-      18 years
-     </td>
-     <td>
-      With certificate of professional competence
-     </td>
-    </tr>
-    <tr>
-     <td>
-      21 years
-     </td>
-     <td>
-      None certificate
-     </td>
-    </tr>
-    <tr>
-     <td class="first-column" rowspan="2">
-      <strong>
-       D1(E) Small bus
-      </strong>
-     </td>
-     <td>
-      18 years
-     </td>
-     <td>
-      With certificate of professional competence
-     </td>
-    </tr>
-    <tr>
-     <td>
-      21 years
-     </td>
-     <td>
-      None certificate
-     </td>
-    </tr>
-    <tr>
-     <td class="first-column" rowspan="2">
-      <strong>
-       D(E) Large bus
-      </strong>
-     </td>
-     <td>
-      18 years
-     </td>
-     <td>
-      With certificate of professional competence
-     </td>
-    </tr>
-    <tr>
-     <td>
-      24 years
-     </td>
-     <td>
-      None certificate
-     </td>
-    </tr>
-    <td class="first-column">
-     <strong>
-      T Agricultural vehicle
-     </strong>
-    </td>
-    <td>
-     16 years
-    </td>
-    <td>
-     No certificate
-    </td>
-   </tbody>
-  </table>
-  <h2>
-   Instructor requirements
-  </h2>
-  <p>
-   A driving instructor must also adhere to certain rules, such as being in possession of a valid instructor pass.
-        You may ask to see your instructor’s pass at any time.
-  </p>
-  <p>
-   Instructors may not combine motorcycle and moped driving lessons, or vehicle and motorcycle lessons. In addition,
-        instructors must remain in contact with their students. While this is easy in a car, moped and motorcycle
-        lessons require the use of a walkietalkie and an earpiece that must be worn by the student to maintain radio
-        contact.
-  </p>
-  <div class="important-words2">
-   <p>
-    Driving instructors receive their instructor pass after passing a driving instruction course. The instructor
-            pass is valid for a limited time and must be renewed on time. Instructors must always be able to show their
-            pass if asked while teaching.
-   </p>
-   <p>
-    You can also check your instructor’s authorisation at
-    <a href="https://www.ibki.nl" onclick="alert('If the link does not open, please copy and paste it into your browser: www.ibki.nl');" target="_blank">
-     www.ibki.nl
-    </a>
-    .
-   </p>
-  </div>
-  <div class="image-container">
-   <figure>
-    <img alt="Resim 1" src="https://static.wixstatic.com/media/4b688f_1b7a667cdd2143fba35c6ef852f52c06~mv2.png"/>
-    <figcaption>
-     <em>
-      Front of instructor pass
-     </em>
-    </figcaption>
-   </figure>
-   <figure>
-    <img alt="Resim 2" src="https://static.wixstatic.com/media/4b688f_c14d35da73c947ccb74902776b06332f~mv2.png"/>
-    <figcaption>
-     <em>
-      Back of instructor pass
-     </em>
-    </figcaption>
-   </figure>
-  </div>
-  <a class="custom-button" href="https://www.examtheorie.nl/ar-test-and-theory-menu" target="_blank">
-   Back to
-    overview
-  </a>
-  <script>
-   window.addEventListener("scroll", () => {
-      window.scrollTo(0, 0);
-    });
+    <div class="important-words2">
+        <p>
+            يتسلّم مُدرّسو القيادة بطاقة المُدرّس بعد اجتياز دورة تدريب تعليم القيادة. وتكون بطاقة المُدرّس صالحةً لمدةٍ
+            محدودة ويجب تجديدُها في الوقت المناسب. ويجب على المُدرّسين دائمًا القدرةُ على إبراز بطاقتهم عند الطلب أثناء
+            التدريب.
+        </p>
+        <p>
+            يمكنك كذلك التحقّق من تفويض مُدرّسك عبر
+            <a href="https://www.ibki.nl" onclick="alert('إذا لم يفتح الرابط يُرجى نسخه ولصقه في متصفحك: www.ibki.nl');"
+                target="_blank">
+                www.ibki.nl
+            </a>
+            .
+        </p>
+    </div>
+    <div class="image-container">
+        <figure>
+            <img alt="Resim 1"
+                src="https://static.wixstatic.com/media/4b688f_1b7a667cdd2143fba35c6ef852f52c06~mv2.png" />
+            <figcaption>
+                <em>
+                    الوجه الأمامي لبطاقة المُدرّس
+                </em>
+            </figcaption>
+        </figure>
+        <figure>
+            <img alt="Resim 2"
+                src="https://static.wixstatic.com/media/4b688f_c14d35da73c947ccb74902776b06332f~mv2.png" />
+            <figcaption>
+                <em>
+                    الوجه الخلفي لبطاقة المُدرّس
+                </em>
+            </figcaption>
+        </figure>
+    </div>
+    <a class="custom-button" href="https://www.examtheorie.nl/ar-test-and-theory-menu" target="_blank">
+        العودة إلى النظرة العامة
+    </a>"
 
 
-    // Sağ tıklamayı engelle
-    document.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-    });
 
-    // Metin seçmeyi engelle
-    document.addEventListener("selectstart", function (event) {
-      event.preventDefault();
-    });
+<script>
+window.addEventListener("scroll", () => {
+  window.scrollTo(0, 0);
+});
 
-    function sendHeight() {
-      const target = document.querySelector(".custom-button");
-      if (!target) return;
+// Sag tiklamayi engelle
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
 
-      const height = target.getBoundingClientRect().bottom;
+// Metin se�meyi engelle
+document.addEventListener("selectstart", function (event) {
+  event.preventDefault();
+});
 
-      // Post message ile dış sayfaya gönder
-      window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+function sendHeight() {
+  const target = document.querySelector(".custom-button");
+  if (!target) return;
+  const height = target.getBoundingClientRect().bottom;
+  // Post message ile dis sayfaya g�nder
+  window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+}
 
+window.onload = () => {
+  sendHeight();
+  setTimeout(sendHeight, 300);
+  setTimeout(sendHeight, 1000);
+  setTimeout(sendHeight, 3000);
+};
 
-    }
+// Tarayici yeniden boyutlandiginda da y�kseklik g�nder
+window.onresize = () => {
+  sendHeight();
+};
+</script>
+</body>
 
-    window.onload = () => {
-      sendHeight();
-      setTimeout(sendHeight, 300);
-      setTimeout(sendHeight, 1000);
-      setTimeout(sendHeight, 3000);
-    };
-
-
-    // Tarayıcı yeniden boyutlandığında da yükseklik gönder
-    window.onresize = () => {
-      sendHeight();
-    };
-  </script>
- </body>
 </html>

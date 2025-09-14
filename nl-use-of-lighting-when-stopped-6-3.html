@@ -8,20 +8,21 @@
   </title>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300&amp;display=swap" rel="stylesheet"/>
   <style>
+html, body {
+  overflow: hidden !important;
+  height: 100%;
+  margin: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
    body {
             font-family: "Trirong", serif;
             line-height: 1.2;
         }
-         html,
-      body {
-      overflow: hidden !important;
-      height: 100%;
-      margin: 0;
-      padding-left: 2px;
-      padding-right: 2px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+         
 
         h1,
         h2 {
@@ -236,26 +237,23 @@
  </head>
  <body>
   <h1>
-   Use of lighting when stopped
+   Gebruik van verlichting bij stilstaan
   </h1>
   <p>
-   The use of lighting may not only be mandatory while driving. In some cases it is also compulsory to use
-        sidelights in combination with a rear light when stationary.
+   Het gebruik van verlichting kan niet alleen tijdens het rijden verplicht zijn. In sommige gevallen is het ook verplicht om bij stilstand stadslichten in combinatie met een achterlicht te voeren.
   </p>
   <p>
-   Lighting while stopped is mandatory for motor vehicles with more than two wheels, and trailers, when:
+   Verlichting bij stilstaan is verplicht voor motorvoertuigen met meer dan twee wielen en aanhangwagens, wanneer:
   </p>
   <ul>
    <li>
     <p>
-     they are stopped on a carriageway outside a built-up area during the day in poor visibility and at
-                night;
+     zij stilstaan op een rijbaan buiten de bebouwde kom, overdag bij slecht zicht en ’s nachts;
     </p>
    </li>
    <li>
     <p>
-     they are stopped in a parking lane, a car park, hard shoulder, or refuge that lies directly alongside an
-                autoweg or motorway during the day in poor visibility and at night.
+     zij stilstaan in een parkeerstrook, een parkeerplaats, op de vluchtstrook of in een vluchthaven die direct langs een autoweg of autosnelweg ligt, overdag bij slecht zicht en ’s nachts.
     </p>
    </li>
   </ul>
@@ -263,78 +261,72 @@
    <div class="container">
     <div>
      <p>
-      Most passenger cars have a special lighting mode, the parking position. You can usually choose to
-                    only switch on the lighting on one side, for example only on the left if you park to the right of
-                    the road.
+      De meeste personenauto’s hebben een speciale lichtstand, de parkeerstand. Je kunt meestal kiezen om de verlichting slechts aan één kant in te schakelen, bijvoorbeeld alleen links als je rechts van de weg parkeert.
      </p>
     </div>
     <figure>
      <img alt="Örnek Resim" class="image1" src="https://static.wixstatic.com/media/4b688f_817b897377724eeca47bacb8fdb523bf~mv2.png"/>
      <figcaption>
-      Parking lights
+      Parkeerlichten
      </figcaption>
     </figure>
    </div>
   </div>
   <p>
-   For narrower trailers without front sidelights, white retro-reflectors at the front and rear lights are
-        sufficient.
+   Voor smallere aanhangwagens zonder voorste stadslichten volstaan witte retroreflectoren aan de voorzijde en achterlichten aan de achterzijde.
   </p>
   <div>
    <div class="images-container5">
     <figure>
-     <img alt="Warning side-airbag malfunction" src="https://static.wixstatic.com/media/4b688f_02aab234be794f2c81b90ec15b819b6a~mv2.jpg"/>
+     <img alt="Een personenauto die buiten de bebouwde kom op de rijbaan geparkeerd staat, moet stadslichten en achterlichten voeren." src="https://static.wixstatic.com/media/4b688f_02aab234be794f2c81b90ec15b819b6a~mv2.jpg"/>
      <figcaption>
-      A passenger car parked on the carriageway outside a built-up area must have sidelights and
-                    rear lights on.
+      Een personenauto die buiten de bebouwde kom op de rijbaan geparkeerd staat, moet stadslichten en achterlichten voeren.
      </figcaption>
     </figure>
    </div>
   </div>
   <a class="custom-button" href="https://www.examtheorie.nl/nl-test-and-theory-menu" target="_blank">
-   Back to
-    overview
+   Terug naar
+    overzicht
   </a>
-  <script>
-   window.addEventListener("scroll", () => {
-      window.scrollTo(0, 0);
-    });
 
+  
+ 
+<script>
+window.addEventListener("scroll", () => {
+  window.scrollTo(0, 0);
+});
 
-    // Sağ tıklamayı engelle
-    document.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-    });
+// Sag tiklamayi engelle
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
 
-    // Metin seçmeyi engelle
-    document.addEventListener("selectstart", function (event) {
-      event.preventDefault();
-    });
+// Metin se�meyi engelle
+document.addEventListener("selectstart", function (event) {
+  event.preventDefault();
+});
 
-    function sendHeight() {
-      const target = document.querySelector(".custom-button");
-      if (!target) return;
+function sendHeight() {
+  const target = document.querySelector(".custom-button");
+  if (!target) return;
+  const height = target.getBoundingClientRect().bottom;
+  // Post message ile dis sayfaya g�nder
+  window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+}
 
-      const height = target.getBoundingClientRect().bottom;
+window.onload = () => {
+  sendHeight();
+  setTimeout(sendHeight, 300);
+  setTimeout(sendHeight, 1000);
+  setTimeout(sendHeight, 3000);
+};
 
-      // Post message ile dış sayfaya gönder
-      window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
-
-
-    }
-
-    window.onload = () => {
-      sendHeight();
-      setTimeout(sendHeight, 300);
-      setTimeout(sendHeight, 1000);
-      setTimeout(sendHeight, 3000);
-    };
-
-
-    // Tarayıcı yeniden boyutlandığında da yükseklik gönder
-    window.onresize = () => {
-      sendHeight();
-    };
-  </script>
- </body>
+// Tarayici yeniden boyutlandiginda da y�kseklik g�nder
+window.onresize = () => {
+  sendHeight();
+};
+</script>
+</body>
 </html>
+

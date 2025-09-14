@@ -9,10 +9,21 @@
       rel="stylesheet"
     />
     <style>
+html, body {
+  overflow: hidden !important;
+  height: 100%;
+  margin: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
       body {
         font-family: "Trirong", serif;
         line-height: 1.2;
       }
+         
 
       h1,
       h2 {
@@ -453,51 +464,47 @@
 
      <a href="https://www.examtheorie.nl/tr-test-and-theory-menu" class="custom-button" target="_blank">Geri Dön</a>
 
-   <script>
-  // (isteğe bağlı) kaydırmayı kilitleme – gerekliyse korumalı
-  let lockingScroll = false;
-  window.addEventListener("scroll", () => {
-    if (lockingScroll) return;
-    lockingScroll = true;
-    window.scrollTo(0, 0);
-    requestAnimationFrame(() => (lockingScroll = false));
-  });
-
-  document.addEventListener("contextmenu", e => e.preventDefault());
-  document.addEventListener("selectstart", e => e.preventDefault());
-
-  const SELECTOR = ".custom-button";
-
-  function sendHeight() {
-    const t = document.querySelector(SELECTOR);
-    if (!t) return;
-    const h = t.getBoundingClientRect().bottom;
-    window.parent.postMessage({ type: "contentHeight", height: h }, "*");
-  }
-
-  function init() {
-    const t = document.querySelector(SELECTOR);
-    if (!t) { requestAnimationFrame(init); return; }
-    sendHeight();
-    if (window.ResizeObserver) new ResizeObserver(sendHeight).observe(t);
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(sendHeight).catch(()=>{});
-    setTimeout(sendHeight, 300);
-    setTimeout(sendHeight, 1000);
-    setTimeout(sendHeight, 3000);
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
-  }
-
-  window.addEventListener("load", sendHeight);
-  window.addEventListener("resize", sendHeight);
-</script>
+   
 
   </script>
 
 
-  </body>
+  
+<script>
+window.addEventListener("scroll", () => {
+  window.scrollTo(0, 0);
+});
+
+// Sag tiklamayi engelle
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
+
+// Metin se�meyi engelle
+document.addEventListener("selectstart", function (event) {
+  event.preventDefault();
+});
+
+function sendHeight() {
+  const target = document.querySelector(".custom-button");
+  if (!target) return;
+  const height = target.getBoundingClientRect().bottom;
+  // Post message ile dis sayfaya g�nder
+  window.parent.postMessage({ type: 'contentHeight', height: height }, '*');
+}
+
+window.onload = () => {
+  sendHeight();
+  setTimeout(sendHeight, 300);
+  setTimeout(sendHeight, 1000);
+  setTimeout(sendHeight, 3000);
+};
+
+// Tarayici yeniden boyutlandiginda da y�kseklik g�nder
+window.onresize = () => {
+  sendHeight();
+};
+</script>
+</body>
 </html>
+
