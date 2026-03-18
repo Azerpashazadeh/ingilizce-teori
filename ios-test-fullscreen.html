@@ -2043,12 +2043,12 @@
       #next-button-s3 {
         position: static;
         width: 20%;
-        height: 11.73vh;
+        height: 9.73vh;
         background-color: #085dc4;
         color: white;
         font-size: 14px;
         border: 1px solid #085dc4;
-        border-radius: 8px;
+        border-radius: 10px;
         cursor: pointer;
         z-index: 1000;
 
@@ -2858,6 +2858,12 @@
   #button-container {
     padding-bottom: 5px;
        /* Biraz daha kalın */
+  }
+
+  #buttonDiv,
+  #button-container {
+    padding: 2px 0;  /* Üst-alt iç boşluğu azalt */
+    height: auto;    /* Yüksekliği içeriğe göre ayarla (isteğe bağlı) */
   }
 }
 
