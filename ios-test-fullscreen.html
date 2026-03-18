@@ -162,7 +162,7 @@
       box-shadow:
         inset 0 60px 0 0 #085dc4,
         /* Üst kenar için 50px kalınlık */
-        inset 0 -60px 0 0 #085dc4,
+       
         /* Alt kenar için 60px kalınlık */
         inset 50px 0 0 0 #085dc4,
         /* Sol kenar için 10px kalınlık */
@@ -173,20 +173,15 @@
     }
 
     /* Mobil cihazlar için stil tanımlamaları */
-    @media (max-width: 768px) {
-      .overlay {
-        box-shadow:
-          inset 0 60px 0 0 #085dc4,
-          /* Üst kenar */
-          inset 5px 0 0 0 #085dc4,
-          /* Sol kenar */
-          inset -5px 0 0 0 #085dc4,
-          /* Sağ kenar */
-          inset 0 -60px 0 0 #085dc4;
-        /* Alt kenar */
-      }
-    }
-
+   @media (max-width: 768px) {
+  .overlay {
+    box-shadow:
+      inset 0 60px 0 0 #085dc4,  /* Üst kenar */
+      inset 5px 0 0 0 #085dc4,   /* Sol kenar */
+      inset -5px 0 0 0 #085dc4   /* Sağ kenar */
+      !important;                /* Hepsi için geçerli kural */
+  }
+}
     .overlay-thin-top {
       position: fixed;
       top: 0;
@@ -199,7 +194,7 @@
       box-shadow:
         inset 0 10px 0 0 #085dc4,
         /* Üst kenar 5px */
-        inset 0 -60px 0 0 #085dc4,
+        
         /* Alt kenar */
         inset 50px 0 0 0 #085dc4,
         /* Sol kenar */
@@ -213,7 +208,7 @@
         box-shadow:
           inset 0 10px 0 0 #085dc4,
           /* Üst kenar 5px */
-          inset 0 calc(-11.75vh) 0 0 #085dc4,
+         
           /* Alt kenar */
           inset 5px 0 0 0 #085dc4,
           /* Sol kenar */
@@ -2848,6 +2843,28 @@
     .toggle-fullscreen-btn.on .icon-fullscreen-enter {
       display: none;
     }
+
+
+    /* 3. bölüm alt sabit buton çubuğu - mavi arka plan */
+#button-container {
+  background-color: #085dc4;
+  padding: 10px 0;           /* Biraz iç boşluk, butonları rahatlatır */
+  box-shadow: 0 -4px 8px rgba(0,0,0,0.2); /* Hafif üst gölge */
+  z-index: 2000;             /* Overlay'in üstünde olmalı */
+}
+
+/* Mobilde daha iyi görünüm için */
+@media (max-width: 768px) {
+  #button-container {
+    padding-bottom: 5px;
+       /* Biraz daha kalın */
+  }
+}
+
+
+
+
+
   </style>
 </head>
 
@@ -2878,7 +2895,7 @@
   <!--<div class="coordinateDisplay">X: 0, Y: 0</div>-->
 
   <!-- SECTION-1 ve teste başla düğmeleri -->
-  <button id="quizButton1" onclick="startQuizAndFullscreen()">QUIZ-1-1-1</button>
+  <button id="quizButton1" onclick="startQuizAndFullscreen()">QUIZ-1-2</button>
 
   <!-- Mesaj alanı -->
   <div id="messageArea">
@@ -6306,7 +6323,7 @@
 
       const overlay = document.querySelector(".overlay");
       if (overlay) {
-        overlay.classList.add("overlay-thin-top");
+        
       }
     }
 
